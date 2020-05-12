@@ -1,0 +1,21 @@
+.navbar{
+    background-color:white;
+    border: none;
+}
+a :hover{
+    color: #950081;
+
+}
+.navbar-inverse .navbar-nav>.active>a{
+    background-color: #950081;
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: #950081;
+}
+.same_padding{
+    padding: 30px;
+}
+.nav-item{
+    border-right: #950081 5px;
+}
