@@ -19,3 +19,43 @@ a :hover{
 .nav-item{
     border-right: #950081 5px;
 }
+.nav-link{
+    color: white;
+    size: 150px;
+}
+.nav-link:hover{
+    color: #950081;
+}
+.big-text{
+    color: #fff;
+    font-size: 25pt;
+    line-height: 1em;
+    
+}
+.always-moving{
+    color: #fff;
+    font-size: 20pt;
+    font-family: 'Leckerli One', cursive;
+    margin-top: 0;
+}
+.header-2{
+    font-size: 20px;
+}
+@media (max-width: 601px) {
+    #first_header{
+        padding-top: 0;
+        
+    }
+    #min-padding{
+        padding-top: 0;
+    }
+}
+@media (min-width: 601px) {
+    #first_header{
+        padding-top: 100;
+        
+    }
+    #min-padding{
+        padding-top: 100;
+    }
+}
