@@ -33,7 +33,12 @@ a :hover{
      padding-right: 20%;
      z-index: 1;
 }
+div.example {
+ color: white;
+ padding-right: 40px;
+ padding-top: 20px;
 
+}
 @media screen and (min-width: 601px) {
   div.example {
     font-size: 50px;

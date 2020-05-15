@@ -7,13 +7,15 @@ import { HomeComponent } from './home_page/home/home.component';
 import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.component';
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FooterComponent } from './container/footer/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    DriverRegisterComponent
+    DriverRegisterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

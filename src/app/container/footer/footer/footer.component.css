@@ -1,0 +1,67 @@
+/* footer start*/
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* Remove extra left and right margins, due to padding */
+  .row {
+    margin: 0 5px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    footer{
+      background-image: url('/assets/image/foote-half-mini.png') !important; 
+      background-size: 100% !important;
+      background-repeat: no-repeat; 
+      padding-top: 15px !important;
+    }
+    .column {
+      width: 50%;
+    }
+    .row {
+      flex-direction: column;
+  
+    }
+  
+  }
+  
+  @media screen and (min-width: 600px){
+    footer{
+      background-image: url('/assets/image/footer.png'); 
+      background-size: cover;
+      background-repeat: no-repeat; 
+      padding-top: 110px;
+    }
+    
+  }
+  
+  
+  /* Style the counter cards */
+  .card {
+    padding: 16px;
+    text-align: center;
+  
+  }
+  
+  ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .footer-img{
+   width: 112.5%;
+   margin-left: -20px;
+   border-style: solid 1px white;
+  }
+  
+  /* footer end */

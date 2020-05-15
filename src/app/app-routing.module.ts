@@ -11,6 +11,10 @@ const routes: Routes = [
     component : HomeComponent
 },
 {
+  path:"nav",
+  component: NavBarComponent
+},
+{
   path : 'header',
   component : NavBarComponent
 },
