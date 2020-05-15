@@ -41,14 +41,25 @@ div.example {
   div.example {
     font-size: 50px;
   }
+  .taxiye{
+  margin-left: 10px;
+  border-radius: 10%;
+  width: 60%;
+}
 }
 .nav-item{
     border-right: #950081 1px;
 }
+@media screen and (max-width: 600px){
 .taxiye{
-  margin-left: 90px;
+  margin-left: 90sp;
   border-radius: 10%;
+  width: 45%;
+
 }
+}
+
+
 .driver-img{
   margin-top: 0px;
   margin-left: 0px;
@@ -166,7 +177,9 @@ video{
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 5px;}
+.row {
+  margin: 0 5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -180,18 +193,23 @@ video{
     width: 50%;
   }
 }
+@media screen and (min-width: 400){
+  .column{
+    width: 30%;
+  }
+}
 @media screen and (max-width: 600px) {
   .row {
     flex-direction: column;
+
   }
 }
 
 /* Style the counter cards */
 .card {
-  
   padding: 16px;
   text-align: center;
-  
+
 }
 
 ul.no-bullets {
@@ -201,19 +219,7 @@ ul.no-bullets {
   text-align: center;
   color: white;
 }
-flex-img {
-  width: 100%;
-  height: auto;
-  /* Magic! */
-  
-}
-.footer {
-  
-   left: 0;
-   bottom: 0;
-   width: 100%;
-  
-   color: white;
-   text-align: center;
-}
+
+
+
 /* footer end */
