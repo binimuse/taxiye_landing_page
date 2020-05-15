@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home_page/home/home.component';
 import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.component';
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,12 @@ import { DriverRegisterComponent } from './driver-register/driver-register.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
