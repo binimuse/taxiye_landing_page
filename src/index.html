@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>LandingPageNew</title>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <base href="/">
@@ -14,7 +16,7 @@
   <app-root></app-root>
 </body>
 <script>
-  // Accordion 
+  // Accordion
   function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
@@ -23,20 +25,65 @@
       x.className = x.className.replace(" w3-show", "");
     }
   }
-  
+
   // Click on the "Jeans" link on page load to open the accordion for demo purposes
   document.getElementById("myBtn").click();
-  
-  
   // Open and close sidebar
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
   }
-   
+
   function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
   }
+
+
+   function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className =
+          x.previousElementSibling.className.replace("w3-white ");
+      } else {
+        x.className = x.className.replace("w3-show",);
+        x.previousElementSibling.className =
+          x.previousElementSibling.className.replace("w3-white");
+      }
+    }
+
+//
+
+// slide fade
+    var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-purple", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-purple";
+      }
+
   </script>
+
+
 </html>

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home_page/home/home.component';
 import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.component';
+import { DriverRegisterComponent } from './driver-register/driver-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    DriverRegisterComponent
   ],
   imports: [
     BrowserModule,
