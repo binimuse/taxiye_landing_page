@@ -1,44 +1,9 @@
-.navbar{
-    background-color:white;
-    border: none;
 
-}
-a :hover{
-    color: #950081;
-
-}
-.navbar-inverse .navbar-nav>.active>a{
-    background-color: #950081;
-    color: white;
-
-}
-.navbar-inverse .navbar-nav>li>a{
-    color: #950081;
-    display: inline-block;
-    line-height:normal;
-    margin-top: 20px;
-
-}
-
-.same_padding{
-    padding: 0px;
-}
-.nav-item{
-    border-right: #950081 5px;
-}
-
-.nav-link{
-    color: white;
-    size: 150px;
-}
-.nav-link:hover{
-    color: #950081;
-}
 .big-text{
     color: #fff;
     font-size: 25pt;
     line-height: 1em;
-    
+
 }
 .always-moving{
     color: #fff;
@@ -52,7 +17,7 @@ a :hover{
 @media (max-width: 601px) {
     #first_header{
         padding-top: 0;
-        
+
     }
     #min-padding{
         padding-top: 0;
@@ -61,11 +26,16 @@ a :hover{
 @media (min-width: 601px) {
     #first_header{
         padding-top: 100;
-        
+
     }
     #min-padding{
         padding-top: 100;
     }
+}
+
+.title{
+  text-align: center;
+  color: #950081;
 }
 .taxiye{
   margin-left: 90px;
@@ -73,3 +43,63 @@ a :hover{
   border-radius: 10%;
 }
 
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#more {display: none;}
+
+.read-more {
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:#950081;
+  color: white;
+  font-size: 16px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.read-more:hover {
+  background-color: darkorange;
+}
+
+
+.img-taxiye {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  width: 150px; /* Set a small width */
+  background-color: white;
+  padding: 15px;
+  background-size: 100% !important;
+  background-repeat: no-repeat;
+  padding-top: 15px !important;
+
+}
+
+/* Add a hover effect (blue shadow) */
+.img-taxiye:hover {
+  box-shadow: 0 0 2px 1px white;
+}
+.icons{
+font-size:250%;
+color:#950081;
+float: left;
+padding-right: 50px;
+}

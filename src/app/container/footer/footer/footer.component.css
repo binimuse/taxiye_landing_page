@@ -17,9 +17,9 @@
   /* Responsive columns */
   @media screen and (max-width: 600px) {
     footer{
-      background-image: url('/assets/image/foote-half-mini.png') !important; 
+      background-image: url('/assets/image/foote-half-mini.png');
       background-size: 100% !important;
-      background-repeat: no-repeat; 
+      background-repeat: no-repeat;
       padding-top: 15px !important;
     }
     .column {
@@ -27,29 +27,28 @@
     }
     .row {
       flex-direction: column;
-  
+
     }
-  
+
   }
-  
+
   @media screen and (min-width: 600px){
     footer{
-      background-image: url('/assets/image/footer.png'); 
+      background-image: url('/assets/image/footer.png');
       background-size: cover;
-      background-repeat: no-repeat; 
-      padding-top: 110px;
+      background-repeat: no-repeat;
+      padding-top: 180px;
     }
-    
+
   }
-  
-  
+
   /* Style the counter cards */
   .card {
     padding: 16px;
     text-align: center;
-  
+
   }
-  
+
   ul.no-bullets {
     list-style-type: none;
     margin: 0;
@@ -57,11 +56,11 @@
     text-align: center;
     color: white;
   }
-  
+
   .footer-img{
    width: 112.5%;
    margin-left: -20px;
    border-style: solid 1px white;
   }
-  
+
   /* footer end */
