@@ -8,6 +8,7 @@ import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.com
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { FooterComponent } from './container/footer/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     
