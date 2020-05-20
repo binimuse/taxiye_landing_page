@@ -8,13 +8,13 @@ import { GetNewsService } from 'src/app/service/get-news.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private news :GetNewsService) { }
+  constructor(private news: GetNewsService) { }
 
   ngOnInit() {
-    console.log("test");
-    this.news.getNews().subscribe(resp =>{
+    console.log('test');
+    this.news.getNews().subscribe(resp => {
         console.log(resp);
-    })
+    });
   }
 
 }

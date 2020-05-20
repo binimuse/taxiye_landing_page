@@ -8,6 +8,13 @@ import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.com
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
+import { DriverSingupComponent } from './driver-singup/driver-singup.component';
+import { BookRideComponent } from './book-ride/book-ride.component';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.default
+};
 
 @NgModule({
   declarations: [
@@ -15,16 +22,17 @@ import { FooterComponent } from './container/footer/footer/footer.component';
     HomeComponent,
     NavBarComponent,
     DriverRegisterComponent,
-    FooterComponent
+    FooterComponent,
+    DriverSingupComponent,
+    BookRideComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgWizardModule.forRoot(ngWizardConfig),
   ],
-  providers: [
-    
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

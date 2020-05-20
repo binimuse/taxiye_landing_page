@@ -108,64 +108,43 @@
   margin-top: 35px;
   border-radius: 10%;
 }
+/* input form */
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: 15px;
+ 
+}
+.input-field {
+  width: 80%;
+  height: 40px;
+  padding-left: 20px;
+  outline: none;
+  color: black;
+   border-radius: 2px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.input-field:focus {
+  border: 2px solid dodgerblue;
 }
 
-#more {display: none;}
-
-.read-more {
-
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color:#950081;
-  color: white;
-  font-size: 16px;
-  padding: 10px 10px;
+/* Set a style for the submit button */
+.btns {
+  background-color: darkorange;
+  color: #950081;
   border: none;
   cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+  margin-left: 300px;
   border-radius: 5px;
-  text-align: center;
-  margin-left: 50%;
-  margin-top: 20px;
-  width: 50%;
+  font-size: 12px;
+  height: 30px;
 }
 
-.read-more:hover {
-  background-color: darkorange;
-}
-
-
-.img-taxiye {
-  border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
-  width: 150px; /* Set a small width */
-  background-color: white;
-  padding: 15px;
-  background-size: 100% !important;
-  background-repeat: no-repeat;
-  padding-top: 15px !important;
-
-}
-
-/* Add a hover effect (blue shadow) */
-.img-taxiye:hover {
-  box-shadow: 0 0 2px 1px white;
-}
-.icons{
-font-size:250%;
-color:#950081;
-float: left;
-padding-right: 50px;
+.btns:hover {
+  opacity: 1;
 }
