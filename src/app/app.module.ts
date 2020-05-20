@@ -8,6 +8,7 @@ import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.com
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
+
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
@@ -15,6 +16,9 @@ import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default
 };
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +35,11 @@ const ngWizardConfig: NgWizardConfig = {
     AppRoutingModule,
     HttpClientModule,
     NgWizardModule.forRoot(ngWizardConfig),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

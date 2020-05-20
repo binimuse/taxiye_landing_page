@@ -15,4 +15,7 @@ export class GetNewsService {
       return this.httpClient.get(AppConfig.apiRootUrl + '/taxiyes');
       // return this.httpClient.get(AppConfig.apiRootUrl + '/taxiyes');
     }
+    postImage(images){
+      return this.httpClient.post(AppConfig.apiRootUrl + "containers/imags/upload",images);
+    }
 }

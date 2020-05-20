@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetNewsService } from 'src/app/service/get-news.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,6 @@ export class HomeComponent implements OnInit {
     this.news.getNews().subscribe(resp => {
         console.log(resp);
     });
-  }
 
+  }
 }
