@@ -18,6 +18,8 @@ const ngWizardConfig: NgWizardConfig = {
 };
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.component';
+import { CorporateComponent } from './corporate/corporate.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     DriverSingupComponent,
     BookRideComponent,
+    VehiclePricingComponent,
+    CorporateComponent,
   ],
   imports: [
     BrowserModule,

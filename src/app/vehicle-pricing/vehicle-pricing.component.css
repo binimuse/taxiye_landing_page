@@ -1,0 +1,75 @@
+@media screen and (min-width: 601px) {
+  .example {
+    font-size: 15px;
+    padding-top: 20%;
+    padding-left: 50px;
+  }
+ .btn {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+}
+.btn:hover {background: #eee;}
+.big-text{
+    color: #fff;
+    font-size: 20pt;
+    line-height: 1em;
+}
+.always-moving{
+    color: #fff;
+    font-size: 20pt;
+    font-family: 'Leckerli One', cursive;
+    margin-top: 0;
+}
+  .taxiye{
+  margin-left: 10px;
+  border-radius: 10%;
+  width: 60%;
+}
+.vehicle{
+  width:100px;
+}
+.accordion{
+  background-color: rgba(51, 51, 51, 0.1);
+   border: 0px;
+   margin-top: 10px;
+   width: 600px;
+   height: auto;
+}
+.accordion__label,
+.accordion__content {
+  padding: 14px 20px;
+}
+
+.accordion__content {
+  line-height: 1.6;
+  font-size: 0.85em;
+  display: none;
+}
+
+.accordion__input {
+  display: none;
+}
+.accordion__input:checked ~ .accordion__content {
+  display: block;
+}
+.accordion__input:checked ~ .accordion__label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+
+}
+
+@media screen and (max-width: 600px){
+  .example {
+    font-size: 10px;
+  }
+.taxiye{
+  margin-left: 90sp;
+  border-radius: 10%;
+  width: 45%;
+}
+
+}
+
