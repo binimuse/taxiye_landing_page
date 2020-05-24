@@ -8,6 +8,15 @@ import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.com
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
+
+import { DriverSingupComponent } from './driver-singup/driver-singup.component';
+import { BookRideComponent } from './book-ride/book-ride.component';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.default
+};
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './admin/login/login.component';
 import { NotificationComponent } from './container/notification/notification.component';
@@ -18,6 +27,9 @@ import { AuthGuard } from './guard/auth.guard';
 import { ViewNewsComponent } from './admin/News/view-news/view-news.component';
 import { AddNewsComponent } from './admin/News/add-news/add-news.component';
 import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
+import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.component';
+import { CorporateComponent } from './corporate/corporate.component';
+
 
 @NgModule({
   declarations: [
@@ -33,18 +45,23 @@ import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
     AdminContainerComponent,
     ViewNewsComponent,
     AddNewsComponent,
-    EditNewsComponent
+    EditNewsComponent,
+    DriverSingupComponent,
+    BookRideComponent,
+    VehiclePricingComponent,
+    CorporateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
     ReactiveFormsModule
   ],
   providers: [
     AuthGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

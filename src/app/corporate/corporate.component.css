@@ -1,49 +1,11 @@
-
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
-@media screen and (min-width: 601px) {
-  .example {
-    font-size: 50px;
-    padding-top: 40%;
-    padding-right: 30%;
-  }
-  .taxiye{
-  margin-left: 10px;
-  border-radius: 10%;
-  width: 60%;
-}
-.title{
-  text-align: center;
-  color: #950081;
-}
-.lines{
-  width: 15%;
-  height: 4px;
-  background-color: #950081;
-  border-radius: 20%;
-   box-shadow: 3px 3px 3px #950081;
-  display: flex;
-  margin-left: 43%;
-}
-
-
-}
-
 @media screen and (max-width: 600px){
-  .example {
-    font-size: 20px;
-    padding-top: 40%;
-    padding-right: 20%;
-  }
-.taxiye{
-  margin-left: 90sp;
-  border-radius: 10%;
-  width: 45%;
-}
+  
 .title{
   text-align: center;
   color: #950081;
   font-size: 20px;
 }
+}
 .lines{
   width: 15%;
   height: 4px;
@@ -54,44 +16,20 @@
   margin-left: 43%;
 }
 
+
+.title{
+  text-align: center;
+  color: #950081;
 }
-/* header title start */
-.sign{
-  border-radius: 4px;
-  background-color: darkorange;
-  border: none;
-  color: #FFFFFF;
-  font-size: 18px;
-  width: 100px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+.page{
+
+  background:rgba(255,255,255,0.5);
 
 }
-.sign a:hover{
-  background-color: darkorchid;
-  width: 100px;
+.corporate-page{
+  padding: 20px;
+ 
 }
-.sign a{
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.sign:hover a:after{
-  opacity: 1;
-  right: 0;
-}
-/* header title end */
-
-/* guidelines content start */
-video{
-  width: 100%;
-  height: 400px;
-
-}
-/* guidelines content end */
-
 
 /* slideshow content start  */
 input {
@@ -125,7 +63,7 @@ input {
   box-shadow: 3px 3px 20px #950081;
 }
 .feedback{
-  width: 600px;
+  width: 300px;
 }
 
 span {
@@ -217,11 +155,8 @@ label {
   background-color: white;
   margin-top: 20px;
 }
-
-
 }
 
-/* slideshow content end */
 
 /* FAQ accordion start */
 
@@ -229,10 +164,11 @@ label {
   .faq{
   font-size: 15px;
   width: 100%;
+  
 }
 .accordion{
   width: 100%;
-  padding-left: 10px;
+  padding-left: 1px;
   
 }
 .icons{
@@ -254,16 +190,4 @@ label {
 }
 }
 /* ena of FQA */
-/* button style */
-.btns {
-  border: 5px solid #e2a320;
-  background-color: transparent;
-  color: white;
-  padding: 4% 9%;
-  cursor: pointer;
-  border-radius: 25px;
-}
-.btns:hover{
-  background-color: #950081;
-  color: white;
-}
+

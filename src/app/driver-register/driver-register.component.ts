@@ -12,4 +12,6 @@ export class DriverRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  // for jquery code
+
 }

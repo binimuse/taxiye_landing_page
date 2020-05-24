@@ -1,0 +1,154 @@
+/* windows resolution */
+@media screen and (min-width: 601px) {
+  .example {
+    font-size: 30px;
+    padding-top: 30%;
+    padding-left: 20px;
+  }
+  .taxiye{
+  margin-left: 10px;
+  border-radius: 10%;
+  width: 60%;
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+}
+.download{
+  padding-left: 30px;
+}
+.download img{
+ width: 200px;
+ padding-right:30px;
+}
+}
+/* mobile resolution */
+@media screen and (max-width: 600px){
+  .example {
+    font-size: 12px;
+    padding-top: 25%;
+    padding-left: 8px;
+
+  }
+.taxiye{
+  margin-left: 90sp;
+  border-radius: 10%;
+  width: 45%;
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 2px;
+}
+.download{
+  padding-left: 10px;
+}
+.download img{
+ width: 105px;
+ padding-right:15px;
+}
+}
+
+.btn:hover {background: #eee;}
+.big-text{
+    color: #fff;
+    font-size: 20pt;
+    line-height: 1em;
+}
+.always-moving{
+    color: #fff;
+    font-size: 20pt;
+    font-family: 'Leckerli One', cursive;
+    margin-top: 0;
+}
+.header-2{
+    font-size: 20px;
+}
+.lines{
+  width: 15%;
+  height: 4px;
+  background-color: #950081;
+  border-radius: 20%;
+   box-shadow: 3px 3px 3px #950081;
+  display: flex;
+  margin-left: 43%;
+}
+
+@media (max-width: 601px) {
+    #first_header{
+        padding-top: 0;
+
+    }
+    #min-padding{
+        padding-top: 0;
+    }
+}
+@media (min-width: 601px) {
+    #first_header{
+        padding-top: 100;
+
+    }
+    #min-padding{
+        padding-top: 100;
+    }
+}
+
+.title{
+  text-align: center;
+  color: #950081;
+}
+.taxiye{
+  margin-left: 90px;
+  margin-top: 35px;
+  border-radius: 10%;
+}
+/* input form */
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: 15px;
+
+}
+.input-field {
+  width: 80%;
+  height: 40px;
+  padding-left: 20px;
+  outline: none;
+  color: black;
+   border-radius: 2px;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btns {
+  background-color: darkorange;
+  color: #950081;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+  margin-left: 300px;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+}
+
+.btns:hover {
+  opacity: 1;
+}
+
+
+
+
