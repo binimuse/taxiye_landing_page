@@ -11,15 +11,13 @@ import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.compo
 
 const routes: Routes = [
   {
-    path : '',
-    component : HomeComponent
+    path : '', component : HomeComponent
 },
 {
   path: 'nav', component: NavBarComponent
 },
 {
-  path : 'header',
-  component : NavBarComponent
+  path : 'header', component : NavBarComponent
 },
 {
   path: 'driver', component: DriverRegisterComponent

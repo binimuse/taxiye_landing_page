@@ -11,12 +11,6 @@ import { FooterComponent } from './container/footer/footer/footer.component';
 
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
-import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
-
-const ngWizardConfig: NgWizardConfig = {
-  theme: THEME.default
-};
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.component';
 import { CorporateComponent } from './corporate/corporate.component';
@@ -38,7 +32,6 @@ import { CorporateComponent } from './corporate/corporate.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
     ReactiveFormsModule
   ],

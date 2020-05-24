@@ -2,7 +2,7 @@
 <div class="w3-display-topleft w3-text-white same_padding">
 
   <div class="example">
-    <!-- <div class="form-container">
+    <div class="form-container">
       <form action="" role="form">
 
         <input id='step2' type='checkbox'>
@@ -20,13 +20,13 @@
             <input type="text" id="name" class="form-control" placeholder="Full Name" aria-describedby="sizing-addon1">
             <div class="btn-group btn-group-lg" role="group" aria-label="...">
               <label for='step2' id="continue-step2" class="continue">
-                <div class="btn btn-primary text-white py-2 px-4 btn-block">Continue</div>
+                <div class="btn btn-primary text-white py-2 px-4 btn-block" ng-model="ishidden">Continue</div>
               </label>
             </div>
           </div>
         </div>
 
-        <div id="part2" class="form-group">
+        <div id="part2" class="form-group" ng-hide="ishidden">
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Part 2</h3>
@@ -85,19 +85,10 @@
           </div>
         </div>
       </form>
-    </div> -->
+    </div>
   </div>
 </div>
 
 <div class="carousel-item">
   <img src="\assets\image\2.png" width="100%" alt="Los Angeles">
 </div>
-
-
-
-
-
-
-
-
-
