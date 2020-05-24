@@ -254,5 +254,16 @@ label {
 }
 }
 /* ena of FQA */
-
-
+/* button style */
+.btns {
+  border: 5px solid #e2a320;
+  background-color: transparent;
+  color: white;
+  padding: 4% 9%;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.btns:hover{
+  background-color: #950081;
+  color: white;
+}
