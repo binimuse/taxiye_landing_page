@@ -14,7 +14,11 @@ export class GetNewsService {
     getNews(){
       return this.httpClient.get(AppConfig.apiRootUrl + "/taxiyes");
     }
+    postNews(news){
+      return this.httpClient.post(AppConfig.apiRootUrl + "/taxiyes",news)
+    }
     postImage(images){
       return this.httpClient.post(AppConfig.apiRootUrl + "containers/imags/upload",images);
     }
+    
 }

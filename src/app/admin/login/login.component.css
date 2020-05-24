@@ -1,0 +1,21 @@
+.login-box {
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+.btn-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

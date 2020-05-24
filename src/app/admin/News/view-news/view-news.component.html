@@ -1,0 +1,43 @@
+<div class="row">
+  <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+    src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+</div>
+<div class="row">
+  <div class=" w3-section col-sm-3" style="height: 420px;" *ngFor="let news of news">
+    <div class="w3-card-4">
+      <img src="http://localhost:3000{{news.image_url}}" style="width:100%">
+      <div class="w3-container w3-white">
+        <h4><strong>{{news.news_header}}</strong></h4>
+        <p class="text-body">{{news.details}}</p>
+        <button type="button" class="btn btn-primary read-more" (click)="modal_view(news)" data-toggle="modal" data-target="#myModal">
+          Read More
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img src="http://localhost:3000{{single_news.image_url}}" style="width:100%">
+          <h4 class="modal-title"><strong>{{single_news.news_header}}</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          {{single_news.details}}
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

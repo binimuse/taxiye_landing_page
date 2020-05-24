@@ -9,6 +9,15 @@ import { DriverRegisterComponent } from './driver-register/driver-register.compo
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './admin/login/login.component';
+import { NotificationComponent } from './container/notification/notification.component';
+import { AdminHomePageComponent } from './admin/admin-home-page/admin-home-page.component';
+import { AdminSideBarComponent } from './admin/admin-side-bar/admin-side-bar.component';
+import { AdminContainerComponent } from './admin/admin-container/admin-container.component';
+import { AuthGuard } from './guard/auth.guard';
+import { ViewNewsComponent } from './admin/News/view-news/view-news.component';
+import { AddNewsComponent } from './admin/News/add-news/add-news.component';
+import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +25,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     NavBarComponent,
     DriverRegisterComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    NotificationComponent,
+    AdminHomePageComponent,
+    AdminSideBarComponent,
+    AdminContainerComponent,
+    ViewNewsComponent,
+    AddNewsComponent,
+    EditNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +43,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
