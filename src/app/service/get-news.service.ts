@@ -21,5 +21,9 @@ export class GetNewsService {
     postImage(images){
       return this.httpClient.post(AppConfig.apiRootUrl + "containers/imags/upload",images);
     }
+    updateNews(id,news){
+      return this.httpClient.post(AppConfig.apiRootUrl + "/taxiyes/update" +
+      `?where[id]=`+id,news)
+    }
     
 }

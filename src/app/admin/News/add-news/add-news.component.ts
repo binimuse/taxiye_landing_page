@@ -14,7 +14,7 @@ export class AddNewsComponent implements OnInit {
   news_form = new FormGroup({
     news_header :new FormControl("",Validators.required),
     details :new FormControl("",Validators.required),
-    image_url : new FormControl(""),
+    image_url : new FormControl("",Validators.required),
     date : new FormControl("")
   })
   message: NotificationModel;
@@ -44,7 +44,7 @@ export class AddNewsComponent implements OnInit {
      this.newsService.postImage(fd).subscribe((resp:any)=>{
        console.log(resp);
        console.log(resp.result.files.image[0].name);
-       this.news_form.value.image_url="/api/Containers/imags/download/"+resp.result.files.image[0].name;
+       this.news_form.value.image_url="http://localhost:3000/api/Containers/imags/download/"+resp.result.files.image[0].name;
        this.news_form.value.date = this.date;
        console.log(this.news_form.value);
        this.newsService.postNews(this.news_form.value).subscribe(resp=>{

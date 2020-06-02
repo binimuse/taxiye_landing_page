@@ -14,6 +14,7 @@ import { ViewNewsComponent } from './admin/News/view-news/view-news.component';
 import { AddNewsComponent } from './admin/News/add-news/add-news.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
 import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.component';
+import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,10 @@ const routes: Routes = [
     {
       path : "add_news",
       component : AddNewsComponent
+    },
+    {
+      path : "edit_news",
+      component : EditNewsComponent
     }
     
 
