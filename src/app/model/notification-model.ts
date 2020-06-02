@@ -1,4 +1,4 @@
 export class NotificationModel {
-    status :string;
-    message : string;
+    status: string;
+    message: string;
 }

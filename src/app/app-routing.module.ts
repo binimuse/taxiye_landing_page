@@ -1,3 +1,6 @@
+import { OfficesComponent } from './offices/offices.component';
+import { FqaComponent } from './fqa/fqa.component';
+import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
 import { CorporateComponent } from './corporate/corporate.component';
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
@@ -28,18 +31,16 @@ const routes: Routes = [
   canLoad : [AuthGuard],
   children : [
     {
-      path : "hompage",
-      component : AdminHomePageComponent,
+      path : 'homepage', component : AdminHomePageComponent,
     },
     {
-      path : "news",
-      component : ViewNewsComponent,
+      path : 'news',
+      component: ViewNewsComponent,
     },
     {
-      path : "add_news",
-      component : AddNewsComponent
+      path : 'add_news', component : AddNewsComponent
     }
-    
+
 
   ]
 },
@@ -48,7 +49,7 @@ const routes: Routes = [
     component : LoginComponent
 },
 {
-  path:"nav",
+  path: 'nav',
   component: NavBarComponent
 },
 {
@@ -68,6 +69,15 @@ const routes: Routes = [
   },
   {
     path: 'corporate', component: CorporateComponent
+  },
+  {
+   path: 'corporate-signup', component: CorporateSignupComponent
+  },
+  {
+  path: 'FQA', component: FqaComponent
+  },
+  {
+    path: 'offices', component: OfficesComponent
   }
 ];
 
@@ -75,4 +85,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

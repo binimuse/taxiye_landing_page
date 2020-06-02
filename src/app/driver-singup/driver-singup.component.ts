@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgWizardConfig, THEME, StepChangedArgs, NgWizardService } from 'ng-wizard';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-driver-singup',

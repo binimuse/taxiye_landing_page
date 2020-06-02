@@ -23,15 +23,15 @@
     font-family: 'Leckerli One', cursive;
     margin-top: 0;
 }
-  .taxiye{
+  .taxiye {
   margin-left: 10px;
   border-radius: 10%;
   width: 60%;
 }
-.vehicle{
+.vehicle {
   width:100px;
 }
-.accordion{
+.accordion {
   background-color: rgba(51, 51, 51, 0.1);
    border: 0px;
    margin-top: 10px;
@@ -42,13 +42,95 @@
 .accordion__content {
   padding: 14px 20px;
 }
-
 .accordion__content {
   line-height: 1.6;
-  font-size: 0.85em;
+  font-size: 1em;
+  display: none;
+  margin-left: 90px;
+  margin-top: -50px;
+}
+.accordion__input {
   display: none;
 }
+.accordion__input, .accordion__label img{
+  filter: grayscale(0%);
+}
+.accordion__input:checked, .accordion__label::after img {
+  filter: grayscale(100%);
+}
+.accordion__input:checked ~ .accordion__content {
+  display: block;
 
+}
+.accordion__input:checked ~ .accordion__label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+.driver-img{
+  height: 700px;
+}
+.title{
+  padding-left: 30px;
+}
+
+}
+@media screen and (max-width: 601px){
+  .example {
+    font-size: 20px;
+    padding-top: 20%;
+    padding-left: 30px;
+
+  }
+  .taxiye{
+  margin-left: 90sp;
+  border-radius: 10%;
+  width: 45%;
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 1px;
+}
+.btn:hover {background: #eee;}
+.big-text{
+    color: #fff;
+    font-size: 20pt;
+    line-height: 0.5em;
+}
+.always-moving{
+    color: #fff;
+    font-size: 20pt;
+    font-family: 'Leckerli One', cursive;
+    margin-top: 0;
+}
+.taxiye{
+  margin-left: 10px;
+  border-radius: 10%;
+  width: 60%;
+}
+.vehicle{
+  width:50px;
+  margin-top: -40px;
+}
+.accordion{
+  background-color: rgba(51, 51, 51, 0.1);
+  border: 0px;
+  margin-top: 10px;
+  width: 300px;
+}
+.accordion__label,
+.accordion__content {
+  padding: 10px 15px;
+}
+.accordion__content {
+  line-height: 1;
+  font-size: 0.4em;
+  display: none;
+  margin-left: 40px;
+  margin-top: -40px;
+}
 .accordion__input {
   display: none;
 }
@@ -58,18 +140,14 @@
 .accordion__input:checked ~ .accordion__label::after {
   transform: translateY(-50%) rotate(0.5turn);
 }
-
+.driver-img{
+  height: 330px;
 }
-
-@media screen and (max-width: 600px){
-  .example {
-    font-size: 10px;
-  }
-.taxiye{
-  margin-left: 90sp;
-  border-radius: 10%;
-  width: 45%;
+.title{
+  font-size: 0.80em;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 }
-

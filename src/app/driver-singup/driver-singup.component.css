@@ -4,165 +4,82 @@
     padding-top: 30%;
     padding-left: 20px;
   }
-  .taxiye{
-  margin-left: 10px;
-  border-radius: 10%;
-  width: 60%;
-}
-.btn {
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 20px;
-}
-.download{
-  padding-left: 30px;
-}
-.download img{
- width: 200px;
- padding-right:30px;
-}
-}
-/* mobile resolution */
-@media screen and (max-width: 500px){
-
-.form-container {
-  width: 10%;
-  max-width: 100px;
-
-
-}
-  input[type=text], input[type=email], input[type=phone], input[type=number], textarea {
-    width: 100px;
-    margin: 20px auto;
-    border: 1px solid white;
-    box-shadow: 0 0 1px 1px white;
-
-  }
-  .form-group{
-background-color: rgba(0, 0, 0, .3);
-  }
-  .panel-primary{
-    background-color: rgba(0, 0, 0, .3);
-    height: 100px;
-  }
-
-  textarea {
-    min-height: 150px;
-  }
-  .panel-heading {
-      margin-bottom: 20px;
-    }
-  .btn-group {
-    width: 90%;
-    margin: 0 auto 10px auto;
-  }
-  .back {
-    float: left;
-  }
-  .continue {
-    float: right;
-  }
-
+  .login-box {
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
 }
 
-
-
-.form-container {
+.center-div {
   width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
+  height: 100%;
+  margin-top: -300px;
+}
+
+.btn-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-  input[type=text], input[type=email], input[type=phone], input[type=number], textarea {
-    width: 90%;
-    margin: 20px auto;
-    border: 1px solid white;
-    box-shadow: 0 0 1px 1px white;
+.buttons{
+ margin-left: 300px;
+}
 
-  }
-  .form-group{
-background-color: rgba(0, 0, 0, .3);
-  }
+}
 
-  textarea {
-    min-height: 150px;
-  }
-  .panel-heading {
-      margin-bottom: 20px;
-    }
-  .btn-group {
-    width: 90%;
-    margin: 0 auto 10px auto;
-  }
-  .back {
-    float: left;
-  }
-  .continue {
-    float: right;
-  }
+/* mobile resolution */
+@media screen and (max-width: 600px){
+}
 
-
-/* Multi-Part CSS */
+/* Position the checkbox in upper left corner & hide */
 input[type=checkbox] {
   position: absolute;
-  /* Position the checkbox in upper left corner */
-
-  opacity: 0;
+  visibility: hidden;
 }
+
 
 /* Styling Parts */
 #part1,
 #part2,
-#part3,
-#part4 {
-  z-index: 2;
+#part3 {
   display: block;
-  height: auto;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
-/* Hidden Parts */
+
+/* Hide Parts 2 & 3 on Page Load */
 #part2,
-#part3,
- #part4 {
+#part3 {
   opacity: 0;
   height: 0;
   overflow: hidden;
 }
 
-/* Show Step 2 & Hide Step 1 */
+
+/* Show Step 2 */
 #step2:checked ~ #part2 {
   opacity: 1;
   height: auto;
 }
+
+/* Hide Step 1 */
 #step2:checked ~ #part1 {
   opacity: 0;
   height: 0;
-  display: none;
 }
 
-/* Show Step 3  & Hide Step 2 */
-
+/* Show Step 3 */
 #step3:checked ~ #part3 {
   opacity: 1;
   height: auto;
 }
+
+/* Hide Step 2 */
 #step3:checked ~ #part2 {
   opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-#step4:checked ~ #part4 {
-  opacity: 1;
-  height: auto;
-}
-#step4:checked ~ #part3 {
-  opacity: 0;
-  width: 0;
   height: 0;
 }
 
