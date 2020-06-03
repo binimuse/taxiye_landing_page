@@ -12,31 +12,31 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   // form data values
-  login_form=new FormGroup({
-    email : new FormControl("",Validators.email),
-    password : new FormControl("",Validators.required)
-  })
+  login_form = new FormGroup({
+    email: new FormControl('', Validators.email),
+    password: new FormControl('', Validators.required)
+  });
   // notification message
-  message : NotificationModel;
+  message: NotificationModel;
 
 
 
-  constructor(private auteservice : AuteServiceService,private router: Router) { }
+  constructor(private auteservice: AuteServiceService, private router: Router) { }
 
   ngOnInit() {
   }
   // send login api request
-  login(){
+  login() {
     console.log(this.login_form.value);
-    this.auteservice.userLogin(this.login_form.value).subscribe((resp:any)=>{
+    this.auteservice.userLogin(this.login_form.value).subscribe((resp: any) => {
       this.message = this.auteservice.checkForAuthentication(resp);
       this.router.navigate(['admin/hompage']);
     },
-    err=>{
+    err => {
       console.log(err);
       this.message = this.auteservice.checkForAuthentication(err);
     }
-    )
+    );
   }
-  
+
 }

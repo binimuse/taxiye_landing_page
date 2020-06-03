@@ -1,0 +1,140 @@
+/* windows resolution */
+@media screen and (min-width: 601px) {
+  .example {
+    font-size: 30px;
+    padding-top: 20%;
+    padding-left: 50px;
+
+  }
+  .taxiye{
+  margin-left: 10px;
+  border-radius: 10%;
+  width: 60%;
+}
+.login-box {
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+  margin-left: 30px
+}
+.card-body{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.title1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 100px;
+
+}
+.title{
+font-size: 15px;
+ color: #fff;
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.btn-center{
+    display: flex;
+    justify-content: center;
+   padding-left:300px;
+   border-radius: 5px;
+   bottom: 20px;
+   padding-bottom: 20px;
+}
+
+}
+/* mobile resolution */
+@media screen and (max-width: 601px){
+  .example {
+    font-size: 15px;
+    padding-top: 20%;
+    padding-left: 8px;
+
+  }
+  .taxiye{
+   margin-left: 90sp;
+  border-radius: 10%;
+  width: 45%;
+  }
+.btn {
+  border: none;
+  background-color: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 2px;
+}
+
+.login-box {
+  display: flex;
+  justify-content: left;
+  vertical-align: left;
+  align-items: left;
+  margin-left: 20px
+ }
+.card-body{
+  padding-left: 50px;
+  padding-right: 50px;
+ }
+.title1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 50px;
+   font-size: 15px;
+ }
+.title{
+font-size: 8px;
+color: #fff;
+ }
+
+.center-div {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 100%;
+ }
+.btn-center{
+  display: flex;
+  justify-content: center;
+  padding-left:100px;
+  border-radius: 5px;
+  bottom: 20px;
+  padding-bottom: 10px;
+ }
+
+}
+
+.btn:hover {background: #eee;}
+.big-text{
+    color: #fff;
+    font-size: 20pt;
+    line-height: 1em;
+}
+
+
+@media (max-width: 601px) {
+    #first_header{
+        padding-top: 0;
+
+    }
+    #min-padding{
+        padding-top: 0;
+    }
+}
+@media (min-width: 601px) {
+    #first_header{
+        padding-top: 100;
+
+    }
+    #min-padding{
+        padding-top: 100;
+    }
+}
+
+#more {display: none;}

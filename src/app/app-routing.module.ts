@@ -1,3 +1,6 @@
+import { OfficesComponent } from './offices/offices.component';
+import { FqaComponent } from './fqa/fqa.component';
+import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
 import { CorporateComponent } from './corporate/corporate.component';
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
@@ -19,8 +22,7 @@ import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 
 const routes: Routes = [
   {
-    path : '',
-    component : HomeComponent
+    path : '', component : HomeComponent
 },
 {
   path : 'admin',
@@ -30,12 +32,11 @@ const routes: Routes = [
   canLoad : [AuthGuard],
   children : [
     {
-      path : "hompage",
-      component : AdminHomePageComponent,
+      path : 'homepage', component : AdminHomePageComponent,
     },
     {
-      path : "news",
-      component : ViewNewsComponent,
+      path : 'news',
+      component: ViewNewsComponent,
     },
     {
       path : "add_news",
@@ -45,7 +46,7 @@ const routes: Routes = [
       path : "edit_news",
       component : EditNewsComponent
     }
-    
+
 
   ]
 },
@@ -54,12 +55,11 @@ const routes: Routes = [
     component : LoginComponent
 },
 {
-  path:"nav",
+  path: 'nav',
   component: NavBarComponent
 },
 {
-  path : 'header',
-  component : NavBarComponent
+  path : 'header', component : NavBarComponent
 },
 {
   path: 'driver', component: DriverRegisterComponent
@@ -75,6 +75,15 @@ const routes: Routes = [
   },
   {
     path: 'corporate', component: CorporateComponent
+  },
+  {
+   path: 'corporate-signup', component: CorporateSignupComponent
+  },
+  {
+  path: 'FQA', component: FqaComponent
+  },
+  {
+    path: 'offices', component: OfficesComponent
   }
 ];
 
@@ -82,4 +91,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

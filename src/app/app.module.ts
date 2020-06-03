@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home_page/home/home.component';
@@ -29,6 +28,9 @@ import { AddNewsComponent } from './admin/News/add-news/add-news.component';
 import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.component';
 import { CorporateComponent } from './corporate/corporate.component';
+import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
+import { FqaComponent } from './fqa/fqa.component';
+import { OfficesComponent } from './offices/offices.component';
 
 
 @NgModule({
@@ -50,14 +52,17 @@ import { CorporateComponent } from './corporate/corporate.component';
     BookRideComponent,
     VehiclePricingComponent,
     CorporateComponent,
+    CorporateSignupComponent,
+    FqaComponent,
+    OfficesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [
     AuthGuard

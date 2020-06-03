@@ -8,34 +8,31 @@ import { AuteServiceService } from '../service/aute-service.service';
 })
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
 
-  constructor(private AuthService : AuteServiceService, private route :Router){
+  constructor(private AuthService : AuteServiceService, private route: Router) {
 
   }
   canActivate(){
-    if(this.AuthService.loggedIn()){
-      return true
-    }
-    else{
+    if (this.AuthService.loggedIn()) {
+      return true;
+    } else {
       this.route.navigate(['taxiyeadmin']);
-      return false
+      return false;
     }
   }
   canActivateChild(){
-    if(this.AuthService.loggedIn()){
-      return true
-    }
-    else{
+    if (this.AuthService.loggedIn()) {
+      return true;
+    } else {
       this.route.navigate(['taxiyeadmin']);
-      return false
+      return false;
     }
   }
   canLoad(){
-    if(this.AuthService){
-      return true
-    }
-    else{
+    if (this.AuthService) {
+      return true;
+    } else {
       this.route.navigate(['taxiyeadmin']);
-      return false
+      return false;
     }
   }
 
