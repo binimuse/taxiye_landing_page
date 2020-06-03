@@ -7,7 +7,6 @@ import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.com
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
-
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
 // import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
@@ -31,7 +30,9 @@ import { CorporateComponent } from './corporate/corporate.component';
 import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
 import { FqaComponent } from './fqa/fqa.component';
 import { OfficesComponent } from './offices/offices.component';
+import { AgmCoreModule } from '@agm/core';
 
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -62,11 +63,12 @@ import { OfficesComponent } from './offices/offices.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCRNebshVW6XSdv4X2Nxm3FGIt3qbA7UKU',
+    }),
 
   ],
-  providers: [
-    AuthGuard
-  ],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

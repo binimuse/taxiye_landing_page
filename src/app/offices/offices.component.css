@@ -1,12 +1,23 @@
-   .map {
-    z-index: 3; 
-    position: absolute;
-     height: 100%; 
-     width: 100%; 
-    padding: 0px; 
-    border-width: 0px; 
-    margin: 0px;
-     left: 0px;
-      top: 0px; 
-      touch-action: pan-x pan-y;
-   }
+ agm-map{
+   height: 550px;
+ }
+.title{
+  text-align: center;
+  color: #950081;
+  font-size: 25px;
+}
+.lines{
+  width: 15%;
+  height: 4px;
+  background-color: #950081;
+  border-radius: 20%;
+  box-shadow: 3px 3px 3px #950081;
+  display: flex;
+  margin-left: 43%;
+}
+.titles{
+  margin-left: 60px;
+  text-align: center;
+  color: #950081;
+  font-size: 20px;
+}
