@@ -1,3 +1,41 @@
-<div #mapContainer class="map">
+<app-nav-bar></app-nav-bar>
+<div class="w3-container w3-white">
+  <div class="w3-container w3-padding-32 w3-theme-d1">
+    <h1 class="title">Taxiye Offices </h1><br>
+    <div class="lines"></div>
+  </div>
+<agm-map [latitude]="lat" [longitude]="lng" [maxZoom]="6" [scrollwheel]="false" [mapTypeControl]="true">
+  <agm-marker [latitude]="8.99958" [longitude]="38.820551" title="Taxiye" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="8.7470477" [longitude]="38.981003" title="Bishoftu" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="7.0421716" [longitude]="38.4448537" title="Awassa" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="13.4899926" [longitude]="39.4686699" title="Mekele" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="11.589541" [longitude]="37.3866263" title="Bihar Dar" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="12.613171" [longitude]="37.471023" title="Gondar" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="8.537969" [longitude]="39.255904" title="Adama" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+  <agm-marker [latitude]="9.606796" [longitude]="41.8493225" title="Adama" [iconUrl]="'assets/image/marker.png'">
+  </agm-marker>
+</agm-map>
 
 </div>
+
+<div class="w3-container w3-white">
+  <div class="w3-container w3-padding-32 w3-theme-d1">
+    <h1 class="title">Coming Soon</h1><br>
+    <div class="lines"></div>
+  </div>
+
+  <div class="w3-center">
+  <span class="titles"> Arbamench</span> <span class="titles">Kenya</span> <span class="titles">Uganda</span><br><br>
+  <span class="titles">Tanzaniya</span> <span class="titles">Gambela</span><br><br>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
