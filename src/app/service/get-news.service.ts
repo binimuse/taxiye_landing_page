@@ -19,4 +19,9 @@ export class GetNewsService {
     postNews(news) {
       return this.httpClient.post(AppConfig.apiRootUrl + '/taxiyes', news);
     }
+    updateNews(id,news){
+      return this.httpClient.post(AppConfig.apiRootUrl + "/taxiyes/update" +
+      `?where[id]=`+id,news)
+    }
+    
 }

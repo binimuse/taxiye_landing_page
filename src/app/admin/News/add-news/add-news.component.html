@@ -13,10 +13,10 @@
     <textarea formControlName="details" class="form-control" rows="5" id="comment"></textarea>
  
     <label for="comment">Image</label>
-    <input type="file" (change)="onFileSelected($event)" class="form-control-file border btn-success">
+    <input type="file" formControlName="image_url" (change)="onFileSelected($event)" class="form-control-file border btn-success">
     <app-notification [message]= "message"></app-notification>
 
-    <input type="submit" class="btn-success" (click)="addNews()"/>
+    <input type="submit" [disabled]="news_form.invalid" class="btn-success" (click)="addNews()"/>
  </div>
     
 </div>
