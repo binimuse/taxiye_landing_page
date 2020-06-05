@@ -31,7 +31,6 @@ import { CorporateSignupComponent } from './corporate-signup/corporate-signup.co
 import { FqaComponent } from './fqa/fqa.component';
 import { OfficesComponent } from './offices/offices.component';
 import { AgmCoreModule } from '@agm/core';
-import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { from } from 'rxjs';
 
 @NgModule({
@@ -66,7 +65,6 @@ import { from } from 'rxjs';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCRNebshVW6XSdv4X2Nxm3FGIt3qbA7UKU',
     }),
-    AgmSnazzyInfoWindowModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
