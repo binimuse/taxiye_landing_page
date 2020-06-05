@@ -1,0 +1,26 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+    src="./assets/image/cor2.png" alt="" width="100%">
+  </div>
+  
+  <div class="w3-card-4" style="padding: 10px;">
+      <h3 style="text-align: center;">Add Corporate</h3>
+   <div class="form-group" [formGroup]="corporate_form">
+      <label for="usr">Corporate Name</label>
+      <input formControlName="corporate_name" type="text" class="form-control" id="usr">
+
+      <label for="name">Full Name</label>
+      <input formControlName="full_name" type="text" class="form-control" id="name">
+
+      <label for="comment">Corporate Feedback</label>
+      <textarea formControlName="feed_up" class="form-control" rows="5" id="comment"></textarea>
+   
+      <label for="comment">Corporate Logo</label>
+      <input type="file"  (change)="onFileSelected($event)" class="form-control-file border btn btn-success">
+      <app-notification [message]= "message"></app-notification>
+        <br>
+      <input type="submit" [disabled]="corporate_form.invalid" class="btn btn-success" (click)="addcorporate()"/>
+   </div> 
+      
+  </div>
+  

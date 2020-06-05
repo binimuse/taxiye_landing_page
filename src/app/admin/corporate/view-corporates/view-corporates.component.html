@@ -1,0 +1,18 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/cor2.png" alt="" width="100%">
+  </div>
+  <div class="row" *ngIf="corporates">
+    <div class=" w3-section col-sm-3" style="height: 420px;" *ngFor="let corporate of corporates">
+      <div class="w3-card-4">
+        <img src="{{corporate.corporate_logo}}" style="width:100%">
+        <div class="w3-container w3-white">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div *ngIf="corporates.length ==0">
+      <h3>There are no news</h3>
+    </div>
+  

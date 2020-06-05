@@ -18,6 +18,8 @@ import { AddNewsComponent } from './admin/News/add-news/add-news.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
 import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.component';
 import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
+import { AddCorporatesComponent } from './admin/corporate/add-corporates/add-corporates.component';
+import { ViewCorporatesComponent } from './admin/corporate/view-corporates/view-corporates.component';
 
 
 const routes: Routes = [
@@ -32,7 +34,8 @@ const routes: Routes = [
   canLoad : [AuthGuard],
   children : [
     {
-      path : 'homepage', component : AdminHomePageComponent,
+      path : 'homepage',
+      component : AdminHomePageComponent,
     },
     {
       path : 'news',
@@ -45,8 +48,15 @@ const routes: Routes = [
     {
       path : "edit_news",
       component : EditNewsComponent
+    },
+    {
+      path : "add_corporate",
+      component : AddCorporatesComponent
+    },
+    {
+      path : "view_corporate",
+      component : ViewCorporatesComponent
     }
-
 
   ]
 },

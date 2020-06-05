@@ -6,21 +6,29 @@
   
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
-                  <a href="#" routerLink="hompage">
+                  <a href="#" routerLink="/admin/homepage">
                   <i class="fa fa-dashboard fa-lg"></i> Dashboard
                   </a>
                 </li>
 
-                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                <li  data-toggle="collapse" data-target="#news" class="collapsed active">
                   <a><i class="fa fa-gift fa-lg"></i> News <span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse" id="products">
+                <ul class="sub-menu collapse" id="news">
                     <li routerLink="/admin/news"><a>View News</a></li>
                     <li><a routerLink="/admin/add_news">Add News</a></li>
                     <li><a routerLink="/admin/edit_news">Edit News</a></li>
                     
                 </ul>
-
+                <li  data-toggle="collapse" data-target="#corporate" class="collapsed active">
+                  <a><i class="fa fa-gift fa-lg"></i> Corporate <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="corporate">
+                    <li routerLink="/admin/view_corporate"><a>View Corporate</a></li>
+                    <li><a routerLink="/admin/add_corporate">Add Corporate</a></li>
+                    <li><a routerLink="/admin/edit_news">Edit News</a></li>
+                    
+                </ul>
 
                 <li data-toggle="collapse" data-target="#service" class="collapsed">
                   <a><i class="fa fa-globe fa-lg"></i> Auswertungen <span class="arrow"></span></a>

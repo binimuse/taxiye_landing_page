@@ -23,7 +23,10 @@ export class AuteServiceService {
       localStorage.setItem("token" , login_repo.id);
       return message
     }
-
+    if(login_repo = "success"){
+      let message : NotificationModel = {"status": "success","message":"Success full"};
+      return message
+    }
     // login failures 
 
     

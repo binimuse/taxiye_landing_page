@@ -33,6 +33,8 @@ import { OfficesComponent } from './offices/offices.component';
 import { AgmCoreModule } from '@agm/core';
 
 import { from } from 'rxjs';
+import { AddCorporatesComponent } from './admin/corporate/add-corporates/add-corporates.component';
+import { ViewCorporatesComponent } from './admin/corporate/view-corporates/view-corporates.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { from } from 'rxjs';
     CorporateSignupComponent,
     FqaComponent,
     OfficesComponent,
+    AddCorporatesComponent,
+    ViewCorporatesComponent,
   ],
   imports: [
     BrowserModule,

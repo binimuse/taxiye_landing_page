@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetNewsService } from 'src/app/service/get-news.service';
+import { AppConfig } from 'src/app/config_file/app-config';
 
 @Component({
   selector: 'app-view-news',
