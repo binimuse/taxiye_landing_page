@@ -9,12 +9,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
-// import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
-
-// const ngWizardConfig: NgWizardConfig = {
-//   theme: THEME.default
-// };
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './admin/login/login.component';
 import { NotificationComponent } from './container/notification/notification.component';
@@ -32,7 +27,8 @@ import { FqaComponent } from './fqa/fqa.component';
 import { OfficesComponent } from './offices/offices.component';
 import { AgmCoreModule } from '@agm/core';
 import { from } from 'rxjs';
-
+import { FormWizardModule } from 'angular-wizard-form';
+import { Ng2TelInputModule } from 'ng2-tel-input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,8 +59,12 @@ import { from } from 'rxjs';
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCRNebshVW6XSdv4X2Nxm3FGIt3qbA7UKU',
+      // tslint:disable-next-line: quotemark
+      apiKey: "AIzaSyCRNebshVW6XSdv4X2Nxm3FGIt3qbA7UKU",
     }),
+    SlickCarouselModule,
+    FormWizardModule,
+    Ng2TelInputModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

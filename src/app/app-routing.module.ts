@@ -1,3 +1,4 @@
+
 import { OfficesComponent } from './offices/offices.component';
 import { FqaComponent } from './fqa/fqa.component';
 import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
@@ -22,69 +23,79 @@ import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 
 const routes: Routes = [
   {
-    path : '', component : HomeComponent
-},
-{
-  path : 'admin',
-  component : AdminContainerComponent,
-  canActivate : [AuthGuard],
-  canActivateChild : [AuthGuard],
-  canLoad : [AuthGuard],
-  children : [
-    {
-      path : 'homepage', component : AdminHomePageComponent,
-    },
-    {
-      path : 'news',
-      component: ViewNewsComponent,
-    },
-    {
-      path : "add_news",
-      component : AddNewsComponent
-    },
-    {
-      path : "edit_news",
-      component : EditNewsComponent
-    }
+    path: "",
+    component: HomeComponent,
+  },
+  {
+    path: "admin",
+    component: AdminContainerComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+    canLoad: [AuthGuard],
+    children: [
+      {
+        path: "homepage",
+        component: AdminHomePageComponent,
+      },
+      {
+        path: "news",
+        component: ViewNewsComponent,
+      },
+      {
+        path: "add_news",
+        component: AddNewsComponent,
+      },
+      {
+        path: "edit_news",
+        component: EditNewsComponent,
+      },
+    ],
+  },
+  {
+    path: "taxiyeadmin",
+    component: LoginComponent,
+  },
+  {
+    path: "nav",
+    component: NavBarComponent,
+  },
+  {
+    path: "header",
+    component: NavBarComponent,
+  },
+  {
+    path: "driver",
+    component: DriverRegisterComponent,
+  },
+  {
+    path: "singup",
+    component: DriverSingupComponent,
+  },
+  {
+    path: "book-ride",
+    component: BookRideComponent,
+  },
+  {
+    path: "pricing",
+    component: VehiclePricingComponent,
+  },
+  {
+    path: "corporate",
+    component: CorporateComponent,
+  },
+  {
+    path: "corporate-signup",
+    component: CorporateSignupComponent,
+  },
+  {
+    path: "FQA",
+    component: FqaComponent,
+  },
+  {
+    path: "offices",
+    component: OfficesComponent,
+  },
 
-
-  ]
-},
-{
-    path : 'taxiyeadmin',
-    component : LoginComponent
-},
-{
-  path: 'nav',
-  component: NavBarComponent
-},
-{
-  path : 'header', component : NavBarComponent
-},
-{
-  path: 'driver', component: DriverRegisterComponent
-},
-{
-  path: 'singup', component: DriverSingupComponent
-},
-{
- path: 'book-ride', component: BookRideComponent
-},
-  {
-    path: 'pricing', component: VehiclePricingComponent
-  },
-  {
-    path: 'corporate', component: CorporateComponent
-  },
-  {
-   path: 'corporate-signup', component: CorporateSignupComponent
-  },
-  {
-  path: 'FQA', component: FqaComponent
-  },
-  {
-    path: 'offices', component: OfficesComponent
-  }
 ];
 
 @NgModule({

@@ -1,85 +1,238 @@
-@media screen and (min-width: 601px) {
-  .example {
-    font-size: 30px;
-    padding-top: 30%;
-    padding-left: 20px;
-  }
-  .login-box {
-  display: flex;
-  justify-content: center;
-  vertical-align: center;
-  align-items: center;
+#grad1 {
+    background-image: url('/assets/image/right.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; 
 }
 
-.center-div {
-  width: 100%;
-  height: 100%;
-  margin-top: -300px;
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
 }
 
-.btn-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.buttons{
- margin-left: 300px;
+#msform fieldset .form-card {  
+    border: 0 none;
+    position: relative;
+    margin-bottom: 20px
 }
 
+#msform fieldset {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 95px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 80%;
 }
 
-/* mobile resolution */
-@media screen and (max-width: 600px){
+#msform fieldset:not(:first-of-type) {
+    display: none
 }
 
-/* Position the checkbox in upper left corner & hide */
-input[type=checkbox] {
-  position: absolute;
-  visibility: hidden;
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
 }
 
-
-/* Styling Parts */
-#part1,
-#part2,
-#part3 {
-  display: block;
-  opacity: 1;
-  transition: all 1s ease-in-out;
+#msform input,
+#msform textarea { 
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    width: 80%;
+    height: 40px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.input{
+  padding-left: 10px;
 }
 
-
-/* Hide Parts 2 & 3 on Page Load */
-#part2,
-#part3 {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
 }
 
-
-/* Show Step 2 */
-#step2:checked ~ #part2 {
-  opacity: 1;
-  height: auto;
+#msform .action-button {
+    width: 100px;
+    background: darkorange;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
 }
 
-/* Hide Step 1 */
-#step2:checked ~ #part1 {
-  opacity: 0;
-  height: 0;
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px darkorange, 0 0 0 3px darkorange
 }
 
-/* Show Step 3 */
-#step3:checked ~ #part3 {
-  opacity: 1;
-  height: auto;
+#msform .action-button-previous {
+    width: 100px;
+    background: #950081;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
 }
 
-/* Hide Step 2 */
-#step3:checked ~ #part2 {
-  opacity: 0;
-  height: 0;
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px #950081, 0 0 0 3px #950081
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 3px;
+    float: left;
+
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    
+}
+
+#progressbar .active {
+    color: darkorange
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 10px;
+    width: 20%;
+    float: left;
+    position: relative;
+
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+    
+}
+
+#progressbar #otp:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #document:before {
+    font-family: FontAwesome;
+    content: "\f016"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    display: block;
+    font-size: 13px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: darkorange;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #950081;
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px;
+    float: left;
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(#950081, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(#950081, 0.1)
+}
+
+.fit-image {
+    width: 50%;
+    object-fit: cover
+}
+.title{
+  font-size: 30px;
+  color: #ffffff;
+margin-left: -50px;
 }
 
