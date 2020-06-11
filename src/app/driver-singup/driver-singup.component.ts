@@ -17,6 +17,10 @@ export class DriverSingupComponent implements OnInit {
     const result = patt.test(event.key);
     return result;
   }
+  login_form = new FormGroup({
+    email: new FormControl('', Validators.email),
+    password: new FormControl('', Validators.required)
+  });
   ngOnInit() {
     $(document).ready(function () {
       var current_fs, next_fs, previous_fs;
