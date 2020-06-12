@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
   login() {
     console.log(this.login_form.value);
     this.auteservice.userLogin(this.login_form.value).subscribe((resp: any) => {
+      console.log("wtf");
       this.message = this.auteservice.checkForAuthentication(resp);
       this.router.navigate(['/admin/homepage']);
     },

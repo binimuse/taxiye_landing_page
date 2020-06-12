@@ -16,14 +16,13 @@ export class AuteServiceService {
   }
   // check For login response
   checkForAuthentication(login_repo){
-    
     // login success
     if(login_repo.id){
       let message : NotificationModel = {"status": "success","message":"Success full"};
       localStorage.setItem("token" , login_repo.id);
       return message
     }
-    if(login_repo = "success"){
+    if(login_repo == "success"){
       let message : NotificationModel = {"status": "success","message":"Success full"};
       return message
     }
@@ -32,8 +31,9 @@ export class AuteServiceService {
     
     //connection problem
     if(login_repo.status == 0){
-      let message : NotificationModel = {"status": "warning","message":"Connection b/n Server is corrupted"}
-      return message;
+      console.log("test error");
+      let message : NotificationModel = {"status": "warning","message":"Connection b/n Server is corrupted"};
+      return message
     }
 
     // password or email error 
@@ -44,8 +44,8 @@ export class AuteServiceService {
     // }
     // other errors
     else{
-      let message : NotificationModel = {"status": "warning","message":login_repo.error.error.name} 
-      return message;
+      let message : NotificationModel = {"status": "warning","message":login_repo.error.error.name};
+      return message
     }
     
     

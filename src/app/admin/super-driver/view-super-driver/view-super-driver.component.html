@@ -1,0 +1,23 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+  </div>
+  <h3 style="text-align: center;">Super Drivers</h3>
+  <div class="row" *ngIf="super_driver">
+    <div class=" w3-section col-sm-3" style="height: 420px;" *ngFor="let super_driver of super_driver">
+      <div class="w3-card-4">
+        <img src="{{super_driver.driver_image}}" style="width:100%">
+        <div class="w3-container w3-white">
+          <h6><strong>Name : {{super_driver.full_name}}</strong></h6>
+          <h6><strong>Trip : {{super_driver.trip}}</strong></h6>
+          <h6><strong>Vechicle type : {{super_driver.vehicle_type}}</strong></h6>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+    <app-notification *ngIf="message" [message]= "message"></app-notification>
+    <div *ngIf="super_driver.length ==0">
+      <h3>There are no list</h3>
+    </div>
+  

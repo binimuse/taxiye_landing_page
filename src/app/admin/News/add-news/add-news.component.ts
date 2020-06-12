@@ -51,6 +51,10 @@ export class AddNewsComponent implements OnInit {
         this.news_form.value.date = this.date;
         console.log(this.news_form.value);
         this.newsService.postNews(this.news_form.value).subscribe(resp => {
+          this.news_form.patchValue({
+            news_header : "",
+            details : ""
+          })
           this.message = { "status": "success", "message": "Success Fully Added News" }
         },
           err => {

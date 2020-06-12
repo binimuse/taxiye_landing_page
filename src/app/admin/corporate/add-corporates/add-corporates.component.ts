@@ -47,6 +47,11 @@ export class AddCorporatesComponent implements OnInit {
         this.corporate_form.value.corporate_logo = AppConfig.apiRootUrl + "Containers/imags/download/" + resp.result.files.image[0].name;
         this.corporate_form.value.date = this.date;
         this.corporateService.addcorporates(this.corporate_form.value).subscribe((resp : any)=>{
+          this.corporate_form.patchValue({
+            corporate_name : "",
+            full_name : "",
+            feed_up : ""
+          })
           this.message = this.authService.checkForAuthentication("success");
         },
         err => {

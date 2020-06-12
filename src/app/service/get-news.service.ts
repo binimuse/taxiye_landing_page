@@ -23,5 +23,7 @@ export class GetNewsService {
       return this.httpClient.post(AppConfig.apiRootUrl + "/taxiyes/update" +
       `?where[id]=`+id,news)
     }
-    
+    deleteNews(newsID){
+      return this.httpClient.delete(AppConfig.apiRootUrl + `/taxiyes/${newsID}/`);
+    } 
 }

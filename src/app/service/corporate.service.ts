@@ -11,7 +11,14 @@ export class CorporateService {
   addcorporates(corporate) {
     return this.httpClient.post(AppConfig.apiRootUrl + '/corporates' ,corporate);
   }
-  getcorporates(){
+  getcorporates(){ 
     return this.httpClient.get(AppConfig.apiRootUrl + '/corporates');
   }
+  updateNews(id,news){
+    return this.httpClient.post(AppConfig.apiRootUrl + "/corporates/update" +
+    `?where[id]=`+id,news)
+  }
+  deleteNews(corporateID){
+    return this.httpClient.delete(AppConfig.apiRootUrl + `/corporates/${corporateID}/`);
+  } 
 }

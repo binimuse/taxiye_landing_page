@@ -8,6 +8,7 @@ import { CorporateService } from 'src/app/service/corporate.service';
 })
 export class ViewCorporatesComponent implements OnInit {
   corporates;
+  single_corporate ?: any;
   constructor(private corporateService : CorporateService) {
 
   }
@@ -17,5 +18,7 @@ export class ViewCorporatesComponent implements OnInit {
       this.corporates=resp;
     })
   }
-
+  modal_view(single_corporate){
+    this.single_corporate = single_corporate;
+  }
 }

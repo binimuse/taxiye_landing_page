@@ -20,6 +20,16 @@ import { VehiclePricingComponent } from './vehicle-pricing/vehicle-pricing.compo
 import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 import { AddCorporatesComponent } from './admin/corporate/add-corporates/add-corporates.component';
 import { ViewCorporatesComponent } from './admin/corporate/view-corporates/view-corporates.component';
+import { EditCorporateComponent } from './admin/corporate/edit-corporate/edit-corporate.component';
+import { AddOfficesComponent } from './admin/offices/add-offices/add-offices.component';
+import { ViewOfficesComponent } from './admin/offices/view-offices/view-offices.component';
+import { EditOfficesComponent } from './admin/offices/edit-offices/edit-offices.component';
+import { ViewDriverFeedbackComponent } from './admin/drivers-feedback/view-driver-feedback/view-driver-feedback.component';
+import { AddDriverFeedbackComponent } from './admin/drivers-feedback/add-driver-feedback/add-driver-feedback.component';
+import { EditDriverFeedbackComponent } from './admin/drivers-feedback/edit-driver-feedback/edit-driver-feedback.component';
+import { AddSuperDriverComponent } from './admin/super-driver/add-super-driver/add-super-driver.component';
+import { ViewSuperDriverComponent } from './admin/super-driver/view-super-driver/view-super-driver.component';
+import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver/edit-super-driver.component';
 
 
 const routes: Routes = [
@@ -56,6 +66,46 @@ const routes: Routes = [
     {
       path : "view_corporate",
       component : ViewCorporatesComponent
+    },
+    {
+      path : "edit_corporate",
+      component : EditCorporateComponent
+    },
+    {
+      path : "add_office",
+      component : AddOfficesComponent
+    },
+    {
+      path : "view_offices",
+      component : ViewOfficesComponent
+    },
+    {
+      path : "edit_offices",
+      component : EditOfficesComponent
+    },
+    {
+      path : "add_feedback",
+      component : AddDriverFeedbackComponent
+    },
+    {
+      path : "view_feedback",
+      component : ViewDriverFeedbackComponent
+    },
+    {
+      path : "edit_feedback",
+      component : EditDriverFeedbackComponent
+    },
+    {
+      path : "add_superdriver",
+      component : AddSuperDriverComponent
+    },
+    {
+      path : "view_superdriver",
+      component : ViewSuperDriverComponent
+    },
+    {
+      path : "edit_superdriver",
+      component : EditSuperDriverComponent
     }
 
   ]

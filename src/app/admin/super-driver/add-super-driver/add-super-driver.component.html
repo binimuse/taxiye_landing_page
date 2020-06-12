@@ -1,0 +1,23 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+  </div>
+  
+  <div class="w3-card-4" style="padding: 10px;">
+      <h3 style="text-align: center;">Add Super Driver</h3>
+   <div class="form-group" [formGroup]="super_driver_form">
+      <label for="full_name">Full Name</label>
+      <input formControlName="full_name" type="text" class="form-control" id="full_name">
+      <label for="trip">Number Of Trip</label>
+      <input formControlName="trip" type="number" class="form-control" id="trip">
+      <label for="vehicle_type">Vehicle Type</label>
+      <input formControlName="vehicle_type" type="text" class="form-control" id="vehicle_type">
+      <label for="comment">Image</label>
+      <input type="file" (change)="onFileSelected($event)" class="form-control-file border btn btn-success">
+      <app-notification [message]= "message"></app-notification>
+    <br>
+      <input type="submit" [disabled]="super_driver_form.invalid" class="btn btn-success" (click)="addSuperDriver()"/>
+   </div>
+      
+  </div>
+  

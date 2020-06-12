@@ -1,0 +1,99 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+</div>
+<h2>Driver Feedback Table</h2>   
+<div class="table-responsive">     
+<table class="table">
+  <thead style="background-color: #950081; color: #e3a200;">
+    <tr>
+      <th>Driver Full Name</th>
+      <th>Driver Images</th>
+      <th>Feed Back</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="feedback">
+    <tr *ngFor="let feedback of feedback">
+        <td style="width: 20%;">{{feedback.driver_fullname}}</td>
+        <td style="width: 30%;"><img src="{{feedback.driver_img}}" alt="" width="30%"></td>
+        <td style="width: 30%;" class="text-body">{{feedback.driver_feedback}}</td>
+        <td style="width: 10%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(feedback)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
+        <td style="width: 10%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(feedback)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
+    </tr>
+  </tbody>
+ 
+</table>
+</div>
+<app-notification [message]= "message"></app-notification>
+<div *ngIf="feedback.length == 0">
+    <td>There are no feedback</td>
+</div>
+<div class="modal" id="EditModal" *ngIf="feedback_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Edit feedback</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="feedback_form">
+                <label for="new_hed">Driver Full Name</label>
+                <input id="new_hed" formControlName="driver_fullname" class="form-control" type="text" placeholder="{{feedback_to_edit.driver_fullname}}">
+                <label for="detail">Feedback</label>
+                <textarea id="detail" formControlName='driver_feedback' class="form-control" rows="5" placeholder="{{feedback_to_edit.driver_feedback}}"></textarea>
+                <br>
+                <app-notification [message]= "message"></app-notification>
+                <p style="text-align: center;">
+                    <input type="submit" (click)="editfeedback()" class="btn btn-success"/>
+                </p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="DeletModal" *ngIf="feedback_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Delete feedback</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="feedback_form">
+                
+                
+              <p>are you sure to delete this feedback</p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" (click)="deletefeedback(feedback_to_edit.id)" data-dismiss="modal" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn"  data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
