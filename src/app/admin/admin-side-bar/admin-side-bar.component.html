@@ -5,14 +5,14 @@
         <div class="menu-list">
   
             <ul id="menu-content" class="menu-content collapse out">
-                <li>
+                <li [ngClass]="{'active': dashboard === true}">
                   <a href="#" routerLink="/admin/homepage">
                   <i class="fa fa-dashboard fa-lg"></i> Dashboard
                   </a>
                 </li>
 
                 <li  data-toggle="collapse" data-target="#news" class="collapsed">
-                  <a><i class="fa fa-globe fa-lg"></i> News <span class="arrow"></span></a>
+                  <a><i class="fa fa-newspaper-o fa-lg"></i> News <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="news">
                     <li routerLink="/admin/news"><a>View News</a></li>
@@ -21,7 +21,7 @@
                     
                 </ul>
                 <li  data-toggle="collapse" data-target="#corporate" class="collapsed">
-                  <a><i class="fa fa-gift fa-lg"></i> Corporate <span class="arrow"></span></a>
+                  <a><i class="fa fa-university fa-lg"></i> Corporate <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="corporate">
                     <li routerLink="/admin/view_corporate"><a>View Corporate</a></li>
@@ -49,17 +49,25 @@
                   <li><a routerLink="/admin/edit_feedback">Edit Feedback</a></li>
                 </ul>
                 <li data-toggle="collapse" data-target="#new" class="collapsed">
-                  <a><i class="fa fa-car fa-lg"></i> Super Driver <span class="arrow"></span></a>
+                  <a><i class="fa fa-id-card fa-lg"></i> Super Driver <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="new">
                   <li routerLink="/admin/view_superdriver"><a>View Super Driver</a></li>
                   <li><a routerLink="/admin/add_superdriver">Add Super Driver</a></li>
                   <li><a routerLink="/admin/edit_superdriver">Edit Super Driver</a></li>
                 </ul>
+                <li data-toggle="collapse" data-target="#price" class="collapsed">
+                  <a><i class="fa fa-usd fa-lg"></i> Price <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="price">
+                  <li routerLink="/admin/view_superdriver"><a>View Super Driver</a></li>
+                  <li><a routerLink="/admin/add_price">Add Price</a></li>
+                  <li><a routerLink="/admin/edit_price">Edit Price</a></li>
+                </ul>
 
                  <li>
-                  <a>
-                  <i class="fa fa-user fa-lg"></i> Profile
+                  <a (click)="logOut()">
+                  <i class="fa fa-sign-out fa-lg"></i> Logout
                   </a>
                   </li>
 

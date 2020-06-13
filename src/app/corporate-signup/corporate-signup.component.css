@@ -2,7 +2,7 @@
 @media screen and (min-width: 601px) {
   .example {
     font-size: 30px;
-    padding-top: 20%;
+    padding-top: 23%;
     padding-left: 50px;
 
   }
@@ -37,25 +37,28 @@ font-size: 15px;
   justify-content: center;
   align-items: center;
   width: 100%;
-
+  background: rgba(255, 255, 255, 0.1);
+ border-radius: 10px;
 }
 
 .btn-center{
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
    padding-left:300px;
    border-radius: 5px;
    bottom: 20px;
    padding-bottom: 20px;
 }
-
+.back-img{
+ height: 620px;
+}
 }
 /* mobile resolution */
 @media screen and (max-width: 601px){
   .example {
     font-size: 15px;
-    padding-top: 20%;
-    padding-left: 8px;
+    padding-top: 25%;
+    padding-left: 30px;
 
   }
   .taxiye{
@@ -107,10 +110,14 @@ color: #fff;
   bottom: 20px;
   padding-bottom: 10px;
  }
-
+.back-img{
+  height: 400px;
+}
 }
 
-.btn:hover {background: #eee;}
+.btn:hover {
+  background: #eee;
+}
 .big-text{
     color: #fff;
     font-size: 20pt;

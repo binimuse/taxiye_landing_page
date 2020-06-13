@@ -1,0 +1,30 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/pric.png" alt="" width="100%">
+  </div>
+  
+  <div class="w3-card-4" style="padding: 10px;">
+      <h3 style="text-align: center;">Add Price</h3>
+   <div class="form-group" [formGroup]="price_form">
+      <label for="vechicle_type">Vechicle Type</label>
+      <input formControlName="vechicle_type" type="text" class="form-control" id="vechicle_type">
+
+      <label for="comment">Vechicle Type Image</label>
+      <input type="file" (change)="onFileSelected($event)" class="form-control-file border btn btn-success">
+   
+      <label for="base_fee">Base Fee</label>
+      <input formControlName="base_fee" type="number" class="form-control" id="base_fee">
+   
+      <label for="per_kilometer_fee">Per Kilometer Fee</label>
+      <input formControlName="per_kilometer_fee" type="number" class="form-control" id="per_kilometer_fee">
+
+      <label for="per_minute_fee">Per Minute Fee</label>
+      <input formControlName="per_minute_fee" type="number" class="form-control" id="per_minute_fee">
+
+      <app-notification [message]= "message"></app-notification>
+    <br>
+      <input type="submit" [disabled]="price_form.invalid" class="btn btn-success" (click)="addprice()"/>
+   </div>
+      
+  </div>
+  

@@ -1,3 +1,4 @@
+
 import { OfficesComponent } from './offices/offices.component';
 import { FqaComponent } from './fqa/fqa.component';
 import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
@@ -30,6 +31,8 @@ import { EditDriverFeedbackComponent } from './admin/drivers-feedback/edit-drive
 import { AddSuperDriverComponent } from './admin/super-driver/add-super-driver/add-super-driver.component';
 import { ViewSuperDriverComponent } from './admin/super-driver/view-super-driver/view-super-driver.component';
 import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver/edit-super-driver.component';
+import { AddPriceComponent } from './admin/price/add-price/add-price.component';
+import { EditPriceComponent } from './admin/price/edit-price/edit-price.component';
 
 
 const routes: Routes = [
@@ -106,6 +109,14 @@ const routes: Routes = [
     {
       path : "edit_superdriver",
       component : EditSuperDriverComponent
+    },
+    {
+      path : "add_price",
+      component : AddPriceComponent
+    },
+    {
+      path : "edit_price",
+      component : EditPriceComponent
     }
 
   ]
@@ -130,23 +141,8 @@ const routes: Routes = [
 {
  path: 'book-ride', component: BookRideComponent
 },
-  {
-    path: 'pricing', component: VehiclePricingComponent
-  },
-  {
-    path: 'corporate', component: CorporateComponent
-  },
-  {
-   path: 'corporate-signup', component: CorporateSignupComponent
-  },
-  {
-  path: 'FQA', component: FqaComponent
-  },
-  {
-    path: 'offices', component: OfficesComponent
-  }
-];
 
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

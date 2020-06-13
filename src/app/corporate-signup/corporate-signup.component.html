@@ -14,20 +14,18 @@
             <strong class="title1">Corporate Sing Up</strong>
           </div>
           <div class="card-body">
-            <div class="form-group">
-              <label for="fname" class="title">First Name:</label>
-              <input type="text" formControlName="First Name" class="form-control" id="fn">
-              <label for="lname" class="title">Last Name:</label>
-              <input type="text" formControlName="Last Name" class="form-control" id="ln">
+            <div class="form-group" [formGroup]="login_form">
+              <label for="fname" class="title">Company Name:</label>
+              <input type="text" formControlName="cname" class="form-control" id="cn" placeholder="Enter your company name">
               <label for="eml" class="title">Email:</label>
-              <input type="email" formControlName="example@gmail.com" class="form-control" id="email">
+              <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your Company email">
               <label for="eml" class="title">Message:</label>
-              <textarea for="msg" class="form-control" id="msg" rows="2"></textarea>
+              <textarea for="msg" class="form-control" formControlName="message" placeholder="Message..." id="msg" rows="3"></textarea>
             </div>
             <app-notification></app-notification>
+            <br>
             <div class="btn-center" >
-              <input type="button" class="btn btn-primary" value="Submit"
-                style="background-color: darkorange" />
+              <input type="button" class="btn btn-primary " value="Submit" style="background-color: darkorange" [disabled]="login_form.invalid"/>
             </div>
 
           </div>
@@ -37,5 +35,6 @@
 </div>
 
 <div class="carousel-item">
-  <img src="\assets\image\2.png" height="400" width="100%" alt="Los Angeles">
+  <img src="\assets\image\2.png" height="400" width="100%" class="back-img" alt="Los Angeles">
 </div>
+

@@ -59,4 +59,17 @@ export class EditSuperDriverComponent implements OnInit {
     );
 
   }
+  deletesuper_driver(id){
+    this.superDriveService.deletesuperdriver(id).subscribe(resp=>{
+      this.superDriveService.getsuperdriver().subscribe(resp =>{
+        this.super_driver = resp;
+        this.message = this.authService.checkForAuthentication("success")
+      })
+      
+    },
+    err=>{
+      this.message = this.authService.checkForAuthentication(err)
+    }
+    )
+  }
 }

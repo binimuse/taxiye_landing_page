@@ -58,4 +58,8 @@ export class AuteServiceService {
     return !!localStorage.getItem("token");
     
   }
+  logOut(){
+    localStorage.removeItem('token');
+  }
+  
 }

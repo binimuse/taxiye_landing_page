@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AppConfig } from 'src/app/config_file/app-config';
 
 @Component({
   selector: 'app-admin-home-page',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-home-page.component.css']
 })
 export class AdminHomePageComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

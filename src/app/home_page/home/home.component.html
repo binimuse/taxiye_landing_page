@@ -61,57 +61,21 @@
       <h1 class="title w3-center ">TAXIYE NEWS</h1>
 
     </div>
-    <div class="w3-row-padding w3-theme">
-      <div class="w3-third w3-section">
+    <div class="w3-row-padding w3-theme" >
+      <div class="w3-third w3-section" *ngFor="let news of posts; let i = index">
         <div class="w3-card-4">
-          <img src="\assets\image\management.png" style="width:100%">
+          <img src="{{ news.image }}" style="width:100%">
         <div class="w3-white">
-          <input type="checkbox" class="read-more-state" id="post-1" />
+          <input type="checkbox" class="read-more-state" id="post-{{ news.id}}" />
 
-          <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
-              class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos
-              deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+          <p class="read-more-wrap">{{ news.discription }} <span
+              class="read-more-target">{{ news.discription}}</span></p>
 
-          <label for="post-1" class="read-more-trigger"></label><br>
+          <label for="post-{{news.id}}" class="read-more-trigger"></label><br>
         </div>
         </div>
 
       </div>
-
-      <div class="w3-third w3-section">
-        <div class="w3-card-4">
-          <img src="\assets\image\management.png" style="width:100%">
-          <div class="w3-white">
-            <input type="checkbox" class="read-more-state" id="post-2" />
-
-            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
-                class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore
-                eos
-                deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
-
-            <label for="post-2" class="read-more-trigger"></label><br>
-          </div>
-        </div>
-
-      </div>
-
-    <div class="w3-third w3-section">
-      <div class="w3-card-4">
-        <img src="\assets\image\management.png" style="width:100%">
-        <div class="w3-white">
-          <input type="checkbox" class="read-more-state" id="post-3" />
-
-          <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
-              class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore
-              eos
-              deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
-
-          <label for="post-3" class="read-more-trigger"></label><br>
-        </div>
-      </div>
-
-    </div>
-
     </div>
   </div>
 
