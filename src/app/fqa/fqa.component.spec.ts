@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FqaComponent } from './fqa.component';
 
+import { FqaComponent } from './fqa.component';
 describe('FqaComponent', () => {
   let component: FqaComponent;
   let fixture: ComponentFixture<FqaComponent>;

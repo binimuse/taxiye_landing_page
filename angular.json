@@ -27,12 +27,14 @@
               "src/styles.css",
               "node_modules/slick-carousel/slick/slick.css",
               "node_modules/slick-carousel/slick/slick-theme.css",
-              "node_modules/intl-tel-input/build/css/intlTelInput.css"
+              "node_modules/intl-tel-input/build/css/intlTelInput.css",
+              "node_modules/jquery-bootstrap-scrolling-tabs/dist/jquery.scrolling-tabs.min.css"
             ],
             "scripts": [
             "node_modules/jquery/dist/jquery.min.js",
             "node_modules/slick-carousel/slick/slick.min.js",
-            "node_modules/intl-tel-input/build/js/intlTelInput.min.js"
+            "node_modules/intl-tel-input/build/js/intlTelInput.min.js",
+            "node_modules/jquery-bootstrap-scrolling-tabs/dist/jquery.scrolling-tabs.min.js"
             ]
           },
           "configurations": {

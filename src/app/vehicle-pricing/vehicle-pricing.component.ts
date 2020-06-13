@@ -1,4 +1,6 @@
+import { from } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-vehicle-pricing',
@@ -7,23 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class VehiclePricingComponent implements OnInit {
-
+  single_tab: any;
   constructor() {}
 
-
-  slides = [
-    { img: '/assets/image/bike1.png' },
-    { img: '/assets/image/bajaj1.png' },
-    { img: '/assets/image/taxiye1.png' },
-    { img: '/assets/image/mini1.png' },
-    { img: '/assets/image/bike1.png' },
-    { img: '/assets/image/bajaj1.png' },
-    { img: '/assets/image/taxiye1.png' },
-    { img: '/assets/image/mini1.png' }
+  tb = [
+    { img: '/assets/image/bike1.png', dis: 'aaaaaaaaa' },
+    { img: '/assets/image/bajaj1.png', dis: 'aaaaaaaaa1'  },
+    { img: '/assets/image/taxiye1.png', dis: 'aaaaaaaaa2'  },
+    { img: '/assets/image/mini1.png', dis: 'aaaaaaaaa3'  },
+    { img: '/assets/image/bike1.png', dis: 'aaaaaaaaa4'  },
+    { img: '/assets/image/bajaj1.png', dis: 'aaaaaaaaa5'  },
+    { img: '/assets/image/taxiye1.png', dis: 'aaaaaaaaa6'  },
+    { img: '/assets/image/mini1.png', dis: 'aaaaaaaaa7'  }
   ];
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
 
   ngOnInit() {
-  }
-
+  
+   }
+   open_tab(tab) {
+     this.single_tab = tab;
+   }
 }
