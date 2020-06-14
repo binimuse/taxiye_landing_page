@@ -23,76 +23,76 @@ import { EditNewsComponent } from './admin/News/edit-news/edit-news.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomeComponent,
   },
   {
-    path: "admin",
+    path: 'admin',
     component: AdminContainerComponent,
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     canLoad: [AuthGuard],
     children: [
       {
-        path: "homepage",
+        path: 'homepage',
         component: AdminHomePageComponent,
       },
       {
-        path: "news",
+        path: 'news',
         component: ViewNewsComponent,
       },
       {
-        path: "add_news",
+        path: 'add_news',
         component: AddNewsComponent,
       },
       {
-        path: "edit_news",
+        path: 'edit_news',
         component: EditNewsComponent,
       },
     ],
   },
   {
-    path: "taxiyeadmin",
+    path: 'taxiyeadmin',
     component: LoginComponent,
   },
   {
-    path: "nav",
+    path: 'nav',
     component: NavBarComponent,
   },
   {
-    path: "header",
+    path: 'header',
     component: NavBarComponent,
   },
   {
-    path: "driver",
+    path: 'driver',
     component: DriverRegisterComponent,
   },
   {
-    path: "singup",
+    path: 'singup',
     component: DriverSingupComponent,
   },
   {
-    path: "book-ride",
+    path: 'book-ride',
     component: BookRideComponent,
   },
   {
-    path: "pricing",
+    path: 'pricing',
     component: VehiclePricingComponent,
   },
   {
-    path: "corporate",
+    path: 'corporate',
     component: CorporateComponent,
   },
   {
-    path: "corporate-signup",
+    path: 'corporate-signup',
     component: CorporateSignupComponent,
   },
   {
-    path: "FQA",
+    path: 'FQA',
     component: FqaComponent,
   },
   {
-    path: "offices",
+    path: 'offices',
     component: OfficesComponent,
   },
 

@@ -29,7 +29,7 @@ import { AgmCoreModule } from '@agm/core';
 import { from } from 'rxjs';
 import { FormWizardModule } from 'angular-wizard-form';
 import { Ng2TelInputModule } from 'ng2-tel-input';
-
+import { AgmDirectionModule } from "agm-direction";
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +63,7 @@ import { Ng2TelInputModule } from 'ng2-tel-input';
       // tslint:disable-next-line: quotemark
       apiKey: "AIzaSyCRNebshVW6XSdv4X2Nxm3FGIt3qbA7UKU",
     }),
+    AgmDirectionModule,
     SlickCarouselModule,
     FormWizardModule,
     Ng2TelInputModule,

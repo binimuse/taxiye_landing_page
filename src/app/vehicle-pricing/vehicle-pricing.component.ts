@@ -9,6 +9,9 @@ import * as $ from 'jquery';
 })
 
 export class VehiclePricingComponent implements OnInit {
+
+  // tslint:disable-next-line: variable-name
+  // tslint:disable-next-line: variable-name
   single_tab: any;
   constructor() {}
 
@@ -25,7 +28,7 @@ export class VehiclePricingComponent implements OnInit {
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
 
   ngOnInit() {
-  
+
    }
    open_tab(tab) {
      this.single_tab = tab;

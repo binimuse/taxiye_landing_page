@@ -5,21 +5,22 @@
     <a class="btn default">Register Driver</a>|
     <a class="btn default">Book</a>|
     <a class="btn default" style="color: darkorange;">Pricing</a>|
-    <a class="btn default">Corporate</a><br>
-    <ul class="nav nav-tabs" role="tablist" >
-      <li role="presentation" class="active" *ngFor="let tab of tb; let i = index">
-        <a href="#{{tab.dis}}" (click) = "open_tab(tab)"role="tab" data-toggle="tab">
-          <img src="{{ tab.img}}" width="50px" height="50px">
-          </a>
-      </li>
-    </ul>
-    
-    <!-- Tab panes -->
-    <div class="tab-content" >
-      <div role="tabpanel" class="tab-pane active" id="{{single_tab.dis}}">{{single_tab.dis}}</div>
-    </div>
-  </div>
+    <a class="btn default">Corporate</a><br><br><br>
 </div>
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active" *ngFor="let t of tb; let i = index">
+    <a href="{{t.dis}}" (click)="open_tab(t)" role="tab" data-toggle="tab">
+      <img src="{{ t.img}}" width="30px" height="40px" class="img" style="padding-left: -20px;">
+    </a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content" >
+  <div role="tabpanel" class="tab-pane active" id="{{single_tab.dis}}"> {{ single_tab.dis}}</div>
+
+</div>
+
+ </div>
 <div class="carousel-item">
   <img src="\assets\image\IMG_20200515_224116_400.jpg" class="driver-img" width="100%" alt="Los Angeles">
 </div>
