@@ -29,9 +29,8 @@ import { AgmCoreModule } from '@agm/core';
 import { from } from 'rxjs';
 import { FormWizardModule } from 'angular-wizard-form';
 import { Ng2TelInputModule } from 'ng2-tel-input';
-<<<<<<< HEAD
-import { AgmDirectionModule } from "agm-direction";
-=======
+// tslint:disable-next-line: quotemark
+import { AgmDirectionModule } from 'agm-direction';
 import { AddCorporatesComponent } from './admin/corporate/add-corporates/add-corporates.component';
 import { ViewCorporatesComponent } from './admin/corporate/view-corporates/view-corporates.component';
 import { EditCorporateComponent } from './admin/corporate/edit-corporate/edit-corporate.component';
@@ -47,7 +46,7 @@ import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver
 import { AddPriceComponent } from './admin/price/add-price/add-price.component';
 import { EditPriceComponent } from './admin/price/edit-price/edit-price.component';
 import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signup/corporate-to-signup.component';
->>>>>>> 1c728bce65a39856f1516d113691796c581ebf6b
+
 @NgModule({
   declarations: [
     AppComponent,
