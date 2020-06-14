@@ -1,0 +1,103 @@
+<div class="row">
+  <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+    src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+</div>
+<h2>offices Table</h2>   
+<div class="table-responsive">     
+<table class="table">
+<thead style="background-color: #950081; color: #e3a200;">
+  <tr>
+    <th>Office Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+</thead>
+<tbody *ngIf="off">
+  <tr *ngFor="let office of off">
+      <td style="width: 20%;">{{office.office_name}}</td>
+      <td style="width: 30%;" class="text-body">{{office.phone}}</td>
+      <td style="width: 30%;">{{office.lat}},{{office.lag}}</td>
+      <td style="width: 10%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(office)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
+      <td style="width: 10%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(office)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+<app-notification *ngIf="message" [message]= "message"></app-notification>
+<div *ngIf="off.length == 0">
+  <td>There are no offices</td>
+</div>
+<div class="modal" id="EditModal" *ngIf="offices_to_edit">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><strong>Edit Offices</strong></h4>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <div class="form-group" [formGroup]="offices_form">
+              <label for="office_name"> Offices Name</label>
+              <input id="office_name" formControlName="office_name" class="form-control" type="text" placeholder="{{offices_to_edit.office_name}}">
+              <label for="phone"> Phone</label>
+              <input id="phone" type="number" formControlName='phone' class="form-control" rows="5" placeholder="{{offices_to_edit.phone}}">
+              <label for="lat"> Latitude</label>
+              <input id="lat" type="number" formControlName='lat' class="form-control" rows="5" placeholder="{{offices_to_edit.lat}}">
+              <label for="lag"> Longitude</label>
+              <input id="lag" type="number" formControlName='lag' class="form-control" rows="5" placeholder="{{offices_to_edit.lag}}">
+              
+              <br>
+              <app-notification *ngIf="message" [message]= "message"></app-notification>
+              <p style="text-align: center;">
+                  <input type="submit" (click)="editOffices(offices_to_edit)" class="btn btn-success"/>
+              </p>
+              
+          </div>
+        
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="DeletModal" *ngIf="offices_to_edit">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><strong>Delete offices</strong></h4>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <div class="form-group" [formGroup]="offices_form">
+              
+              
+            <p>are you sure to delete this offices</p>
+              
+          </div>
+        
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" (click)="deleteoffices(offices_to_edit.id)" data-dismiss="modal" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn"  data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+

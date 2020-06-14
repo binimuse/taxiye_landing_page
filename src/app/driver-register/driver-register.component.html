@@ -15,132 +15,67 @@
     <h1 class="title">Super Driver of the Year</h1><br>
     <div class="lines"></div>
   </div>
-<div class="w3-row-padding w3-theme">
+<div *ngIf="super_driver" class="w3-row-padding w3-theme">
   <div class="w3-third w3-section">
-    <div class="w3-card-4">
-      <img src="\assets\image\super-driver.png" style="width:100%">
+    <div  *ngFor="let super_driver of super_driver" class="w3-card-4">
+      <img src="{{super_driver.driver_image}}" style="width:100%">
       <div class="w3-container w3-white">
-        <h4>Name: Cinque Terre</h4>
-        <p>Trip: 120</p>
-        <p>Vehicle-Type: Taxiye</p>
+        <h4>Name: {{super_driver.full_name}}</h4>
+        <p>Trip: {{super_driver.trip}}</p>
+        <p>Vehicle-Type: {{super_driver.vehicle_type}}</p>
       </div>
     </div>
-  </div>
-
-  <div class="w3-third w3-section">
-    <div class="w3-card-4">
-      <img src="\assets\image\super-driver.png" style="width:100%">
-      <div class="w3-container w3-white">
-        <h4>Name: Cinque Terre</h4>
-        <p>Trip: 120</p>
-        <p>Vehicle-Type: Taxiye</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-third w3-section">
-    <div class="w3-card-4">
-      <img src="\assets\image\super-driver.png" style="width:100%">
-      <div class="w3-container w3-white">
-        <h4>Name: Cinque Terre</h4>
-        <p>Trip: 120</p>
-        <p>Vehicle-Type: Taxiye</p>
-      </div>
-    </div>
-    <br>
   </div>
 </div>
 </div>
 <!-- slide show content -->
 
-<div class="w3-container w3-padding-32 w3-theme-d1">
-  <h1 class="title">Drivers' Feedback</h1><br>
-  <div class="lines"></div>
-</div>
+<div class="row" *ngIf="latest_fb">
 
-<input type="radio" name="switch" id="i_1" checked>
-<input type="radio" name="switch" id="i_2">
-<input type="radio" name="switch" id="i_3">
-<input type="radio" name="switch" id="i_4">
-<div class="wrapper">
-  <div class="slide">
-    <div class="content content1">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
-      <img  src="\assets\image\feedback.png" alt="Card image" class="feedback"/>
+  <div class="col-sm-12">
+    <div>
+      <div class="w3-container w3-padding-32 w3-theme-d1">
+        <h1 class="title">Drivers' Feedback</h1><br>
+        <div class="lines"></div>
       </div>
-      <div class="col-sm-6 ">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      
+      
+        <input type="radio" name="switch" id="i_1" checked>
+        <input type="radio" name="switch" id="i_2" >
+        <input type="radio" name="switch" id="i_3">
+      
 
-      </div>
-    </div>
-  </div>
-    </div>
-  </div>
-  <div class="slide">
-    <div class="content content2">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6">
-          <img src="\assets\image\feedback.png" alt="Card image" class="feedback"/>
-        </div>
-        <div class="col-sm-6 ">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
+      <div class="wrapper" >
+        <div class="slide" *ngFor="let latestFb of latest_fb;let i = index">
+          <div class="content content{{i+1}}">
+            <div class="container-fluid">
+              <div class="row center_ver">
+                <div class="col-sm-6">
+                  <img src="{{latestFb.driver_img}}" alt="Card image" class="feedback" />
+                </div>
+                <div class="col-sm-4">
+                  {{latestFb.driver_feedback}}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    
+        <div class="controls w3-center row">
+          <div class="col-sm-5"></div>
+          <div class="horizontal col-sm-2">
+            <div *ngFor="let latestFb of latest_fb;let i = index">
+            <label for="i_{{i+1}}">⬤</label>
+          </div>
+          </div>
+          <div class="col-sm-5"></div>
+          
+      </div>
 
     </div>
   </div>
 
-  <div class="slide">
-    <div class="content content3">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      <img src="\assets\image\feedback.png" alt="Card image" class="feedback" />
-    </div>
-    <div class="col-sm-6 ">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-  <div class="slide">
-    <div class="content content4">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      <img src="\assets\image\feedback.png" alt="Card image" class="feedback" />
-    </div>
-    <div class="col-sm-6 ">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-<div class="controls w3-center">
-  <label for="i_1">⬤</label>
-  <label for="i_2">⬤</label>
-  <label for="i_3">⬤</label>
-  <label for="i_4">⬤</label>
 </div>
 <!-- end of slide show -->
 <!-- guideling taxiye -->

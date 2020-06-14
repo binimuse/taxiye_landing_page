@@ -1,0 +1,106 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+</div>
+<h2>Price Table</h2>   
+<div class="table-responsive">     
+<table class="table">
+  <thead style="background-color: #950081; color: #e3a200;">
+    <tr>
+      <th>Vechicle Type</th>
+      <th>Vechicle Images</th>
+      <th>Base Fee</th>
+      <th>Per Kilometer Fee</th>
+      <th>Per Minute Fee</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="price">
+    <tr *ngFor="let price of price">
+        <td style="width: 10%;">{{price.vechicle_type}}</td>
+        <td style="width: 15%;"><img src="{{price.vechicle_img}}" alt="" width="30%"></td>
+        <td style="width: 10%;" class="text-body">{{price.base_fee}}</td>
+        <td style="width: 10%;" class="text-body">{{price.per_kilometer_fee}}</td>
+        <td style="width: 10%;" class="text-body">{{price.per_minute_fee}}</td>
+        <td style="width: 10%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(price)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
+        <td style="width: 10%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(price)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
+    </tr>
+  </tbody>
+ 
+</table>
+</div>
+<app-notification [message]= "message"></app-notification>
+<div *ngIf="price.length == 0">
+    <td>There are no price</td>
+</div>
+<div class="modal" id="EditModal" *ngIf="price_to_edit ">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Edit price</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="price_form">
+                <label for="vechicle_type"> Vechicle Type</label>
+                <input id="vechicle_type" formControlName="vechicle_type" class="form-control" type="text" placeholder="{{price_to_edit.vechicle_type}}">
+                <label for="base_fee">Base Fee</label>
+                <input id="base_fee" formControlName="base_fee" class="form-control" type="number" placeholder="{{price_to_edit.base_fee}}">
+                <label for="per_kilometer_fee">Per Kilometer Fee</label>
+                <input id="per_kilometer_fee" formControlName="per_kilometer_fee" class="form-control" type="text" placeholder="{{price_to_edit.per_kilometer_fee}}">
+                <label for="per_minute_fee">Per Minute Fee</label>
+                <input id="per_minute_fee" formControlName="per_minute_fee" class="form-control" type="text" placeholder="{{price_to_edit.per_minute_fee}}">
+                <br>
+                <app-notification [message]= "message"></app-notification>
+                <p style="text-align: center;">
+                    <input type="submit" (click)="editprice()" class="btn btn-success"/>
+                </p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="DeletModal" *ngIf="price_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Delete price</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="price_form">
+                
+                
+              <p>are you sure to delete this price</p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" (click)="deleteprice(price_to_edit.id)" data-dismiss="modal" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn"  data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+

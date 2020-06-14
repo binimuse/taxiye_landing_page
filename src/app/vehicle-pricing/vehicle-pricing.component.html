@@ -5,7 +5,29 @@
     <a class="btn default">Register Driver</a>|
     <a class="btn default">Book</a>|
     <a class="btn default" style="color: darkorange;">Pricing</a>|
+<<<<<<< HEAD
     <a class="btn default">Corporate</a><br><br><br>
+=======
+    <a class="btn default">Corporate</a><br>
+    <ul class="nav nav-tabs" role="tablist" >
+      <li role="presentation" class="active" *ngFor="let tab of prices; let i = index">
+        <a href="#{{tab.id}}" (click) = "open_tab(tab)"role="tab" data-toggle="tab">
+          <img src="{{ tab.vechicle_img}}" width="50px" height="50px">
+          </a>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content" *ngIf="single_tab">
+      <div role="tabpanel" class="tab-pane active" id="{{single_tab.id}}">
+        <strong>Name : {{single_tab.vechicle_type}}</strong><br>
+        <strong>Base Fee : {{single_tab.base_fee}}</strong><br>
+        <strong>Per Kilometer Fee : {{single_tab.per_kilometer_fee}}</strong><br>
+        <strong>Per Minute Fee : {{single_tab.per_minute_fee}}</strong>
+      </div>
+    </div>
+  </div>
+>>>>>>> 1c728bce65a39856f1516d113691796c581ebf6b
 </div>
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active" *ngFor="let t of tb; let i = index">

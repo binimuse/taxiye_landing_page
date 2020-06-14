@@ -1,0 +1,104 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+</div>
+<h2>Edit Super Driver List</h2>   
+<div class="table-responsive">     
+<table class="table">
+  <thead style="background-color: #950081; color: #e3a200;">
+    <tr>
+      <th>Driver Full Name</th>
+      <th>Driver Images</th>
+      <th>Trip</th>
+      <th>Vehicle Type</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="super_driver">
+    <tr *ngFor="let super_driver of super_driver">
+        <td style="width: 20%;">{{super_driver.full_name}}</td>
+        <td style="width: 30%;"><img src="{{super_driver.driver_image}}" alt="" width="30%"></td>
+        <td style="width: 30%;" class="text-body">{{super_driver.trip}}</td>
+        <td style="width: 30%;" class="text-body">{{super_driver.vehicle_type}}</td>
+        <td style="width: 10%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(super_driver)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
+        <td style="width: 10%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(super_driver)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
+    </tr>
+  </tbody>
+ 
+</table>
+</div>
+<app-notification [message]= "message"></app-notification>
+<div *ngIf="super_driver.length == 0">
+    <td>There are no super_driver</td>
+</div>
+<div class="modal" id="EditModal" *ngIf="super_driver_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Edit super_driver</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="super_driver_form">
+                <label for="new_hed">Driver Full Name</label>
+                <input id="new_hed" formControlName="full_name" class="form-control" type="text" placeholder="{{super_driver_to_edit.full_name}}">
+                <label for="vehicle_type">Vehicle Type</label>
+                <input id="vehicle_type" formControlName="vehicle_type" class="form-control" type="text" placeholder="{{super_driver_to_edit.vehicle_type}}">
+                <label for="trip">Trip</label>
+                <input id="trip" formControlName="trip" class="form-control" type="number" placeholder="{{super_driver_to_edit.trip}}">
+                <br>
+                <app-notification [message]= "message"></app-notification>
+                <p style="text-align: center;">
+                    <input type="submit" (click)="editSuperDriver()" class="btn btn-success"/>
+                </p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="DeletModal" *ngIf="super_driver_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Delete super_driver</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="super_driver_form">
+                
+                
+              <p>are you sure to delete this super_driver</p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" (click)="deletesuper_driver(super_driver_to_edit.id)" data-dismiss="modal" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn"  data-dismiss="modal">Close</button>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+
+
+

@@ -1,0 +1,105 @@
+
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/cor2.png" alt="" width="100%">
+</div>
+<h2>Corporate Table</h2>   
+
+<div class="table-responsive">     
+<table class="table">
+  <thead style="background-color: #950081; color: #e3a200;">
+    <tr>
+        <th>Corporate Name</th>
+      <th>Corporate Image</th>
+      <th>Full name</th>
+      <th>Corporate Feedback</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let corporate of corporate">
+        <td style="width: 20%;">{{corporate.corporate_name}}</td>
+        <td style="width: 20%;"><img src="{{corporate.corporate_logo}}" alt="" width="30%"></td>
+        <td style="width: 20%;">{{corporate.full_name}}</td>
+        <td style="width: 20%;" class="text-body">{{corporate.feed_up}}</td>
+        
+        <td style="width: 10%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(corporate)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
+        <td style="width: 10%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(corporate)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
+    </tr>
+  </tbody>
+ 
+</table>
+</div>
+
+<div *ngIf="corporate.length == 0">
+    <td>There are no corporate information </td>
+</div>
+<div class="modal" id="EditModal" *ngIf="corporate_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Edit News</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="corporate_form">
+                <label for="corporate">Corporate Name</label>
+                <input id="corporate" formControlName="corporate_name" class="form-control" type="text" placeholder="{{corporate_to_edit.corporate_name}}">
+                <label for="full_name">Full Name</label>
+                <input id="full_name" formControlName="full_name" class="form-control" type="text" placeholder="{{corporate_to_edit.full_name}}">
+                <label for="feed_up"> Feedback</label>
+                <textarea id="feed_up" formControlName='feed_up' class="form-control" rows="5" placeholder="{{corporate_to_edit.feed_up}}"></textarea>
+                <br>
+                <app-notification [message]= "message"></app-notification>
+                <p style="text-align: center;">
+                    <input type="submit" (click)="editNews(corporate_to_edit)" class="btn btn-success"/>
+                </p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="DeletModal" *ngIf="corporate_to_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Delete News</strong></h4>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group" [formGroup]="news_form">
+                
+                
+              <p>are you sure to delete this news</p>
+                
+            </div>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" (click)="deleteNews(corporate_to_edit.id)" data-dismiss="modal" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn"  data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+

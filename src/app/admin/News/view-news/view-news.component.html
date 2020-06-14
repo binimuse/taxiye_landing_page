@@ -41,6 +41,7 @@
       </div>
     </div>
   </div>
+  <app-notification *ngIf="message" [message]= "message"></app-notification>
   <div *ngIf="news.length ==0">
     <h3>There are no news</h3>
   </div>

@@ -291,3 +291,8 @@ label {
   background-color: #950081;
   color: white;
 }
+.horizontal {
+  display: flex;
+  justify-content: space-around;
+  
+}

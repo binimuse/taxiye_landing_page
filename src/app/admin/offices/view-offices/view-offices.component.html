@@ -1,0 +1,22 @@
+<div class="row">
+        <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+          src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+      </div>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+
+        <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(infowindow)" [latitude]="m.lat"
+          [longitude]="m.lng" [iconUrl]="icon">
+    
+          <agm-info-window #infowindow>
+            <h2 class="modals">
+           <b>{{m.label}}</b>
+            </h2>
+            <div class="lines"></div><br>
+            <strong class="modals">
+              {{m.label2}}
+            </strong>
+          </agm-info-window>
+    
+        </agm-marker>
+    
+      </agm-map>

@@ -1,0 +1,23 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
+  </div>
+  
+  <div class="w3-card-4" style="padding: 10px;">
+      <h3 style="text-align: center;">Add Driver FeedBack</h3>
+   <div class="form-group" [formGroup]="feedback_form">
+      <label for="full_name">Driver Full Name</label>
+      <input formControlName="driver_fullname" type="text" class="form-control" id="full_name">
+   
+      <label for="feedback">FeedBack</label>
+      <textarea formControlName="driver_feedback" class="form-control" rows="5" id="feedback"></textarea>
+   
+      <label for="comment">Image</label>
+      <input type="file" (change)="onFileSelected($event)" class="form-control-file border btn btn-success">
+      <app-notification [message]= "message"></app-notification>
+    <br>
+      <input type="submit" [disabled]="feedback_form.invalid" class="btn btn-success" (click)="add_feedBack()"/>
+   </div>
+      
+  </div>
+  

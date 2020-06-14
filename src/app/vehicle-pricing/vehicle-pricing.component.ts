@@ -1,6 +1,7 @@
 import { from } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { PriceService } from '../service/price.service';
 
 @Component({
   selector: 'app-vehicle-pricing',
@@ -13,22 +14,21 @@ export class VehiclePricingComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   // tslint:disable-next-line: variable-name
   single_tab: any;
-  constructor() {}
+  prices: Object;
+  constructor(private priceService : PriceService) {}
 
-  tb = [
-    { img: '/assets/image/bike1.png', dis: 'aaaaaaaaa' },
-    { img: '/assets/image/bajaj1.png', dis: 'aaaaaaaaa1'  },
-    { img: '/assets/image/taxiye1.png', dis: 'aaaaaaaaa2'  },
-    { img: '/assets/image/mini1.png', dis: 'aaaaaaaaa3'  },
-    { img: '/assets/image/bike1.png', dis: 'aaaaaaaaa4'  },
-    { img: '/assets/image/bajaj1.png', dis: 'aaaaaaaaa5'  },
-    { img: '/assets/image/taxiye1.png', dis: 'aaaaaaaaa6'  },
-    { img: '/assets/image/mini1.png', dis: 'aaaaaaaaa7'  }
-  ];
+ 
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
 
   ngOnInit() {
+<<<<<<< HEAD
 
+=======
+    this.priceService.getprice().subscribe(resp=>{
+      this.prices = resp;
+      console.log(resp);
+    })
+>>>>>>> 1c728bce65a39856f1516d113691796c581ebf6b
    }
    open_tab(tab) {
      this.single_tab = tab;

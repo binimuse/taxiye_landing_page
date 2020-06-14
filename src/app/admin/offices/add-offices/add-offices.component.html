@@ -1,0 +1,20 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;" src="./assets/image/photo_2020-05-22_13-12-07.jpg"
+        alt="" width="100%">
+</div>
+<div class="w3-card-4" style="padding: 10px;">
+    <div class="form-group" [formGroup]="offices_form">
+        <h3 style="text-align:center">Add Office</h3>
+        <label for="office_name">Office Name</label>
+        <input formControlName="office_name" type="text" class="form-control" id="office_name">
+        <label for="phone">Phone</label>
+        <input formControlName="phone" type="text" class="form-control" id="phone">
+        <label for="lat">Latitude</label>
+        <input formControlName="lat" type="text" class="form-control" id="lat">
+        <label for="lag">Longitude</label>
+        <input formControlName="lag" type="text" class="form-control" id="lag">
+        <br>
+        <app-notification [message]= "message"></app-notification>
+        <button [disabled]="offices_form.invalid" class="btn btn-success" (click)="addOffices()">Submit</button>
+    </div>
+</div>

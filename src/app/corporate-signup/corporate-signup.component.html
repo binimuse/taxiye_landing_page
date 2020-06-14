@@ -14,18 +14,18 @@
             <strong class="title1">Corporate Sing Up</strong>
           </div>
           <div class="card-body">
-            <div class="form-group" [formGroup]="login_form">
+            <div class="form-group" [formGroup]="corporate_form">
               <label for="fname" class="title">Company Name:</label>
-              <input type="text" formControlName="cname" class="form-control" id="cn" placeholder="Enter your company name">
-              <label for="eml" class="title">Email:</label>
+              <input type="text" formControlName="company_name" class="form-control" id="cn" placeholder="Enter your company name">
+              <label for="email" class="title">Email:</label>
               <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your Company email">
-              <label for="eml" class="title">Message:</label>
-              <textarea for="msg" class="form-control" formControlName="message" placeholder="Message..." id="msg" rows="3"></textarea>
+              <label for="msg" class="title">Message:</label>
+              <textarea class="form-control" formControlName="message" placeholder="Message..." id="msg" rows="3"></textarea>
             </div>
-            <app-notification></app-notification>
+            <app-notification style="font-size: 15px !important;" [message]="message" *ngIf="message"></app-notification>
             <br>
             <div class="btn-center" >
-              <input type="button" class="btn btn-primary " value="Submit" style="background-color: darkorange" [disabled]="login_form.invalid"/>
+              <input type="button" (click)="addcorporate()" class="btn btn-primary " value="Submit" style="background-color: darkorange" [disabled]="corporate_form.invalid"/>
             </div>
 
           </div>

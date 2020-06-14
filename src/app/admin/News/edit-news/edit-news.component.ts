@@ -18,7 +18,7 @@ export class EditNewsComponent implements OnInit {
     details : new FormControl()
   })
   message: NotificationModel;
-
+  
 
   constructor(
     private newsService : GetNewsService,
@@ -42,10 +42,14 @@ export class EditNewsComponent implements OnInit {
     }
     this.newsService.updateNews(this.news_to_edit.id,this.news_form.value)
     .subscribe(resp=>{
-      console.log(resp);
+      this.news_to_edit = this.news_form.value;
       this.message = {"status": "success","message":"Success Fully Updated News"};
       this.newsService.getNews().subscribe((resp:NewsModel)=>{
         this.news = resp;
+        this.news_form.patchValue({
+          news_header : "",
+          details : ""
+        })
       })
     },
     err=>{
@@ -53,6 +57,18 @@ export class EditNewsComponent implements OnInit {
     }
     );
 
+  }
+  deleteNews(id){
+    this.newsService.deleteNews(id).subscribe(resp=>{
+      this.newsService.getNews().subscribe((resp : NewsModel)=>{
+        this.news = resp;
+      })
+      this.message={"status": "success","message":"Success Fully Deleted News"};
+    },
+    err=>{
+      this.message = this.authService.checkForAuthentication(err);
+    }
+    )
   }
 
 }
