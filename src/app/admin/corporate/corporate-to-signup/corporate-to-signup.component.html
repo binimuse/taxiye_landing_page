@@ -1,0 +1,29 @@
+<div class="row">
+    <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
+      src="./assets/image/cor2.png" alt="" width="100%">
+</div>
+<h2>Corporate Table</h2>   
+
+<div class="table-responsive">     
+<table class="table">
+  <thead style="background-color: #950081; color: #e3a200;">
+    <tr>
+        <th>Corporate Name</th>
+      <th>email</th>
+      <th>message</th>
+
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let corporate of corporate">
+        <td style="width: 20%;">{{corporate.company_name}}</td>
+
+        <td style="width: 20%;">{{corporate.email}}</td>
+        <td style="width: 20%;" class="text-body">{{corporate.message}}</td>
+        
+
+    </tr>
+  </tbody>
+ 
+</table>
+</div>

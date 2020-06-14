@@ -9,36 +9,16 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 // tslint:disable-next-line: no-unused-expression
 export class HomeComponent implements OnInit {
-  constructor(private news: GetNewsService) {}
+  constructor(private news: GetNewsService,) {}
 
-  posts: post[] = [
-    {
-      // tslint:disable-next-line: max-line-length
-      discription:
-        '1Taxiye is your one-stop solution for all Taxiye is your one-stop solution for all Taxiye is your one-stop solution for all',
-      image: '/assets/image/management.png',
-      id: 1,
-    },
-    {
-      // tslint:disable-next-line: max-line-length
-      discription:
-        '2Taxiye is your one-stop solution for all Taxiye is your one-stop solution for all Taxiye is your one-stop solution for all',
-      image: '/assets/image/management.png',
-      id: 2,
-    },
-    {
-      // tslint:disable-next-line: max-line-length
-      discription:
-        '3Taxiye is your one-stop solution for all Taxiye is your one-stop solution for all Taxiye is your one-stop solution for all',
-      image: '/assets/image/management.png',
-      id: 3
-    },
-  ];
+  posts: any;
   ngOnInit() {
     console.log('test');
-    this.news.getNews().subscribe((resp) => {
+    this.news.getlatestnews().subscribe((resp:any) => {
       console.log(resp);
+      this.posts = resp.latest_news;
     });
+   
   }
 }
 // tslint:disable-next-line: class-name

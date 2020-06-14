@@ -25,5 +25,8 @@ export class GetNewsService {
     }
     deleteNews(newsID){
       return this.httpClient.delete(AppConfig.apiRootUrl + `/taxiyes/${newsID}/`);
-    } 
+    }
+    getlatestnews(){ 
+      return this.httpClient.get(AppConfig.apiRootUrl + '/taxiyes/getLatest');
+    }
 }

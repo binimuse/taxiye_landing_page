@@ -33,6 +33,8 @@ import { ViewSuperDriverComponent } from './admin/super-driver/view-super-driver
 import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver/edit-super-driver.component';
 import { AddPriceComponent } from './admin/price/add-price/add-price.component';
 import { EditPriceComponent } from './admin/price/edit-price/edit-price.component';
+import { CorporateSignupService } from './service/corporate-signup.service';
+import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signup/corporate-to-signup.component';
 
 
 const routes: Routes = [
@@ -73,6 +75,10 @@ const routes: Routes = [
     {
       path : "edit_corporate",
       component : EditCorporateComponent
+    },
+    {
+      path : "view_signup",
+      component : CorporateToSignupComponent
     },
     {
       path : "add_office",
@@ -117,7 +123,7 @@ const routes: Routes = [
     {
       path : "edit_price",
       component : EditPriceComponent
-    }
+    },
 
   ]
 },
@@ -141,7 +147,15 @@ const routes: Routes = [
 {
  path: 'book-ride', component: BookRideComponent
 },
-
+{
+  path : 'pricing',component : VehiclePricingComponent
+},
+{
+  path : 'corporate',component : CorporateComponent
+},
+{
+  path : 'corporate_signup',component : CorporateSignupComponent
+},
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -85,7 +85,7 @@ span {
 
 }
 
-.content2,
+
 .content5,
 .content6
 {
@@ -145,7 +145,7 @@ label {
   margin-top: 20px;
 }
 /* Additional styling */
-.content2,
+
 .content5,
 .content6
 {
@@ -191,3 +191,18 @@ label {
 }
 /* ena of FQA */
 
+/* .feedback{
+  width: 50vw;
+  margin-bottom:20px;
+  margin-top: 20px;
+} */
+
+.horizontal {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.center_ver{
+display: flex;
+align-items: center;
+}

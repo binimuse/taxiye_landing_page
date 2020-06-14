@@ -224,34 +224,58 @@ label {
 /* slideshow content end */
 
 /* FAQ accordion start */
-
-@media screen and (min-width: 601px) {
-  .faq{
+.accordion-container{
+  margin: 10px auto;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.accordion-container > h2{
+  margin: 2em;
+  position: relative;
+}
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 300;
+  border-bottom: 1px solid #ddd;
+  transition:all 0.2s linear;
+   background: white;
+  box-shadow: 0 0 20px rgba(#000, .2);
+  color: #212121;
+  cursor: pointer;
+  display: block;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: left;
   font-size: 15px;
-  width: 100%;
 }
-.accordion{
-  width: 100%;
-  padding-left: 10px;
-  
-}
-.icons{
-  padding-right: 20px;
-}
-}
-
-@media screen and (max-width: 600px){
-.faq{
-  font-size: 13px;
-  margin-left: -40px;
-}
-.accordion{
-  width: 100%;
-}
-.icons{
-  padding-right: 4px;
+.set > a i{
+  float: right;
+  margin-top: 10px;
 
 }
+.set > a.active{
+  background-color:white;
+  color: #000;
+
+}
+.contents{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display:none;
+}
+.contents p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
 }
 /* ena of FQA */
 /* button style */
@@ -266,4 +290,9 @@ label {
 .btns:hover{
   background-color: #950081;
   color: white;
+}
+.horizontal {
+  display: flex;
+  justify-content: space-around;
+  
 }

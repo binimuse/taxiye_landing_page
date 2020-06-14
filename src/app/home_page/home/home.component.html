@@ -62,14 +62,14 @@
 
     </div>
     <div class="w3-row-padding w3-theme" >
-      <div class="w3-third w3-section" *ngFor="let news of posts; let i = index">
+      <div class="w3-third w3-section" style="height:400px;" *ngFor="let news of posts; let i = index">
         <div class="w3-card-4">
-          <img src="{{ news.image }}" style="width:100%">
+          <img src="{{news.image_url}}" style="width:100%">
         <div class="w3-white">
           <input type="checkbox" class="read-more-state" id="post-{{ news.id}}" />
 
-          <p class="read-more-wrap">{{ news.discription }} <span
-              class="read-more-target">{{ news.discription}}</span></p>
+          <p class="read-more-wrap">{{news.news_header}} <span
+              class="read-more-target">{{news.details}}</span></p>
 
           <label for="post-{{news.id}}" class="read-more-trigger"></label><br>
         </div>

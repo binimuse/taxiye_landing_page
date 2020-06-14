@@ -43,6 +43,7 @@ import { ViewSuperDriverComponent } from './admin/super-driver/view-super-driver
 import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver/edit-super-driver.component';
 import { AddPriceComponent } from './admin/price/add-price/add-price.component';
 import { EditPriceComponent } from './admin/price/edit-price/edit-price.component';
+import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signup/corporate-to-signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +80,7 @@ import { EditPriceComponent } from './admin/price/edit-price/edit-price.componen
     EditSuperDriverComponent,
     AddPriceComponent,
     EditPriceComponent,
+    CorporateToSignupComponent,
   ],
   imports: [
     BrowserModule,

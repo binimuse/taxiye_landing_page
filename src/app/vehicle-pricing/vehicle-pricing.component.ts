@@ -1,4 +1,7 @@
+import { from } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+import { PriceService } from '../service/price.service';
 
 @Component({
   selector: 'app-vehicle-pricing',
@@ -7,23 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class VehiclePricingComponent implements OnInit {
+  single_tab: any;
+  prices: Object;
+  constructor(private priceService : PriceService) {}
 
-  constructor() {}
-
-
-  slides = [
-    { img: '/assets/image/bike1.png' },
-    { img: '/assets/image/bajaj1.png' },
-    { img: '/assets/image/taxiye1.png' },
-    { img: '/assets/image/mini1.png' },
-    { img: '/assets/image/bike1.png' },
-    { img: '/assets/image/bajaj1.png' },
-    { img: '/assets/image/taxiye1.png' },
-    { img: '/assets/image/mini1.png' }
-  ];
+ 
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
 
   ngOnInit() {
-  }
-
+    this.priceService.getprice().subscribe(resp=>{
+      this.prices = resp;
+      console.log(resp);
+    })
+   }
+   open_tab(tab) {
+     this.single_tab = tab;
+   }
 }

@@ -1,100 +1,8 @@
-/* windows resolution */
-@media screen and (min-width: 601px) {
-  .example {
-    font-size: 30px;
-    padding-top: 30%;
-    padding-left: 50px;
-  }
-  .taxiye{
-  margin-left: 10px;
-  border-radius: 10%;
-  width: 60%;
-}
-.btn {
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 20px;
-}
-.download{
-  padding-left: 60px;
-}
-.download img{
- width: 200px;
- padding-right:30px;
-}
-.icons{
-font-size:250%;
-color:#950081;
-float: left;
-padding-right: -30;
-}
-
-}
-/* mobile resolution */
-@media screen and (max-width: 601px){
-  .example {
-    font-size: 12px;
-    padding-top: 25%;
-    padding-left: 8px;
-
-  }
-  .title{
+@media screen and (min-width: 600px){
+.title{
   text-align: center;
   color: #950081;
-   font-size: 15px;
-}
-.taxiye{
-  margin-left: 90sp;
-  border-radius: 10%;
-  width: 45%;
-}
-.btn {
-  border: none;
-  background-color: inherit;
-  font-size: 10px;
-  cursor: pointer;
-  display: inline-block;
-  padding-left: 2px;
-}
-.download{
-  padding-left: 10px;
-}
-.download img{
- width: 105px;
- padding-right:15px;
-
-}
-.icons{
-font-size:100%;
-color:#950081;
-float: left;
-padding-right: 10px;
-}
-.phone-img{
-  display: none;
-}
-.accordion{
-  font-size: 10px;
-  margin-left: -40px;
-}
-}
-
-.btn:hover {background: #eee;}
-.big-text{
-    color: #fff;
-    font-size: 20pt;
-    line-height: 1em;
-}
-.always-moving{
-    color: #fff;
-    font-size: 20pt;
-    font-family: 'Leckerli One', cursive;
-    margin-top: 0;
-}
-.header-2{
-    font-size: 20px;
+  font-size: 25px;
 }
 .lines{
   width: 15%;
@@ -104,6 +12,79 @@ padding-right: 10px;
    box-shadow: 3px 3px 3px #950081;
   display: flex;
   margin-left: 43%;
+}
+.fqa-title{
+  font-size: 15px;
+}
+}
+@media screen and (max-width: 600px){
+.phone-img{
+  display: none;
+
+}
+.title{
+  text-align: center;
+  color: #950081;
+  font-size: 20px;
+}
+.lines{
+  width: 15%;
+  height: 4px;
+  background-color: #950081;
+  border-radius: 20%;
+   box-shadow: 3px 3px 3px #950081;
+  display: flex;
+  margin-left: 43%;
+}
+.fqa-title{
+  font-size: 12px;
+}
+}
+/* Accordion
+================================================== */
+
+.acc {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.acc__card {
+  margin: 2em;
+  position: relative;
+}
+.acc__title {
+  background: white;
+  box-shadow: 0 0 20px rgba(#000, .2);
+  color: #212121;
+  cursor: pointer;
+  display: block;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: left;
+}
+.acc__title:after {
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #4a6e78;
+    border-bottom: 1px solid #4a6e78;
+    position: absolute;
+    right: 10px;
+    content: " ";
+    top: 25px;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out;
+  }
+  .acc__title.active::after {
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out;
+  }
+
+.acc__panel {
+  background: #fff;
+  color: #212121;
+  display: none;
+  margin: 0;
+  padding: 2em;
+  text-align: left;
 }
 
 @media (max-width: 601px) {
@@ -124,50 +105,3 @@ padding-right: 10px;
         padding-top: 100;
     }
 }
-
-.title{
-  text-align: center;
-  color: #950081;
-
-}
-.taxiye{
-  margin-left: 90px;
-  margin-top: 35px;
-  border-radius: 10%;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#more {display: none;}
-
-.img-taxiye {
-  border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
-  width: 150px; /* Set a small width */
-  background-color: white;
-  padding: 15px;
-  background-size: 100% !important;
-  background-repeat: no-repeat;
-  padding-top: 15px !important;
-
-}
-
-/* Add a hover effect (blue shadow) */
-.img-taxiye:hover {
-  box-shadow: 0 0 2px 1px white;
-}
-
-
-/* ena of FQA */

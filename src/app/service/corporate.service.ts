@@ -20,5 +20,8 @@ export class CorporateService {
   }
   deleteNews(corporateID){
     return this.httpClient.delete(AppConfig.apiRootUrl + `/corporates/${corporateID}/`);
-  } 
+  }
+  getlatestcorporates(){ 
+    return this.httpClient.get(AppConfig.apiRootUrl + '/corporates/getLatest');
+  }
 }

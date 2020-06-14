@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CorporateService } from '../service/corporate.service';
 
 @Component({
   selector: 'app-corporate',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./corporate.component.css']
 })
 export class CorporateComponent implements OnInit {
+  corporate;
 
-  constructor() { }
+  constructor(private corporateService : CorporateService) { }
 
   ngOnInit() {
+    this.corporateService.getlatestcorporates().subscribe((resp:any)=>{
+      this.corporate = resp.latest_corporate;
+      console.log(resp)
+    })
   }
 
 }

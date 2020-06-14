@@ -17,60 +17,7 @@
     font-size: 20pt;
     line-height: 1em;
 }
-.always-moving{
-    color: #fff;
-    font-size: 20pt;
-    font-family: 'Leckerli One', cursive;
-    margin-top: 0;
-}
-  .taxiye {
-  margin-left: 10px;
-  border-radius: 10%;
-  width: 60%;
-}
-.vehicle {
-  width:100px;
-}
-.accordion {
-  background-color: rgba(51, 51, 51, 0.1);
-   border: 0px;
-   margin-top: 10px;
-   width: 600px;
-   height: auto;
-}
-.accordion__label,
-.accordion__content {
-  padding: 14px 20px;
-}
-.accordion__content {
-  line-height: 1.6;
-  font-size: 1em;
-  display: none;
-  margin-left: 90px;
-  margin-top: -50px;
-}
-.accordion__input {
-  display: none;
-}
-.accordion__input, .accordion__label img{
-  filter: grayscale(0%);
-}
-.accordion__input:checked, .accordion__label::after img {
-  filter: grayscale(100%);
-}
-.accordion__input:checked ~ .accordion__content {
-  display: block;
 
-}
-.accordion__input:checked ~ .accordion__label::after {
-  transform: translateY(-50%) rotate(0.5turn);
-}
-.driver-img{
-  height: 700px;
-}
-.title{
-  padding-left: 30px;
-}
 
 }
 @media screen and (max-width: 601px){
@@ -105,161 +52,68 @@
     font-family: 'Leckerli One', cursive;
     margin-top: 0;
 }
-.taxiye{
-  margin-left: 10px;
-  border-radius: 10%;
-  width: 60%;
-}
-.vehicle{
-  width:50px;
-  margin-top: -40px;
-}
-.accordion{
-  background-color: rgba(51, 51, 51, 0.1);
-  border: 0px;
-  margin-top: 10px;
-  width: 300px;
-}
-.accordion__label,
-.accordion__content {
-  padding: 10px 15px;
-}
-.accordion__content {
-  line-height: 1;
-  font-size: 0.4em;
-  display: none;
-  margin-left: 40px;
-  margin-top: -40px;
-}
-.accordion__input {
-  display: none;
-}
-.accordion__input:checked ~ .accordion__content {
-  display: block;
-}
-.accordion__input:checked ~ .accordion__label::after {
-  transform: translateY(-50%) rotate(0.5turn);
-}
-.driver-img{
-  height: 330px;
-}
-.title{
-  font-size: 0.80em;
-  font-weight: bold;
-  padding-left: 20px;
-  padding-bottom: 10px;
-}
-
-}
 
 
-.tablink {
-  background-color: #555;
-  color: black;
+}
+.scrtabs-tab-container * {
+  box-sizing: border-box; 
+  
+}
+
+.scrtabs-tab-container {
+  height: 42px;
+  width: 200px;
+}
+  .scrtabs-tab-container .tab-content {
+    clear: left; }
+
+.scrtabs-tab-container.scrtabs-bootstrap4 .scrtabs-tabs-movable-container > .navbar-nav {
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.scrtabs-tabs-fixed-container {
   float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
+  height: 42px;
+  overflow: hidden;
+  width: 100%; }
 
-.tablink:hover {
-  background-color: #777;
-}
+.scrtabs-tabs-movable-container {
+  position: relative; }
+  .scrtabs-tabs-movable-container .tab-content {
+    display: none; }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
+.scrtabs-tab-container.scrtabs-rtl .scrtabs-tabs-movable-container > ul.nav-tabs {
+  padding-right: 0; }
+
+.scrtabs-tab-scroll-arrow {
+  border: 1px solid #dddddd;
+  border-top: none;
+  color: #428bca;
   display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color: white;}
-#News {background-color: white;}
-#Contact {background-color: white;}
-#About {background-color: white;}
-
-
-
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  padding: 2px 16px;
-  color: white;
-
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  background-color: blue;
-  overflow: auto;
-  white-space: nowrap;
-}
-
-/* Six columns side by side */
-.column {
   float: left;
-  width: 16.66%;
+  font-size: 12px;
+  height: 42px;
+  margin-bottom: -1px;
+  padding-left: 2px;
+  padding-top: 13px;
+  width: 20px; }
+  .scrtabs-tab-scroll-arrow:hover {
+    background-color: #eeeeee; }
 
-}
+.scrtabs-tab-scroll-arrow,
+.scrtabs-tab-scroll-arrow .scrtabs-click-target {
+  cursor: pointer; }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
+.scrtabs-tab-scroll-arrow.scrtabs-with-click-target {
+  cursor: default; }
 
-.active,
-.demo:hover {
-  opacity: 1;
-}
+.scrtabs-tab-scroll-arrow.scrtabs-disable,
+.scrtabs-tab-scroll-arrow.scrtabs-disable .scrtabs-click-target {
+  color: #ddd;
+  cursor: default; }
+
+.scrtabs-tab-scroll-arrow.scrtabs-disable:hover {
+  background-color: initial; }
+
+.scrtabs-tabs-fixed-container ul.nav-tabs > li {
+  white-space: nowrap; }
