@@ -2,15 +2,14 @@
 <div class="w3-display-topleft w3-text-white same_padding">
 
   <div class="example">
-    <a class="btn default">Register Driver</a>|
-    <a class="btn default">Book</a>|
-    <a class="btn default">Pricing</a>|
-    <a class="btn default">Corporate</a><br><br>
+    <a class="btn default" href="signup">Register Driver</a>|
+    <a class="btn default" href="book-ride">Book</a>|
+    <a class="btn default" href="corporate-signup">Register Corporate</a><br><br>
     The fast, affordable way to ride <br>
     Always Moving
   </div><br>
-<div class="py-2 download">
-  <a href="https://apps.apple.com/us/app/taxiye-passenger/id1455202776"><img src="/assets/image/app store-3.png" alt=""  class="imgs"></a>
+<div class="download">
+  <a href="https://apps.apple.com/us/app/taxiye-passenger/id1455202776"><img src="/assets/image/app store-3.png" alt=""></a>
   <a href="https://play.google.com/store/apps/details?id=com.taxiye"><img src="/assets/image/playstore.png" alt=""  class="imgs"></a>
 </div>
 
@@ -38,12 +37,10 @@
    <br>
       <h4><img src="/assets/image/reable.jpg" alt="f" > Reliable Services</h4>
       <p style="padding-left: 12%;">With the Taxiye app you can immediately book Taxis and get rides easily and in a timely manner.</p>
-        <h4><img src="/assets/image/reable.jpg" alt="f"> Reliable Services</h4>
-        <p style="padding-left: 12%;">With the Taxiye app you can immediately book Taxis and get rides easily and in a timely
-          manner.</p>
-        <h4><img src="/assets/image/reable.jpg" alt="f"> Reliable Services</h4>
-        <p style="padding-left: 12%;">With the Taxiye app you can immediately book Taxis and get rides easily and in a timely
-          manner.</p>
+        <h4><img src="/assets/image/icon-syaf.png" alt="f">Safer Rides</h4>
+        <p style="padding-left: 12%;">Your safety is our priority. We want to ensure you feel safe during trips and have multiple safety measures in effect.</p>
+        <h4><img src="/assets/image/location-icon-png-42i30.png" alt="f"> Instant Booking</h4>
+        <p style="padding-left: 12%;">With the Taxiye app you can immediately book Taxis and get rides easily and in a timely manner..</p>
         <h4><img src="/assets/image/reable.jpg" alt="f"> Reliable Services</h4>
         <p style="padding-left: 12%;">With the Taxiye app you can immediately book Taxis and get rides easily and in a timely
           manner.</p><br>
@@ -59,25 +56,58 @@
   <div class="w3-container">
     <div class="w3-container w3-padding-32 w3-theme-d1">
       <h1 class="title w3-center ">TAXIYE NEWS</h1>
-
+       <div class="lines" style="width: 100px; margin-left: 46%;" ></div>
     </div>
-    <div class="w3-row-padding w3-theme" >
+
+    <div class="w3-row-padding w3-theme  slider" >
       <div class="w3-third w3-section" style="height:400px;" *ngFor="let news of posts; let i = index">
         <div class="w3-card-4">
-          <img src="{{news.image_url}}" style="width:100%">
-        <div class="w3-white">
-          <input type="checkbox" class="read-more-state" id="post-{{ news.id}}" />
+          <img src="{{news.image_url}}" style="width:100%; height: 300px">
+          <div class="w3-white">
+            <input type="checkbox" class="read-more-state" id="post-{{ news.id}}" />
 
-          <p class="read-more-wrap">{{news.news_header}} <span
-              class="read-more-target">{{news.details}}</span></p>
+            <span class="read-more-wrap">
+              <h4 class="w3-center"><strong>{{news.news_header}}</strong></h4><span
+                class="read-more-target">{{news.details}}</span>
+                <span class="fa fa-calendar" aria-hidden="true" style="padding-left: 50%; padding-bottom: 20px;">&nbsp;&nbsp;&nbsp; {{news.date | date: 'yyyy-MM-dd | HH-MM-SS'}}</span>
+            </span><br>
 
-          <label for="post-{{news.id}}" class="read-more-trigger"></label><br>
+            <button type="button" class="btn read-more" (click)="modal_view(news)" data-toggle="modal" data-target="#myModal">
+              Read More
+            </button>
+            <br>
+          </div>
         </div>
+
+      </div>
+    </div>
+    </div>
+
+
+  <div class="modal" id="myModal" *ngIf="single_news">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img src="{{single_news.image_url}}" style="width:100%">
+          <h4 class="modal-title"><strong>{{single_news.news_header}}</strong></h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          {{single_news.details}}
+        </div>
+        <span class="fa fa-calendar" aria-hidden="true" style="padding-left: 50%;">&nbsp;&nbsp;&nbsp; {{single_news.date | date: 'yyyy-MM-dd | HH-MM-SS'}}</span>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
 
       </div>
     </div>
   </div>
+<br><br><br>
 
   <app-footer></app-footer>
 

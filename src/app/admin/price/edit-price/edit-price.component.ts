@@ -56,8 +56,7 @@ export class EditPriceComponent implements OnInit {
         base_fee : "",
         per_kilometer_fee : "",
         per_minute_fee : ""
-      })
-      
+      })      
       this.priceService.getprice().subscribe(resp=>{
         this.price =resp;
         this.message = this.authService.checkForAuthentication('success')

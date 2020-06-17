@@ -18,12 +18,12 @@ export class EditOfficesComponent implements OnInit {
     lag : new FormControl
 
   })
-  message: import("e:/projext/taxiye landing/landing-page-new/src/app/model/notification-model").NotificationModel;
+  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
   constructor( private officeService : OfficeService,private authService : AuteServiceService) { }
 
   ngOnInit() {
     this.officeService.getOffices().subscribe(resp=>{
-      this.off = resp; 
+      this.off = resp;
     })
   }
   SendValueToModal(office){
@@ -32,18 +32,18 @@ export class EditOfficesComponent implements OnInit {
   editOffices(office){
     if(this.offices_form.value.office_name ==null || this.offices_form.value.office_name ==""){
       this.offices_form.value.office_name = office.office_name;
-      
+
     }
     if(this.offices_form.value.phone==null || this.offices_form.value.phone ==""){
       this.offices_form.value.phone = office.phone;
     }
     if(this.offices_form.value.lat==null || this.offices_form.value.lat ==""){
       this.offices_form.value.lat = office.lat;
-      
+
     }
     if(this.offices_form.value.lag==null || this.offices_form.value.lag ==""){
       this.offices_form.value.lag = office.lag;
-      
+
     }
     this.officeService.updateOffices(office.id,this.offices_form.value).subscribe(resp=>{
       this.offices_to_edit = this.offices_form.value;
@@ -56,7 +56,7 @@ export class EditOfficesComponent implements OnInit {
         lag : "",
       })
       this.officeService.getOffices().subscribe(resp=>{
-        this.off = resp; 
+        this.off = resp;
       },
       err=>{
         this.message = this.authService.checkForAuthentication(err);
@@ -70,6 +70,6 @@ export class EditOfficesComponent implements OnInit {
     )
 
 
-    
+
   }
 }

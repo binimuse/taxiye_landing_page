@@ -1,44 +1,303 @@
 <app-nav-bar></app-nav-bar>
-
 <div class="w3-display-topleft w3-text-white same_padding">
   <div class="example">
-    <a class="btn default">Register Driver</a>|
-    <a class="btn default">Book</a>|
-    <a class="btn default" style="color: darkorange;">Pricing</a>|
-    <a class="btn default">Corporate</a><br>
-    <ul class="nav nav-tabs" role="tablist" >
+    <a class="btn default" href="signup">Register Driver</a>|
+    <a class="btn default" href="book-ride">Book Taxi</a>|
+    <a class="btn default" href="corporate-signup">Register Corporate</a><br><br>
+    <!-- <ul class="nav nav-tabs" role="tablist" >
       <li role="presentation" class="active" *ngFor="let tab of prices; let i = index">
-        <a href="#{{tab.id}}" (click) = "open_tab(tab)"role="tab" data-toggle="tab">
+        <a href="#{{tab.id}}" (click) = "open_tab(tab)" role="tab" data-toggle="tab">
           <img src="{{ tab.vechicle_img}}" width="50px" height="50px">
           </a>
       </li>
-    </ul>
-    
+    </ul> -->
+
     <!-- Tab panes -->
-    <div class="tab-content" *ngIf="single_tab">
+    <!-- <div class="tab-content" *ngIf="single_tab">
       <div role="tabpanel" class="tab-pane active" id="{{single_tab.id}}">
         <strong>Name : {{single_tab.vechicle_type}}</strong><br>
         <strong>Base Fee : {{single_tab.base_fee}}</strong><br>
         <strong>Per Kilometer Fee : {{single_tab.per_kilometer_fee}}</strong><br>
         <strong>Per Minute Fee : {{single_tab.per_minute_fee}}</strong>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active" *ngFor="let t of tb; let i = index">
-    <a href="{{t.dis}}" (click)="open_tab(t)" role="tab" data-toggle="tab">
-      <img src="{{ t.img}}" width="30px" height="40px" class="img" style="padding-left: -20px;">
-    </a>
-  </li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content" >
-  <div role="tabpanel" class="tab-pane active" id="{{single_tab.dis}}"> {{ single_tab.dis}}</div>
-
-</div>
-
- </div>
 <div class="carousel-item">
-  <img src="\assets\image\IMG_20200515_224116_400.jpg" class="driver-img" width="100%" alt="Los Angeles">
+  <img src="\assets\image\2.png" width="100%" alt="Los Angeles">
 </div>
+<div class="codepen-container">
+  <div id="icetab-container" class="w3-center">
+    <div class="icetab current-tab">City Taxiye</div>
+    <div class="icetab">Outstation</div>
+    <div class="icetab">Rental</div>
+  </div>
+
+  <div id="icetab-content">
+    <div class="tabcontent tab-active">
+      <div id="page">
+        <div class="row">
+          <div class="column small-11 small-centered">
+            <div class="slider slider-nav">
+              <div class="img-holder" *ngFor="let tab of prices; let i = index" (click) = "open_tab(tab)">
+                <img src="{{ tab.vechicle_img}}" class="w3-center">
+                <span class="w3-center tit">
+                  Mini
+                </span>
+              </div>
+              <div class="img-holder">
+                <img src="\assets\image\vehicle/driver-incon.png" class="img-holders">
+                <span class="w3-center  tit"><b>Mini</b></span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+            </div>
+            <div>
+
+            </div>
+<div class="slider slider-single" >
+<div class="container sliders" style=" width: 94.5%;" *ngIf="single_tab">
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="{{ single_tab.vechicle_img}}" alt="" width="100%">
+    </div>
+    <br>
+    <div class=" w3-container col-sm-6">
+      <h4> <b>Vehicle Type</b></h4>
+      <p style="padding-left: 12%;">Discription.</p>
+      <h4> Pricing</h4>
+        <strong>Name : {{single_tab.vechicle_type}}</strong><br>
+        <strong>Base Fee : {{single_tab.base_fee}}</strong><br>
+        <strong>Per Kilometer Fee : {{single_tab.per_kilometer_fee}}</strong><br>
+        <strong>Per Minute Fee : {{single_tab.per_minute_fee}}</strong>
+
+    </div>
+  </div>
+
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+              <div>
+                <h3>6</h3>
+              </div>
+              <div>
+                <h3>7</h3>
+              </div>
+              <div>
+                <h3>8</h3>
+              </div>
+              <div>
+                <h3>9</h3>
+              </div>
+              <div>
+                <h3>10</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent"><div id="page">
+
+      <div class="row">
+        <div class="column small-11 small-centered">
+          <div class="slider slider-nav">
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg">
+              <span class="w3-center" style="margin-left:20px; margin-bottom:10px">Bajaj</span><br>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+            <div class="img-holder">
+              <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+              <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+            </div>
+          </div>
+          <div>
+
+          </div>
+          <div class="slider slider-single">
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+            <div>
+              <h3>7</h3>
+            </div>
+            <div>
+              <h3>8</h3>
+            </div>
+            <div>
+              <h3>9</h3>
+            </div>
+            <div>
+              <h3>10</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <div class="tabcontent">
+      <div id="page">
+
+        <div class="row">
+          <div class="column small-11 small-centered">
+            <div class="slider slider-nav">
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg">
+                <span class="w3-center" style="margin-left:20px; margin-bottom:10px">Bajaj</span><br>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+              <div class="img-holder">
+                <img src="/assets\image/bajaj.jpg" width="50px" height="50px" class="img-holders">
+                <span class="w3-center" style="margin-left:30px; margin-top:-10px">Bajaj</span>
+              </div>
+            </div>
+            <div>
+
+            </div>
+            <div class="slider slider-single">
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+              <div>
+                <h3>6</h3>
+              </div>
+              <div>
+                <h3>7</h3>
+              </div>
+              <div>
+                <h3>8</h3>
+              </div>
+              <div>
+                <h3>9</h3>
+              </div>
+              <div>
+                <h3>10</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer> </app-footer>

@@ -46,6 +46,8 @@ import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver
 import { AddPriceComponent } from './admin/price/add-price/add-price.component';
 import { EditPriceComponent } from './admin/price/edit-price/edit-price.component';
 import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signup/corporate-to-signup.component';
+import { SlicksampleComponent } from './slicksample/slicksample.component';
+import { AllViewNewsComponent } from './all-view-news/all-view-news.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +86,8 @@ import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signu
     AddPriceComponent,
     EditPriceComponent,
     CorporateToSignupComponent,
+    SlicksampleComponent,
+    AllViewNewsComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,29 +18,13 @@
   font-size: 20px;
 }
 .download{
-  padding-left: 60px;
+  padding-left: 100px;
 }
 .download img{
  width: 200px;
- padding-right:30px;
 }
-.read-more-trigger {
-  cursor: pointer;
-  display: inline-block;
-  font-size: .9em;
-  line-height: 2;
-  border: 1px solid #ddd;
-  border-radius: 50px;
-  margin-left: 30%;
-  background-color: #950081;
-  color:white;
-  height: 40px;
-  width: 200px;
-  text-align: center;
-  padding-top: 5px;
-}
-.read-more-trigger:hover{
-  background-color: darkorange;
+.imgs{
+margin-left: 50px;
 }
 .why-use{
   background-color: rgba(248, 248, 248, 0.3);
@@ -68,34 +52,14 @@
   padding-left: 2px;
 }
 .download{
-  padding-left: 10px;
+ padding-left: 30px;
 }
 .download img{
  width: 105px;
- padding-right:15px;
-
-}
-.read-more-trigger {
-  cursor: pointer;
-  display: inline-block;
-  font-size: .7em;
-  line-height: 2;
-  border: 1px solid #ddd;
-  border-radius: 50px;
-  margin-left: 30%;
-  background-color: #950081;
-  color:white;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-  padding-top: 3px;
-}
-.read-more-trigger:hover{
-  background-color: darkorange;
 }
 }
 
-.btn:hover {background: #eee;}
+
 .big-text{
     color: #fff;
     font-size: 20pt;
@@ -123,7 +87,6 @@
 @media (max-width: 601px) {
     #first_header{
         padding-top: 0;
-
     }
     #min-padding{
         padding-top: 0;
@@ -205,6 +168,30 @@
   content: 'Read less';
 
 }
+.text-body{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.read-more {
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:#950081;
+    color: white;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 50%;
+    margin-top: 20px;
+    width: 50%;
+  }
+  
 /* Add a hover effect (blue shadow) */
 .img-taxiye:hover {
   box-shadow: 0 0 2px 1px white;
@@ -215,7 +202,6 @@ color:#950081;
 float: left;
 padding-right: 50px;
 }
-
 
 
 

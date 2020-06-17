@@ -1,3 +1,5 @@
+import { AllViewNewsComponent } from './all-view-news/all-view-news.component';
+import { SlicksampleComponent } from './slicksample/slicksample.component';
 
 import { OfficesComponent } from './offices/offices.component';
 import { FqaComponent } from './fqa/fqa.component';
@@ -39,7 +41,7 @@ import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signu
 
 const routes: Routes = [
   {
-  path: '',component: HomeComponent,
+  path: '', component: HomeComponent,
   },
   {
     path: 'admin',
@@ -83,7 +85,7 @@ const routes: Routes = [
     component: DriverRegisterComponent,
   },
   {
-    path: 'singup',
+    path: 'signup',
     component: DriverSingupComponent,
   },
   {
@@ -103,14 +105,20 @@ const routes: Routes = [
     component: CorporateSignupComponent,
   },
   {
-    path: 'FQA',
+    path: 'FAQ',
     component: FqaComponent,
   },
   {
     path: 'offices',
     component: OfficesComponent,
-  },
 
+  },
+ {
+   path: 'slick', component: SlicksampleComponent
+ },
+ {
+   path: 'all-view', component: AllViewNewsComponent
+ }
 ];
 
 @NgModule({
