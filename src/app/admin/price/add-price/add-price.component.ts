@@ -16,6 +16,7 @@ export class AddPriceComponent implements OnInit {
     base_fee : new FormControl("",Validators.required),
     per_kilometer_fee : new FormControl("",Validators.required),
     per_minute_fee : new FormControl("",Validators.required),
+    service_type :new FormControl("",Validators.required),
     vechicle_img : new FormControl
   })
   file_upload: File;

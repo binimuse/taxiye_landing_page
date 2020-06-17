@@ -21,6 +21,14 @@
       <label for="per_minute_fee">Per Minute Fee</label>
       <input formControlName="per_minute_fee" type="number" class="form-control" id="per_minute_fee">
 
+      <label for="sel1">Service Type</label>
+      <select class="form-control" formControlName="service_type" id="sel1" name="sellist1">
+        <option disabled="true" selected>Select Service Type</option>
+        <option value="on_demand">On Demand</option>
+        <option value="rental">Rental</option>
+        <option value="out_station">Out Station</option>
+      </select>
+      
       <app-notification [message]= "message"></app-notification>
     <br>
       <input type="submit" [disabled]="price_form.invalid" class="btn btn-success" (click)="addprice()"/>

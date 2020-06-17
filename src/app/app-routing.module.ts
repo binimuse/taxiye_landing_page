@@ -156,6 +156,9 @@ const routes: Routes = [
 {
   path : 'corporate_signup',component : CorporateSignupComponent
 },
+{
+  path : 'offices',component : OfficesComponent
+}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
