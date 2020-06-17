@@ -17,11 +17,14 @@ export class AddPriceComponent implements OnInit {
     per_kilometer_fee : new FormControl("",Validators.required),
     per_minute_fee : new FormControl("",Validators.required),
     service_type :new FormControl("",Validators.required),
-    vechicle_img : new FormControl
+    description : new FormControl("",Validators.required),
+    vechicle_img : new FormControl,
+    big_img : new FormControl
   })
   file_upload: File;
   url = AppConfig.apiRootUrl;
   message: { status: string; message: string; };
+  file_uploadsecond: File;
   constructor(
     private authService : AuteServiceService,
     private priceService : PriceService,
@@ -36,26 +39,38 @@ export class AddPriceComponent implements OnInit {
         this.file_upload = <File>event.target.files[0];
       }
     }
+    onFileSelected2(event) {
+      if (event.target.files.length > 0) {
+        this.file_uploadsecond = <File>event.target.files[0];
+      }
+    }
   addprice(){
     const fd = new FormData();
-    if (this.file_upload) {
+    const fd2 =new FormData();
+    if (this.file_upload && this.file_uploadsecond) {
       fd.append('image', this.file_upload, this.file_upload.name);
-      this.newsService.postImage(fd).subscribe((resp: any) => {
-        this.price_form.value.vechicle_img = this.url + "Containers/imags/download/" + resp.result.files.image[0].name;
-        this.priceService.addprice(this.price_form.value).subscribe(resp=>{
-          this.price_form.patchValue({
-            vechicle_type : "",
-            base_fee : "",
-            per_kilometer_fee : "",
-            per_minute_fee : "",
-          });
-          this.message = this.authService.checkForAuthentication("success");
-
-        },
-        err=>{
-          this.message = this.authService.checkForAuthentication(err);
-        }
-        )
+      fd2.append('image', this.file_uploadsecond, this.file_uploadsecond.name);
+      this.newsService.postImage(fd).subscribe((resps: any) => {
+        this.price_form.value.vechicle_img = this.url + "Containers/imags/download/" + resps.result.files.image[0].name;
+        this.newsService.postImage(fd2).subscribe((resp:any)=>{
+          this.price_form.value.big_img = this.url + "Containers/imags/download/" + resp.result.files.image[0].name;
+          this.priceService.addprice(this.price_form.value).subscribe(resp=>{
+            this.price_form.patchValue({
+              vechicle_type : "",
+              base_fee : "",
+              per_kilometer_fee : "",
+              per_minute_fee : "",
+            });
+            this.message = this.authService.checkForAuthentication("success");
+  
+          },
+          err=>{
+            this.message = this.authService.checkForAuthentication(err);
+          }
+          )
+        })
+        
+        
       })
     }
     else{

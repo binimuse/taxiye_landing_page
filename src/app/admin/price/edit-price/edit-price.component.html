@@ -9,9 +9,11 @@
     <tr>
       <th>Vechicle Type</th>
       <th>Vechicle Images</th>
+      <th>Vichicle Icon</th>
       <th>Base Fee</th>
       <th>Per Kilometer Fee</th>
       <th>Per Minute Fee</th>
+      <th>Description</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
@@ -19,12 +21,14 @@
   <tbody *ngIf="price">
     <tr *ngFor="let price of price">
         <td style="width: 10%;">{{price.vechicle_type}}</td>
-        <td style="width: 15%;"><img src="{{price.vechicle_img}}" alt="" width="30%"></td>
+        <td style="width: 10%;"><img src="{{price.big_img}}" alt="" width="30%"></td>
+        <td style="width: 10%;"><img src="{{price.vechicle_img}}" alt="" width="30%"></td>
         <td style="width: 10%;" class="text-body">{{price.base_fee}}</td>
         <td style="width: 10%;" class="text-body">{{price.per_kilometer_fee}}</td>
         <td style="width: 10%;" class="text-body">{{price.per_minute_fee}}</td>
-        <td style="width: 10%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(price)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
-        <td style="width: 10%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(price)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
+        <td style="width: 10%;" class="text-body">{{price.description}}</td>
+        <td style="width: 5%;"><button type="button" class="btn btn-success" (click)="SendValueToModal(price)" data-toggle="modal" data-target="#EditModal">Edit</button></td>
+        <td style="width: 5%;"><button type="button" class="btn btn-danger" (click)="SendValueToModal(price)" data-toggle="modal" data-target="#DeletModal">Delete</button></td>
     </tr>
   </tbody>
  

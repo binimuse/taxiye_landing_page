@@ -39,127 +39,138 @@ import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signu
 
 const routes: Routes = [
   {
-    path : '', component : HomeComponent
-},
-{
-  path : 'admin',
-  component : AdminContainerComponent,
-  canActivate : [AuthGuard],
-  canActivateChild : [AuthGuard],
-  canLoad : [AuthGuard],
-  children : [
-    {
-      path : 'homepage',
-      component : AdminHomePageComponent,
-    },
-    {
-      path : 'news',
-      component: ViewNewsComponent,
-    },
-    {
-      path : "add_news",
-      component : AddNewsComponent
-    },
-    {
-      path : "edit_news",
-      component : EditNewsComponent
-    },
-    {
-      path : "add_corporate",
-      component : AddCorporatesComponent
-    },
-    {
-      path : "view_corporate",
-      component : ViewCorporatesComponent
-    },
-    {
-      path : "edit_corporate",
-      component : EditCorporateComponent
-    },
-    {
-      path : "view_signup",
-      component : CorporateToSignupComponent
-    },
-    {
-      path : "add_office",
-      component : AddOfficesComponent
-    },
-    {
-      path : "view_offices",
-      component : ViewOfficesComponent
-    },
-    {
-      path : "edit_offices",
-      component : EditOfficesComponent
-    },
-    {
-      path : "add_feedback",
-      component : AddDriverFeedbackComponent
-    },
-    {
-      path : "view_feedback",
-      component : ViewDriverFeedbackComponent
-    },
-    {
-      path : "edit_feedback",
-      component : EditDriverFeedbackComponent
-    },
-    {
-      path : "add_superdriver",
-      component : AddSuperDriverComponent
-    },
-    {
-      path : "view_superdriver",
-      component : ViewSuperDriverComponent
-    },
-    {
-      path : "edit_superdriver",
-      component : EditSuperDriverComponent
-    },
-    {
-      path : "add_price",
-      component : AddPriceComponent
-    },
-    {
-      path : "edit_price",
-      component : EditPriceComponent
-    },
+    path: '', component: HomeComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminContainerComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+    canLoad: [AuthGuard],
+    children: [
+      {
+        path: 'homepage',
+        component: AdminHomePageComponent,
+      },
+      {
+        path: 'add_news',
+        component: AddNewsComponent,
+      },
+      {
+        path: 'edit_news',
+        component: EditNewsComponent,
+      },
+      {
+        path: 'add_corporate', component: AddCorporatesComponent,
+      },
+      {
+        path: 'edit_corporate', component: EditCorporateComponent
+      },
+      {
+        path: 'view_signup', component: CorporateToSignupComponent
+      },
+      {
+        path: 'add_office', component: AddOfficesComponent
+      },
+      {
+        path: 'edit_offices', component: EditOfficesComponent
+      },
+      {
+        path: 'add_feedback', component: AddDriverFeedbackComponent
+      },
+      {
+        path: 'edit_feedback', component: EditDriverFeedbackComponent
+      },
+      {
+        path: 'add_superdriver', component: AddSuperDriverComponent
+      },
+      {
+        path: 'edit_superdriver', component: EditSuperDriverComponent
+      },
+      {
+        path: 'add_price', component: AddPriceComponent
+      },
+      {
+        path: 'edit_price', component: EditPriceComponent
+      }
+    ],
+  },
+  {
+    path: 'taxiyeadmin',
+    component: LoginComponent,
+  },
+  {
+    path: 'nav',
+    component: NavBarComponent,
+  },
+  {
+    path: 'header',
+    component: NavBarComponent,
+  },
+  {
+    path: 'driver',
+    component: DriverRegisterComponent,
+  },
+  {
+    path: 'singup',
+    component: DriverSingupComponent,
+  },
+  {
+    path: 'book-ride',
+    component: BookRideComponent,
+  },
+  {
+    path: 'pricing',
+    component: VehiclePricingComponent,
+  },
+  {
+    path: 'corporate',
+    component: CorporateComponent,
+  },
+  {
+    path: 'corporate-signup',
+    component: CorporateSignupComponent,
+  },
+  {
+    path: 'FQA',
+    component: FqaComponent,
+  },
+  {
+    path: 'offices',
+    component: OfficesComponent,
+  },
+  {
+    path: 'taxiyeadmin',
+    component: LoginComponent
+  },
+  {
+    path: 'nav',
+    component: NavBarComponent
+  },
+  {
+    path: 'header', component: NavBarComponent
+  },
+  {
+    path: 'driver', component: DriverRegisterComponent
+  },
+  {
+    path: 'singup', component: DriverSingupComponent
+  },
+  {
+    path: 'book-ride', component: BookRideComponent
+  },
+  {
+    path: 'pricing', component: VehiclePricingComponent
+  },
+  {
+    path: 'corporate', component: CorporateComponent
+  },
+  {
+    path: 'corporate_signup', component: CorporateSignupComponent
+  }
 
-  ]
-},
-{
-    path : 'taxiyeadmin',
-    component : LoginComponent
-},
-{
-  path: 'nav',
-  component: NavBarComponent
-},
-{
-  path : 'header', component : NavBarComponent
-},
-{
-  path: 'driver', component: DriverRegisterComponent
-},
-{
-  path: 'singup', component: DriverSingupComponent
-},
-{
- path: 'book-ride', component: BookRideComponent
-},
-{
-  path : 'pricing',component : VehiclePricingComponent
-},
-{
-  path : 'corporate',component : CorporateComponent
-},
-{
-  path : 'corporate_signup',component : CorporateSignupComponent
-},
-{
-  path : 'offices',component : OfficesComponent
-}
-]
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

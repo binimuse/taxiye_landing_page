@@ -2,8 +2,9 @@
 @media screen and (min-width: 601px) {
   .example {
     font-size: 30px;
-    padding-top: 30%;
+    padding-top: 100px;
     padding-left: 20px;
+    padding-bottom: 50px;
   }
   .taxiye{
   margin-left: 10px;
@@ -109,46 +110,75 @@
   border-radius: 10%;
 }
 /* input form */
-
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 4px;
-  font-size: 15px;
-
-}
-.input-field {
-  width: 80%;
-  height: 40px;
-  padding-left: 20px;
-  outline: none;
-  color: black;
-   border-radius: 2px;
+fieldset {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 95px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 400px;
 }
 
-.input-field:focus {
-  border: 2px solid dodgerblue;
+ fieldset:not(:first-of-type) {
+    display: none
 }
 
-/* Set a style for the submit button */
-.btns {
-  background-color: darkorange;
-  color: #950081;
-  border: none;
-  cursor: pointer;
-  width: 15%;
-  opacity: 0.9;
-  margin-left: 300px;
-  border-radius: 5px;
-  font-size: 12px;
-  height: 30px;
+ fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
 }
 
-.btns:hover {
-  opacity: 1;
+ input,
+textarea {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    width: 80%;
+    height: 40px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.input{
+  padding-left: 10px;
 }
 
+ input:focus,
+ textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
 
+.action-button {
+    width: 100px;
+    background: darkorange;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
 
-
+ .action-button:hover,
+ .action-button:focus {
+    box-shadow: 0 0 0 2px darkorange, 0 0 0 3px darkorange
+}
+.maps
+{
+  padding-left: 200px;
+ width: 700px;
+ height: 500px;
+}
