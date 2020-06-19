@@ -41,6 +41,7 @@ import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signu
 
 const routes: Routes = [
   {
+
   path: '', component: HomeComponent,
   },
   {
@@ -55,10 +56,6 @@ const routes: Routes = [
         component: AdminHomePageComponent,
       },
       {
-        path: 'news',
-        component: ViewNewsComponent,
-      },
-      {
         path: 'add_news',
         component: AddNewsComponent,
       },
@@ -66,6 +63,39 @@ const routes: Routes = [
         path: 'edit_news',
         component: EditNewsComponent,
       },
+      {
+        path: 'add_corporate', component: AddCorporatesComponent,
+      },
+      {
+        path: 'edit_corporate', component: EditCorporateComponent
+      },
+      {
+        path: 'view_signup', component: CorporateToSignupComponent
+      },
+      {
+        path: 'add_office', component: AddOfficesComponent
+      },
+      {
+        path: 'edit_offices', component: EditOfficesComponent
+      },
+      {
+        path: 'add_feedback', component: AddDriverFeedbackComponent
+      },
+      {
+        path: 'edit_feedback', component: EditDriverFeedbackComponent
+      },
+      {
+        path: 'add_superdriver', component: AddSuperDriverComponent
+      },
+      {
+        path: 'edit_superdriver', component: EditSuperDriverComponent
+      },
+      {
+        path: 'add_price', component: AddPriceComponent
+      },
+      {
+        path: 'edit_price', component: EditPriceComponent
+      }
     ],
   },
   {
@@ -112,6 +142,35 @@ const routes: Routes = [
     path: 'offices',
     component: OfficesComponent,
 
+  },
+  {
+    path: 'taxiyeadmin',
+    component: LoginComponent
+  },
+  {
+    path: 'nav',
+    component: NavBarComponent
+  },
+  {
+    path: 'header', component: NavBarComponent
+  },
+  {
+    path: 'driver', component: DriverRegisterComponent
+  },
+  {
+    path: 'singup', component: DriverSingupComponent
+  },
+  {
+    path: 'book-ride', component: BookRideComponent
+  },
+  {
+    path: 'pricing', component: VehiclePricingComponent
+  },
+  {
+    path: 'corporate', component: CorporateComponent
+  },
+  {
+    path: 'corporate_signup', component: CorporateSignupComponent
   },
  {
    path: 'slick', component: SlicksampleComponent

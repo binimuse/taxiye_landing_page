@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
-<div class="w3-container w3-white">
+<div class="w3-container" style="background-color:lightgrey;">
 
   <div class="w3-container w3-padding-32 w3-theme-d1">
     <h1 class="title">Taxiye Offices</h1><br>
@@ -7,7 +7,6 @@
   </div>
 
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
-
     <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(infowindow)" [latitude]="m.lat"
       [longitude]="m.lng" [iconUrl]="icon">
 
@@ -26,7 +25,7 @@
   </agm-map>
 </div>
 
-<div class="w3-container w3-white">
+<div class="w3-container">
   <div class="w3-container w3-padding-32 w3-theme-d1">
     <h1 class="title">Coming Soon</h1><br>
     <div class="lines"></div>

@@ -11,7 +11,7 @@ export class ViewOfficesComponent implements OnInit {
 
   constructor(private officesService : OfficeService) { }
   lat = 8.5737791;
-  lng = 35.6687268;
+  lng = 35.6687268; 
   previous;
   zoom = 6;
   icon = {
