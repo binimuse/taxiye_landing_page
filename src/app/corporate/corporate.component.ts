@@ -25,16 +25,16 @@ export class CorporateComponent implements OnInit {
             .siblings(".contents")
             .slideUp(200);
           $(".set > a i")
-            .removeClass("fa-minus")
-            .addClass("fa-plus");
+            .removeClass(" fa-arrow-up")
+            .addClass("fa-arrow-right");
         } else {
           $(".set > a i")
-            .removeClass("fa-minus")
-            .addClass("fa-plus");
+            .removeClass(" fa-arrow-up")
+            .addClass("fa-arrow-right");
           $(this)
             .find("i")
-            .removeClass("fa-plus")
-            .addClass("fa-minus");
+            .removeClass("fa-arrow-right")
+            .addClass(" fa-arrow-up");
           $(".set > a").removeClass("active");
           $(this).addClass("active");
           $(".contents").slideUp(200);

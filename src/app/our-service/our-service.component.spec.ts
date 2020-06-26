@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SlicksampleComponent } from './slicksample.component';
+import { OurServiceComponent } from './our-service.component';
 
-describe('SlicksampleComponent', () => {
-  let component: SlicksampleComponent;
-  let fixture: ComponentFixture<SlicksampleComponent>;
+describe('OurServiceComponent', () => {
+  let component: OurServiceComponent;
+  let fixture: ComponentFixture<OurServiceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SlicksampleComponent ]
+      declarations: [ OurServiceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlicksampleComponent);
+    fixture = TestBed.createComponent(OurServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -26,7 +26,6 @@ export class VehiclePricingComponent implements OnInit {
   rental: any;
   Outstation: any;
   constructor(private priceService: PriceService) { }
-  slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
 
   ngOnInit() {
     this.priceService.getprice().subscribe(resp => {
@@ -34,7 +33,7 @@ export class VehiclePricingComponent implements OnInit {
       this.onDemand =  this.prices.filter(function(price) {
         return price.service_type == 'on_demand';
 });
-    this.rental =  this.prices.filter(function(price1) {
+      this.rental =  this.prices.filter(function(price1) {
         return price1.service_type == 'rental';
 });
       this.Outstation = this.prices.filter(function (price2) {
@@ -127,21 +126,8 @@ export class VehiclePricingComponent implements OnInit {
       tabs[index].addEventListener('click', myFunction, false);
     }
 
-    $(function () {
-      $("#slider").slick({
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-
-      });
-    });
-    jQuery('.slider').slick({
-      slidesToShow: 4,
-      slidesToScroll: 4
-    });
   }
-  
+
   open_tab(tab) {
     this.single_tab = tab;
   }

@@ -46,8 +46,9 @@ import { EditSuperDriverComponent } from './admin/super-driver/edit-super-driver
 import { AddPriceComponent } from './admin/price/add-price/add-price.component';
 import { EditPriceComponent } from './admin/price/edit-price/edit-price.component';
 import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signup/corporate-to-signup.component';
-import { SlicksampleComponent } from './slicksample/slicksample.component';
 import { AllViewNewsComponent } from './all-view-news/all-view-news.component';
+import { OurServiceComponent } from './our-service/our-service.component';
+import { TaxiyeNewsComponent } from './taxiye-news/taxiye-news.component';
 
 @NgModule({
   declarations: [
@@ -86,8 +87,9 @@ import { AllViewNewsComponent } from './all-view-news/all-view-news.component';
     AddPriceComponent,
     EditPriceComponent,
     CorporateToSignupComponent,
-    SlicksampleComponent,
     AllViewNewsComponent,
+    OurServiceComponent,
+    TaxiyeNewsComponent,
   ],
   imports: [
     BrowserModule,

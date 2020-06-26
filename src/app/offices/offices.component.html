@@ -1,11 +1,57 @@
 <app-nav-bar></app-nav-bar>
-<div class="w3-container" style="background-color:lightgrey;">
+<div class="w3-container">
 
   <div class="w3-container w3-padding-32 w3-theme-d1">
     <h1 class="title">Taxiye Offices</h1><br>
     <div class="lines"></div>
   </div>
+<div class="w3-container containers">
+  <div class="wrapper">
 
+    <!-- COMPANY INFORMATION -->
+    <div class="company-info">
+      <br><br>
+      <h1 class="w3-center">Contact Us</h1>
+      <br><br>
+      <ul>
+        <li><i class="fa fa-road"></i> Ethiopia,Addis Ababa,Yerer
+        Leka Building</li><br>
+        <li><i class="fa fa-phone"></i> 6055</li><br>
+        <li><i class="fa fa-phone"></i>+251960464646 OR +251970464646</li><br>
+        <li><i class="fa fa-envelope"></i> info@taxiye.com</li>
+      </ul>
+    </div>
+    <!-- CONTACT FORM -->
+    <div class="contact">
+      <form id="contact-form">
+        <p class="full">
+          <label>Name</label>
+          <input type="text" name="name" id="name" required>
+        </p>
+
+        <p class="full">
+          <label>E-mail Address</label>
+          <input type="email" name="email" id="email" required>
+        </p>
+
+        <p class="full">
+          <label>Message</label>
+          <textarea name="message" rows="5" id="message"></textarea>
+        </p>
+
+        <p class="full">
+          <button type="submit">Submit</button>
+        </p>
+
+      </form>
+      <!-- End #contact-form -->
+    </div>
+    <!-- End .contact -->
+
+  </div>
+  <!-- End .wrapper -->
+</div>
+<!-- End .container -->
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
     <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(infowindow)" [latitude]="m.lat"
       [longitude]="m.lng" [iconUrl]="icon">
@@ -26,13 +72,14 @@
 </div>
 
 <div class="w3-container">
-  <div class="w3-container w3-padding-32 w3-theme-d1">
+  <div class="w3-container">
     <h1 class="title">Coming Soon</h1><br>
     <div class="lines"></div>
   </div>
-
+<br>
   <div class="w3-center">
-  <span class="titles"> Arbamench</span> <span class="titles">Kenya</span> <span class="titles">Uganda</span><br><br>
+  <span class="titles"> Arbamench</span> <span class="titles">Kenya</span>
+  <span class="titles">Uganda</span><br><br>
   <span class="titles">Tanzaniya</span> <span class="titles">Gambela</span><br><br>
   </div>
 

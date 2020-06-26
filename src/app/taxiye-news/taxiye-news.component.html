@@ -1,0 +1,55 @@
+<app-nav-bar></app-nav-bar>
+<div class="header">
+  <h2>Taxiye News</h2>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="row" *ngIf="news">
+      <div class=" w3-section col-sm-3" style="height: 420px;" *ngFor="let news of news">
+        <div class="w3-card-4" style="margin-left: 30px;">
+          <img src="{{news.image_url}}" style="width:100%">
+          <div class="w3-container w3-white">
+            <h4><strong>{{news.news_header}}</strong></h4>
+            <p class="text-body">{{news.details}}</p>
+            <a class="btn btn-primary read-more" (click)="modal_view(news)" href="view-news">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-notification *ngIf="message" [message]="message"></app-notification>
+    <div *ngIf="news.length ==0">
+      <h3>There are no news</h3>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;"><img src="/assets/image/cor.png" width="250px" height="100px"></div>
+      <br><p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg" *ngFor="let news of news| slice:0:3; let i=index">
+        <div>
+            <img src="{{news.image_url}}" width="230px">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <a href="https://t.me/joinchat/AAAAAFDx0QXP9bZkLd5Vgg"><img src="/assets/image/telegram_yellow.png" alt="" width="30px"
+          class="imgs"></a>
+      <a href="https://twitter.com/taxiye"><img src="/assets/image/tweet_yellow-3.png" alt="" width="30px" class="imgs"></a>
+      <a href="https://www.facebook.com/taxiyee/"><img src="/assets/image/facebook_yellow-4.png" alt="" width="30px"
+          class="imgs"></a>
+      <a href="https://www.instagram.com/taxiyee/"><img src="/assets/image/insta_yellow.png" alt="" width="30px"
+          class="imgs"></a>
+    </div>
+  </div>
+
+</div>
+<br><br>
+<app-our-service></app-our-service>
+<app-footer></app-footer>

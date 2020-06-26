@@ -73,17 +73,10 @@ border: none;
   border-top-right-radius: 10px;
 }
 h3 {
-    background: rgba(255, 255, 255, 0.5);
-    color: black;
-    font-size: 2rem;
     position: relative;
     text-align: center;
-    border: none;
     margin-top: 10px;
-    border-radius: 10px;
-    border-top-right-radius: 20px;
     height: 100px;
-    border-top-left-radius: 20px;
 }
 h4 {
     background: rgba(255, 255, 255, 0.5);
@@ -126,8 +119,8 @@ h4 {
 
 .slider-nav .slick-slide { cursor: pointer; border: none; }
 
-.slick-slide.is-active img{
-  background-color: orange;
+.slick-slide.is-active .img-holder{
+  background-color: rgb(168, 163, 153);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -136,8 +129,6 @@ h4 {
   -webkit-filter: grayscale(0);
   padding: 0;
 }
-
-
 .icetab {
 	border: 2px solid #ff9900;
 	display: inline-block;
@@ -271,15 +262,10 @@ border: none;
 
 }
 .sliders{
-  background: rgba(255, 255, 255, 0.5);
-	color: black;
-	font-size: 20px;
 	position: relative;
   text-align: center;
   border: none;
   margin-top: -10px;
-  border-radius: 10px;
-  border-top-right-radius: 10px;
 }
 h3 {
     color: black;
@@ -335,7 +321,7 @@ h4 {
 
 .slider-nav .slick-slide { cursor: pointer; border: none; }
 
-.slick-slide.is-active img{
+.slick-slide.is-active h3{
   background-color: orange;
   width: 40px;
   height: 40px;

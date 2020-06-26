@@ -1,10 +1,7 @@
 <app-nav-bar></app-nav-bar>
 <div class="w3-display-topleft w3-text-white same_padding">
   <div class="example">
-    <a class="btn default" href="signup">Register Driver</a>|
-    <a class="btn default" href="book-ride">Book Taxi</a>|
-    <a class="btn default" href="corporate-signup">Register Corporate</a><br><br>
-
+<h2>More .....</h2>
   </div>
 </div>
 <div class="carousel-item">
@@ -23,7 +20,7 @@
         <div class="row">
           <div class="column small-11 small-centered">
            <div  class="slider slider-nav row" >
-            <div  class="col-sm-1" style="width:200px" *ngFor="let tab of onDemand;" (click) = "open_tab(tab)">
+            <div  class="col-sm-1" *ngFor="let tab of onDemand;" (click) = "open_tab(tab)">
               <h3>
                   <span class="img-holder">
                     <img src="{{ tab.vechicle_img}}" width="50px" height="50px">
@@ -38,7 +35,7 @@
   <div class="row">
     <div class="col-sm-6">
       <br><br>
-    <img src="{{single_tab.big_img}}" alt="" width="100%" >
+    <img src="{{single_tab.big_img}}" alt="" width="100%" height="500px">
     </div><br>
     <div class=" w3-container col-sm-6">
       <h2 class="title " ><b>{{single_tab.vechicle_type}}</b></h2>
@@ -71,7 +68,7 @@
       <div class="row">
         <div class="column small-11 small-centered">
           <div class="slider slider-nav row">
-            <div class="col-sm-1" style="width:200px" *ngFor="let tab1 of rental;" (click)="open_tab1(tab1)">
+            <div class="col-sm-1" *ngFor="let tab1 of rental;" (click)="open_tab1(tab1)">
               <h3>
                 <span class="img-holder">
                   <img src="{{ tab1.vechicle_img}}" width="50px" height="50px">
@@ -79,7 +76,7 @@
               </h3>
             </div>
           </div>
-    
+
           <div class="slider slider-single">
             <div *ngIf="single_tab1">
               <div class="container why-use" style=" width: 94.5%;">
@@ -91,7 +88,7 @@
                   <div class=" w3-container col-sm-6">
                     <h2 class="title "><b>{{single_tab1.vechicle_type}}</b></h2>
                     <div class="lines">
-    
+
                     </div>
                     <br>
                     <p>{{single_tab1.description}}</p>
@@ -107,9 +104,9 @@
                 </div>
               </div>
             </div>
-    
+
           </div>
-    
+
         </div>
       </div>
     </div>
@@ -119,7 +116,7 @@
         <div class="row">
           <div class="column small-11 small-centered">
             <div class="slider slider-nav row">
-              <div class="col-sm-1" style="width:200px" *ngFor="let tab2 of Outstation" (click)="open_tab2(tab2)">
+              <div class="col-sm-1" *ngFor="let tab2 of Outstation" (click)="open_tab2(tab2)">
                 <h3>
                   <span class="img-holder">
                     <img src="{{ tab2.vechicle_img}}" width="50px" height="50px">
@@ -127,7 +124,7 @@
                 </h3>
               </div>
             </div>
-      
+
             <div class="slider slider-single">
               <div *ngIf="single_tab2">
                 <div class="container why-use" style=" width: 94.5%;">
@@ -139,7 +136,7 @@
                     <div class=" w3-container col-sm-6">
                       <h2 class="title "><b>{{single_tab2.vechicle_type}}</b></h2>
                       <div class="lines">
-      
+
                       </div>
                       <br>
                       <p>{{single_tab2.description}}</p>
@@ -155,9 +152,9 @@
                   </div>
                 </div>
               </div>
-      
+
             </div>
-      
+
           </div>
         </div>
       </div>

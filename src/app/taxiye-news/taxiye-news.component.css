@@ -1,10 +1,33 @@
+.text-body{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.read-more {
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:#950081;
+    color: white;
+    font-size: 10px;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 50%;
+    margin-top: 20px;
+    width: 50%;
+  }
 
 /* Header/Blog Title */
 .header {
   padding: 30px;
   font-size: 40px;
   text-align: center;
-  background: rgba(240, 235, 235, 0.63);;
+  background: rgba(240, 235, 235, 0.63);
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -23,14 +46,14 @@
 
 /* Fake image */
 .fakeimg {
-  background-color: rgba(240, 235, 235, 0.63);;
+  background: rgba(240, 235, 235, 0.63);;
   width: 100%;
   padding: 20px;
 }
 
 /* Add a card effect for articles */
 .card {
-   background-color: rgba(240, 235, 235, 0.63);;
+   background: rgba(240, 235, 235, 0.63);
    padding: 20px;
    margin-top: 20px;
 }
@@ -43,7 +66,7 @@
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;

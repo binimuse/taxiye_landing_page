@@ -18,10 +18,7 @@ export class HomeComponent implements OnInit {
       console.log(resp);
       this.posts = resp.latest_news;
     });
-   jQuery('.slider').slick({
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
+   
   }
   modal_view(news) {
     this.single_news = news;

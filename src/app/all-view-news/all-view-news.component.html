@@ -1,47 +1,49 @@
-<div class="row">
-  <img class="col-sm-12" style="margin: 0 !important;padding: 0 !important;"
-    src="./assets/image/photo_2020-05-22_13-12-07.jpg" alt="" width="100%">
-</div>
-<div class="row" *ngIf="news">
-  <div class=" w3-section col-sm-3" style="height: 420px;" *ngFor="let news of news">
-    <div class="w3-card-4">
-      <img src="{{news.image_url}}" style="width:100%">
-      <div class="w3-container w3-white">
-        <h4><strong>{{news.news_header}}</strong></h4>
-        <p class="text-body">{{news.details}}</p>
-        <button type="button" class="btn btn-primary read-more" (click)="modal_view(news)" data-toggle="modal" data-target="#myModal">
-          Read More
-        </button>
-      </div>
-    </div>
-  </div>
+<div class="header">
+  <h2>Taxiye News</h2>
 </div>
 
-  <div class="modal" id="myModal" *ngIf="single_news">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <img src="{{single_news.image_url}}" style="width:100%">
-          <h4 class="modal-title"><strong>{{single_news.news_header}}</strong></h4>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1>No Need
+      to call 6055 or use Taxiye app</h1>
+      <h5>no need
+      to call 6055 or use Taxiye app, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:100%;"><img src="/assets/image/photo5996920908666746254.jpg" width="100%" height="100%"></div>
+      <p>no need
+      to call 6055 or use Taxiye app</p>
+      <p>
+        አፕሊኬሽን ወይም ጥሪ መእከል 6055 ሳይጠቀሙ በመንገድ ላይ የሚያገኙትን ማንኛውም የታክሲዬ ታክሲን አስቁመው በ Manual Ride በኪሎ ሜትር ዋጋ መጓዝ ይችላሉ። በኪ.ሜ. ከ 9 ብር
+        ጀምሮ ታክሲዬ የተለያዩ አማራጮች አቅርቧል! You can stop our "Taxiye" taxis on the streets and travel with kilo meter pricing, no need
+        to call 6055 or use Taxiye app. Different options are available starting from 9 Birr per kilo meter! #Taxiye Always
+        Moving!
+      </p>
+    </div>
+
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Taxiye</h2>
+      <div class="fakeimg" style="height:100px;"><img src="/assets/image/cor.png" width="250px" height="100px"></div><br>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg" *ngFor="let news of news| slice:0:3; let i=index">
+        <div>
+          <img src="{{news.image_url}}" width="230px">
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          {{single_news.details}}
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-  
       </div>
     </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <a href="https://t.me/joinchat/AAAAAFDx0QXP9bZkLd5Vgg"><img src="/assets/image/telegram_yellow.png" alt="" width="30px" class="imgs"></a>
+      <a href="https://twitter.com/taxiye"><img src="/assets/image/tweet_yellow-3.png" alt="" width="30px" class="imgs"></a>
+      <a href="https://www.facebook.com/taxiyee/"><img src="/assets/image/facebook_yellow-4.png" alt="" width="30px" class="imgs"></a>
+      <a href="https://www.instagram.com/taxiyee/"><img src="/assets/image/insta_yellow.png" alt="" width="30px" class="imgs"></a>
+    </div>
   </div>
-  <app-notification *ngIf="message" [message]= "message"></app-notification>
-  <div *ngIf="news.length ==0">
-    <h3>There are no news</h3>
-  </div>
+</div>
+<br>
+<app-our-service></app-our-service>
+<app-footer></app-footer>

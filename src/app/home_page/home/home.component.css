@@ -59,7 +59,6 @@ margin-left: 50px;
 }
 }
 
-
 .big-text{
     color: #fff;
     font-size: 20pt;
@@ -205,3 +204,38 @@ padding-right: 50px;
 
 
 
+
+.stage {
+padding:40px;
+text-align:center;}
+.sm {
+  line-height:1em;
+  letter-spacing:0.06em;
+  font-family: 'Lato', sans-serif;
+  font-weight:normal;
+  font-size:16px;
+  text-decoration:none;
+  color:#fff;
+  background:#950081;
+  display:inline-block;
+  padding:15px 12px 15px 15px;
+  transition:background 200ms;
+  border-radius:4px;
+}
+.sm:hover {
+  background:#cea052;
+}
+.sm:after {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight:300;
+  content: "\f105";
+  margin-left:20px;
+  color:#cea052;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
+
+.sm:hover:after {
+  color:#231f20;
+}

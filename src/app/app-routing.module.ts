@@ -1,6 +1,5 @@
+import { TaxiyeNewsComponent } from './taxiye-news/taxiye-news.component';
 import { AllViewNewsComponent } from './all-view-news/all-view-news.component';
-import { SlicksampleComponent } from './slicksample/slicksample.component';
-
 import { OfficesComponent } from './offices/offices.component';
 import { FqaComponent } from './fqa/fqa.component';
 import { CorporateSignupComponent } from './corporate-signup/corporate-signup.component';
@@ -173,10 +172,10 @@ const routes: Routes = [
     path: 'corporate_signup', component: CorporateSignupComponent
   },
  {
-   path: 'slick', component: SlicksampleComponent
+   path: 'view-news', component: AllViewNewsComponent
  },
  {
-   path: 'all-view', component: AllViewNewsComponent
+   path: 'news', component: TaxiyeNewsComponent
  }
 ];
 

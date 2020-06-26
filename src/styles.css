@@ -12,3 +12,6 @@ body{
  background: rgba(180, 180, 180, 0.1);
 
 }
+* {
+  box-sizing: border-box;
+}
