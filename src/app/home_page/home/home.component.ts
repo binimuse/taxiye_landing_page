@@ -14,8 +14,9 @@ export class HomeComponent implements OnInit {
   posts: any;
   ngOnInit() {
     console.log('test');
+    
     this.news.getlatestnews().subscribe((resp:any) => {
-      console.log(resp);
+      
       this.posts = resp.latest_news;
     });
    

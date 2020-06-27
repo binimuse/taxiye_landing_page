@@ -29,4 +29,5 @@ export class GetNewsService {
     getlatestnews(){ 
       return this.httpClient.get(AppConfig.apiRootUrl + '/taxiyes/getLatest');
     }
+
 }
