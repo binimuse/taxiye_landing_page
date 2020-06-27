@@ -16,6 +16,35 @@ export class CorporateComponent implements OnInit {
       this.corporate = resp.latest_corporate;
       console.log(resp)
     })
+
+    $(document).ready(function () {
+      $(".set > a").on("click", function () {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+          $(this)
+            .siblings(".contents")
+            .slideUp(200);
+          $(".set > a i")
+            .removeClass(" fa-arrow-up")
+            .addClass("fa-arrow-right");
+        } else {
+          $(".set > a i")
+            .removeClass(" fa-arrow-up")
+            .addClass("fa-arrow-right");
+          $(this)
+            .find("i")
+            .removeClass("fa-arrow-right")
+            .addClass(" fa-arrow-up");
+          $(".set > a").removeClass("active");
+          $(this).addClass("active");
+          $(".contents").slideUp(200);
+          $(this)
+            .siblings(".contents")
+            .slideDown(200);
+        }
+      });
+    });
+
   }
 
 }

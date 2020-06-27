@@ -32,6 +32,7 @@
     "intl-tel-input": "^17.0.3",
     "jquery": "^3.5.1",
     "jquery-bootstrap-scrolling-tabs": "^2.6.1",
+    "loopback": "^3.27.0",
     "ng-wizard": "^1.0.0",
     "ng2-tel-input": "^2.3.0",
     "ngx-slick-carousel": "^0.5.0",

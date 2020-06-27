@@ -5,13 +5,18 @@
     margin-bottom: 0em;
 
 }
-a :hover{
+a:hover{
     color: #950081;
 }
 .navbar-inverse .navbar-nav>.active>a{
     background-color: #950081;
     color: white;
 
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #950081;
+   display: inline-block;
+    line-height:normal;
 }
 .navbar-inverse .navbar-nav>li>a{
     color: #950081;

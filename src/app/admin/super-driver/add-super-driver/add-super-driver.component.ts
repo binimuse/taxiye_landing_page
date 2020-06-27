@@ -21,7 +21,7 @@ export class AddSuperDriverComponent implements OnInit {
   file_upload: File;
   date: Date = new Date();
   url = AppConfig.apiRootUrl;
-  message: import("e:/projext/taxiye landing/landing-page-new/src/app/model/notification-model").NotificationModel;
+  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
   constructor(
     private newsService: GetNewsService,
     private superDriverService : SuperDriverService,
@@ -30,14 +30,14 @@ export class AddSuperDriverComponent implements OnInit {
 
   ngOnInit() {
   }
-  // on change file reader 
+  // on change file reader
   onFileSelected(event) {
     if (event.target.files.length > 0) {
       this.file_upload = <File>event.target.files[0];
     }
   }
 
-  //  add form data and the image file to the database 
+  //  add form data and the image file to the database
   addSuperDriver() {
     const fd = new FormData();
 

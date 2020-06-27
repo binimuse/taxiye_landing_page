@@ -1,42 +1,164 @@
 <app-nav-bar></app-nav-bar>
-
 <div class="w3-display-topleft w3-text-white same_padding">
   <div class="example">
-    <a class="btn default">Register Driver</a>|
-    <a class="btn default">Book</a>|
-    <a class="btn default" style="color: darkorange;">Pricing</a>|
-    <a class="btn default">Corporate</a><br>
-    <ul class="nav nav-tabs" role="tablist" >
-      <li role="presentation" class="active" *ngFor="let tab of prices; let i = index">
-        <a href="#{{tab.id}}" (click) = "open_tab(tab)"role="tab" data-toggle="tab">
-          <img src="{{ tab.vechicle_img}}" width="50px" height="50px">
-          </a>
-      </li>
-    </ul>
-    
-    <!-- Tab panes -->
-    <div class="tab-content" *ngIf="single_tab">
-      <div role="tabpanel" class="tab-pane active" id="{{single_tab.id}}">
-        <strong>Name : {{single_tab.vechicle_type}}</strong><br>
-        <strong>Base Fee : {{single_tab.base_fee}}</strong><br>
-        <strong>Per Kilometer Fee : {{single_tab.per_kilometer_fee}}</strong><br>
-        <strong>Per Minute Fee : {{single_tab.per_minute_fee}}</strong>
+<h2>More .....</h2>
+  </div>
+</div>
+<div class="carousel-item">
+  <img src="\assets\image\2.png" width="100%" alt="Los Angeles">
+</div>
+<div class="codepen-container">
+  <div id="icetab-container" class="w3-center">
+    <div class="icetab current-tab">City Taxiye</div>
+    <div class="icetab">Rental</div>
+    <div class="icetab">Outstation</div>
+  </div>
+
+  <div id="icetab-content">
+    <div class="tabcontent tab-active">
+      <div id="page">
+        <div class="row">
+          <div class="column small-11 small-centered">
+           <div  class="slider slider-nav row" >
+            <div  class="col-sm-1" *ngFor="let tab of onDemand;" (click) = "open_tab(tab)">
+              <h3>
+                  <span class="img-holder">
+                    <img src="{{ tab.vechicle_img}}" width="50px" height="50px">
+                  </span>
+              </h3>
+            </div>
+          </div>
+
+            <div class="slider slider-single">
+              <div *ngIf="single_tab">
+                <div class="container why-use" style=" width: 94.5%;">
+  <div class="row">
+    <div class="col-sm-6">
+      <br><br>
+    <img src="{{single_tab.big_img}}" alt="" width="100%" height="500px">
+    </div><br>
+    <div class=" w3-container col-sm-6">
+      <h2 class="title " ><b>{{single_tab.vechicle_type}}</b></h2>
+      <div class="lines">
+
       </div>
+        <br>
+        <p>{{single_tab.description}}</p>
+        <br>
+            <h4>
+              <strong>Name : {{single_tab.vechicle_type}}</strong><br>
+              <strong>Base Fee : {{single_tab.base_fee}}</strong><br>
+              <strong>Per Kilometer Fee : {{single_tab.per_kilometer_fee}}</strong><br>
+              <strong>Per Minute Fee : {{single_tab.per_minute_fee}}</strong>
+            </h4>
+          <br>
     </div>
   </div>
 </div>
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active" *ngFor="let t of tb; let i = index">
-    <a href="{{t.dis}}" (click)="open_tab(t)" role="tab" data-toggle="tab">
-      <img src="{{ t.img}}" width="30px" height="40px" class="img" style="padding-left: -20px;">
-    </a>
-  </li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content" >
-  <div role="tabpanel" class="tab-pane active" id="{{single_tab.dis}}"> {{ single_tab.dis}}</div>
+              </div>
 
-</div>
-<div class="carousel-item">
-  <img src="\assets\image\IMG_20200515_224116_400.jpg" class="driver-img" width="100%" alt="Los Angeles">
-</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent">
+    <div id="page">
+      <div class="row">
+        <div class="column small-11 small-centered">
+          <div class="slider slider-nav row">
+            <div class="col-sm-1" *ngFor="let tab1 of rental;" (click)="open_tab1(tab1)">
+              <h3>
+                <span class="img-holder">
+                  <img src="{{ tab1.vechicle_img}}" width="50px" height="50px">
+                </span>
+              </h3>
+            </div>
+          </div>
+
+          <div class="slider slider-single">
+            <div *ngIf="single_tab1">
+              <div class="container why-use" style=" width: 94.5%;">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <br><br>
+                    <img src="{{single_tab1.big_img}}" alt="" width="100%">
+                  </div><br>
+                  <div class=" w3-container col-sm-6">
+                    <h2 class="title "><b>{{single_tab1.vechicle_type}}</b></h2>
+                    <div class="lines">
+
+                    </div>
+                    <br>
+                    <p>{{single_tab1.description}}</p>
+                    <br>
+                    <h4>
+                      <strong>Name : {{single_tab1.vechicle_type}}</strong><br>
+                      <strong>Base Fee : {{single_tab1.base_fee}}</strong><br>
+                      <strong>Per Kilometer Fee : {{single_tab1.per_kilometer_fee}}</strong><br>
+                      <strong>Per Minute Fee : {{single_tab1.per_minute_fee}}</strong>
+                    </h4>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="tabcontent">
+      <div id="page">
+        <div class="row">
+          <div class="column small-11 small-centered">
+            <div class="slider slider-nav row">
+              <div class="col-sm-1" *ngFor="let tab2 of Outstation" (click)="open_tab2(tab2)">
+                <h3>
+                  <span class="img-holder">
+                    <img src="{{ tab2.vechicle_img}}" width="50px" height="50px">
+                  </span>
+                </h3>
+              </div>
+            </div>
+
+            <div class="slider slider-single">
+              <div *ngIf="single_tab2">
+                <div class="container why-use" style=" width: 94.5%;">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <br><br>
+                      <img src="{{single_tab2.big_img}}" alt="" width="100%">
+                    </div><br>
+                    <div class=" w3-container col-sm-6">
+                      <h2 class="title "><b>{{single_tab2.vechicle_type}}</b></h2>
+                      <div class="lines">
+
+                      </div>
+                      <br>
+                      <p>{{single_tab2.description}}</p>
+                      <br>
+                      <h4>
+                        <strong>Name : {{single_tab2.vechicle_type}}</strong><br>
+                        <strong>Base Fee : {{single_tab2.base_fee}}</strong><br>
+                        <strong>Per Kilometer Fee : {{single_tab2.per_kilometer_fee}}</strong><br>
+                        <strong>Per Minute Fee : {{single_tab2.per_minute_fee}}</strong>
+                      </h4>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  <app-footer> </app-footer>

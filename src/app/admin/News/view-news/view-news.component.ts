@@ -11,7 +11,8 @@ import { AuteServiceService } from 'src/app/service/aute-service.service';
 export class ViewNewsComponent implements OnInit {
   news ?;
   single_news ?;
-  message: import("e:/projext/taxiye landing/landing-page-new/src/app/model/notification-model").NotificationModel;
+  // tslint:disable-next-line: quotemark
+  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
   constructor(private newsService : GetNewsService,private authService : AuteServiceService) { }
 
   ngOnInit() {
@@ -24,7 +25,7 @@ export class ViewNewsComponent implements OnInit {
       this.message = this.authService.checkForAuthentication(err);
       console.log(this.message)
     }
-    
+
     )
   }
   modal_view(news){

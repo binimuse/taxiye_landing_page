@@ -217,6 +217,9 @@ label {
   background-color: white;
   margin-top: 20px;
 }
+p{
+  margin: 10px;
+}
 
 
 }
@@ -294,5 +297,5 @@ label {
 .horizontal {
   display: flex;
   justify-content: space-around;
-  
+
 }

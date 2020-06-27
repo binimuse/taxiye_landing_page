@@ -68,10 +68,11 @@
     border-bottom: 1px solid #4a6e78;
     position: absolute;
     right: 10px;
-    content: " ";
+    content: "";
     top: 25px;
     transform: rotate(-45deg);
     transition: all 0.2s ease-in-out;
+    font-weight: bolder;
   }
   .acc__title.active::after {
     transform: rotate(45deg);

@@ -2,7 +2,7 @@
 
 <div class="w3-display-topright w3-text-white same_padding">
   <div class="example">REGISTER AS A <br>DRIVER </div>
-  <p class="sign"><a href="#jeans" class="btn btn-defualt">SIGN UP</a></p>
+  <p class="sign"><a href="signup" class="btn btn-defualt">SIGN UP</a></p>
 
 </div>
 <div class="carousel-item">
@@ -31,19 +31,16 @@
 <!-- slide show content -->
 
 <div class="row" *ngIf="latest_fb">
-
   <div class="col-sm-12">
     <div>
       <div class="w3-container w3-padding-32 w3-theme-d1">
         <h1 class="title">Drivers' Feedback</h1><br>
         <div class="lines"></div>
       </div>
-      
-      
+
         <input type="radio" name="switch" id="i_1" checked>
         <input type="radio" name="switch" id="i_2" >
         <input type="radio" name="switch" id="i_3">
-      
 
       <div class="wrapper" >
         <div class="slide" *ngFor="let latestFb of latest_fb;let i = index">
@@ -51,17 +48,17 @@
             <div class="container-fluid">
               <div class="row center_ver">
                 <div class="col-sm-6">
-                  <img src="{{latestFb.driver_img}}" alt="Card image" class="feedback" />
-                </div>
+                  <img src="{{latestFb.driver_img}}" alt="Card image" class="feedback" width="40%" height="200px"/>
+                </div><br><br>
                 <div class="col-sm-4">
-                  {{latestFb.driver_feedback}}
+                 <p>{{latestFb.driver_feedback}}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
+
         <div class="controls w3-center row">
           <div class="col-sm-5"></div>
           <div class="horizontal col-sm-2">
@@ -69,8 +66,6 @@
             <label for="i_{{i+1}}">⬤</label>
           </div>
           </div>
-          <div class="col-sm-5"></div>
-          
       </div>
 
     </div>
@@ -84,10 +79,12 @@
   <h1 class="title">Guidelines to becoming a Taxiye</h1><br>
   <div class="lines"></div>
 </div>
-<video width="400" controls >
-  <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
-</video>
+<figure>
+  <video width="1000" autoplay>
+    <source src="/assets/image/Taxiye - Home.mp4" type="video/mp4" width="1000">
+  </video>
+</figure>
+
   <div class="w3-row">
     <div class="w3-third ">
       <h3 class="title">1. Download</h3>
@@ -105,24 +102,26 @@
   Use your phone number to create an account </p>
     </div>
   </div>
-</div><br><br>
+</div><br>
 <!-- guideling taxiye end -->
 
 <!-- FAQ start -->
 <div class="row">
   <div class="container why-use" style=" width: 94.5%;">
         <div class="col-sm-6 phone-img">
-          <img src="\assets\image\phone1.png" alt="" width="90%">
-        </div><br>
+          <img src="\assets\image\photo600123775451329.png" alt="" width="90%">
+        </div>
+        <br>
         <div class=" w3-container col-sm-6">
           <h1 class="title">Driver Frequently Asked Questions </h1>
-          <div class="lines"></div><br><br>
+          <div class="lines"></div>
+          <br><br><br>
           <!-- FAQ start -->
   <div class="accordion-container">
   <div class="set">
     <a>
       What documents do i need to become a drive?
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
       <p class="fqa-title">We require the following documents:</p>
@@ -136,7 +135,7 @@
   <div class="set">
     <a>
       What documents do i need to become a drive?
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
       <p class="fqa-title">We require the following documents:</p>
@@ -150,7 +149,7 @@
   <div class="set">
     <a>
       What documents do i need to become a drive?
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
       <p class="fqa-title">We require the following documents:</p>
@@ -164,7 +163,7 @@
   <div class="set">
     <a>
       What documents do i need to become a drive?
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
       <p class="fqa-title">We require the following documents:</p>
@@ -178,7 +177,7 @@
 <div class="set">
   <a>
     What documents do i need to become a drive?
-    <i class="fa fa-plus"></i>
+    <i class="fa fa-arrow-right"></i>
   </a>
   <div class="contents">
     <p class="fqa-title">We require the following documents:</p>
@@ -193,6 +192,6 @@
             </div>
           </div>
         </div>
-
+<br><br>
 
 <app-footer></app-footer>
