@@ -18,7 +18,7 @@ export class EditOfficesComponent implements OnInit {
     lag : new FormControl
 
   })
-  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
+  message;
   constructor( private officeService : OfficeService,private authService : AuteServiceService) { }
 
   ngOnInit() {

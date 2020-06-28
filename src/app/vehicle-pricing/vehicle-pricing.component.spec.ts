@@ -11,8 +11,8 @@ describe('VehiclePricingComponent', () => {
       declarations: [ VehiclePricingComponent ]
     })
     .compileComponents();
-  }));
-
+  })); 
+ 
   beforeEach(() => {
     fixture = TestBed.createComponent(VehiclePricingComponent);
     component = fixture.componentInstance;

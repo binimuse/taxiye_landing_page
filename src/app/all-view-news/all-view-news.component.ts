@@ -2,6 +2,7 @@ import { Component, OnInit, Input,Output} from '@angular/core';
 import { GetNewsService } from 'src/app/service/get-news.service';
 import { AppConfig } from 'src/app/config_file/app-config';
 import { AuteServiceService } from 'src/app/service/aute-service.service';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-all-view-news',
@@ -9,17 +10,23 @@ import { AuteServiceService } from 'src/app/service/aute-service.service';
   styleUrls: ['./all-view-news.component.css']
 })
 export class AllViewNewsComponent implements OnInit {
+  
+  news_to_view;
   news?;
-  single_news?;
+  
 
   // tslint:disable-next-line: quotemark
-  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
-  constructor(private newsService: GetNewsService, private authService: AuteServiceService) { }
+  message;
+  constructor(
+    private newsService: GetNewsService,
+    private authService: AuteServiceService,
+    private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.currentMessage.subscribe(message=> this.news_to_view =message);
+    console.log(this.news_to_view);
     this.newsService.getNews().subscribe(resp => {
       this.news = resp;
-      console.log(resp);
     },
       err => {
         console.log(err);
@@ -29,9 +36,6 @@ export class AllViewNewsComponent implements OnInit {
 
     )
   }
-  modal_view(news) {
-    this.single_news = news;
-  }
-
+ 
 
 }

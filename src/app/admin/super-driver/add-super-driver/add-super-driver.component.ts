@@ -21,7 +21,7 @@ export class AddSuperDriverComponent implements OnInit {
   file_upload: File;
   date: Date = new Date();
   url = AppConfig.apiRootUrl;
-  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
+  message;
   constructor(
     private newsService: GetNewsService,
     private superDriverService : SuperDriverService,

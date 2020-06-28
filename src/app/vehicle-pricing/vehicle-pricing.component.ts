@@ -89,7 +89,7 @@ export class VehiclePricingComponent implements OnInit {
               slidesToScroll: 2,
             },
           },
-        ],
+        ], 
       });
 
     $('.slider-single').on('afterChange', function (event, slick, currentSlide) {

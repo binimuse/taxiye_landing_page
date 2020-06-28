@@ -12,7 +12,7 @@ export class ViewNewsComponent implements OnInit {
   news ?;
   single_news ?;
   // tslint:disable-next-line: quotemark
-  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
+  message;
   constructor(private newsService : GetNewsService,private authService : AuteServiceService) { }
 
   ngOnInit() {

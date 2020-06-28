@@ -1,22 +1,16 @@
 <div class="header">
   <h2>Taxiye News</h2>
 </div>
-
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h1>No Need
-      to call 6055 or use Taxiye app</h1>
+      <h1>{{news_to_view.news_header}}</h1>
       <h5>no need
-      to call 6055 or use Taxiye app, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:100%;"><img src="/assets/image/photo5996920908666746254.jpg" width="100%" height="100%"></div>
-      <p>no need
-      to call 6055 or use Taxiye app</p>
+      to call 6055 or use Taxiye app,<span class="fa fa-calendar" aria-hidden="true" style="padding-left: 50%; padding-bottom: 20px;">&nbsp;&nbsp;&nbsp; {{news_to_view.date | date: "fullDate"}}</span></h5>
+      <div class="fakeimg" style="height:100%;"><img src="{{news_to_view.image_url}}" width="100%" height="100%"></div>
+      
       <p>
-        አፕሊኬሽን ወይም ጥሪ መእከል 6055 ሳይጠቀሙ በመንገድ ላይ የሚያገኙትን ማንኛውም የታክሲዬ ታክሲን አስቁመው በ Manual Ride በኪሎ ሜትር ዋጋ መጓዝ ይችላሉ። በኪ.ሜ. ከ 9 ብር
-        ጀምሮ ታክሲዬ የተለያዩ አማራጮች አቅርቧል! You can stop our "Taxiye" taxis on the streets and travel with kilo meter pricing, no need
-        to call 6055 or use Taxiye app. Different options are available starting from 9 Birr per kilo meter! #Taxiye Always
-        Moving!
+        {{news_to_view.details}}
       </p>
     </div>
 

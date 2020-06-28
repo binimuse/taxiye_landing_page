@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output ,EventEmitter } from '@angular/core';
 import { GetNewsService } from 'src/app/service/get-news.service';
 import { AppConfig } from 'src/app/config_file/app-config';
 import { AuteServiceService } from 'src/app/service/aute-service.service';
+import { BehaviorSubject } from 'rxjs';
+import { DataService } from '../service/data.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-taxiye-news',
@@ -9,11 +13,17 @@ import { AuteServiceService } from 'src/app/service/aute-service.service';
   styleUrls: ['./taxiye-news.component.css']
 })
 export class TaxiyeNewsComponent implements OnInit {
+  
   news?;
-  single_news?;
+  single_news?; 
   // tslint:disable-next-line: quotemark
-  message: import("C:/Users/JESUS/Desktop/Taxiye-landing page/taxiye_landing_new/src/app/model/notification-model").NotificationModel;
-  constructor(private newsService: GetNewsService, private authService: AuteServiceService) { }
+  message;
+  constructor(
+    private newsService: GetNewsService, 
+    private authService: AuteServiceService,
+    private dataService: DataService,
+    private router : Router
+    ) { }
 
   ngOnInit() {
     this.newsService.getNews().subscribe(resp => {
@@ -30,6 +40,10 @@ export class TaxiyeNewsComponent implements OnInit {
   }
   modal_view(news) {
     this.single_news = news;
+    this.dataService.changedata(news);
+    console.log(this.dataService.currentMessage);
+    this.router.navigate(['view-news']);
+    
   }
 
 
