@@ -49,6 +49,8 @@ import { CorporateToSignupComponent } from './admin/corporate/corporate-to-signu
 import { AllViewNewsComponent } from './all-view-news/all-view-news.component';
 import { OurServiceComponent } from './our-service/our-service.component';
 import { TaxiyeNewsComponent } from './taxiye-news/taxiye-news.component';
+import { ArticleComponent } from './article/article.component';
+import { TestimoniyalComponent } from './testimoniyal/testimoniyal.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +92,8 @@ import { TaxiyeNewsComponent } from './taxiye-news/taxiye-news.component';
     AllViewNewsComponent,
     OurServiceComponent,
     TaxiyeNewsComponent,
+    ArticleComponent,
+    TestimoniyalComponent,
   ],
   imports: [
     BrowserModule,

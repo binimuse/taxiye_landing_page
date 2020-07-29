@@ -3,7 +3,9 @@ import { Component, OnInit, forwardRef } from '@angular/core';
 declare var jQuery: any;
 import { PriceService } from '../service/price.service';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
+
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
+
 
 @Component({
   selector: 'app-vehicle-pricing',
@@ -122,7 +124,7 @@ export class VehiclePricingComponent implements OnInit {
 
 
     for (var index = 0; index < tabs.length; index++) {
-      tabs[index].mynum = index;
+     // tabs[index].mynum = index;
       tabs[index].addEventListener('click', myFunction, false);
     }
 

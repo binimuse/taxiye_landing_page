@@ -1,7 +1,7 @@
 
 
 html {
-  background: url('assets/image/fg.png') no-repeat center center fixed;
+  background: #fff  ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,7 +9,7 @@ html {
 
 }
 body{
- background: rgba(180, 180, 180, 0.1);
+ background: rgba(255, 255, 255, 255);
 
 }
 * {

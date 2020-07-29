@@ -2,76 +2,88 @@
 
 <div class="w3-display-topright w3-text-white same_padding">
   <div class="example">REGISTER AS A <br>DRIVER </div>
-  <p class="sign"><a href="signup" class="btn btn-defualt">SIGN UP</a></p>
+  <p class="sign"><a href="" class="btns btn-defualt">SIGN UP</a></p>
+
+</div>
+
+
+<div class="arrow">
+  <span></span>
+  <span></span>
+  <span></span>
 
 </div>
 <div class="carousel-item">
   <img src="\assets\image\left.png " class="driver-img" width="100%" alt="Los Angeles">
 </div>
 
+
+    
+
 <!-- body part -->
-<div class="w3-container">
-  <div class="w3-container w3-padding-32 w3-theme-d1">
-    <h1 class="title">Super Driver of the Year</h1><br>
-    <div class="lines"></div>
-  </div>
-<div *ngIf="super_driver" class="w3-row-padding w3-theme">
-  <div class="w3-third w3-section">
-    <div  *ngFor="let super_driver of super_driver" class="w3-card-4">
-      <img src="{{super_driver.driver_image}}" style="width:100%">
-      <div class="w3-container w3-white">
-        <h4>Name: {{super_driver.full_name}}</h4>
-        <p>Trip: {{super_driver.trip}}</p>
-        <p>Vehicle-Type: {{super_driver.vehicle_type}}</p>
-      </div>
+<div class="w3-container" style="
+  padding-left: 0px;
+  padding-right: 0px;
+">
+    <div class="w3-container w3-padding-32 w3-theme-d1">
+      <h1 class="title w3-center ">TAXIYE NEWS</h1>
+       <div class="lines" style="width: 100px; margin-left: 46%;" ></div>
     </div>
-  </div>
-</div>
-</div>
-<!-- slide show content -->
 
-<div class="row" *ngIf="latest_fb">
-  <div class="col-sm-12">
-    <div>
-      <div class="w3-container w3-padding-32 w3-theme-d1">
-        <h1 class="title">Drivers' Feedback</h1><br>
-        <div class="lines"></div>
-      </div>
 
-        <input type="radio" name="switch" id="i_1" checked>
-        <input type="radio" name="switch" id="i_2" >
-        <input type="radio" name="switch" id="i_3">
 
-      <div class="wrapper" >
-        <div class="slide" *ngFor="let latestFb of latest_fb;let i = index">
-          <div class="content content{{i+1}}">
-            <div class="container-fluid">
-              <div class="row center_ver">
-                <div class="col-sm-6">
-                  <img src="{{latestFb.driver_img}}" alt="Card image" class="feedback" width="40%" height="200px"/>
-                </div><br><br>
-                <div class="col-sm-4">
-                 <p>{{latestFb.driver_feedback}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Container (TOUR Section) -->
+<div id="tour" class="ebg-1">
+  <div class="container">
+    
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/assets/image/management.png  " alt="Paris" width="400" height="300">
+          <p><strong>Taxiye Has officially launched</strong></p>
+          <p>BY :: ADMIN                        
+
+            Wlam Aiber Vestibulum Fringilla Oremedad Ipsum Dolor Sit Amet Consectetur </p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Read more</button>
+          <p class="date" >25 feb</p>
+         
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/assets/image/management.png" alt="New York" width="400" height="300">
+          <p><strong>Taxiye Has officially launched</strong></p>
+          <p>BY :: ADMIN                        
 
-        <div class="controls w3-center row">
-          <div class="col-sm-5"></div>
-          <div class="horizontal col-sm-2">
-            <div *ngFor="let latestFb of latest_fb;let i = index">
-            <label for="i_{{i+1}}">⬤</label>
-          </div>
-          </div>
+            Wlam Aiber Vestibulum Fringilla Oremedad Ipsum Dolor Sit Amet Consectetur </p>
+         <button class="btn" data-toggle="modal" data-target="#myModal">Read more</button>
+         <p class="date" >25 feb</p>
+        </div>
       </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/assets/image/management.png" alt="San Francisco" width="400" height="300">
+          <p><strong>Taxiye Has officially launched</strong></p>
+          <p>BY :: ADMIN                        
 
+            Wlam Aiber Vestibulum Fringilla Oremedad Ipsum Dolor Sit Amet Consectetur </p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Read more</button>
+          <p class="date" >25 feb</p>
+        </div>
+      </div>
     </div>
   </div>
 
-</div>
+<!-- slide show content -->
+<div class="w3-container w3-padding-32 w3-theme-d1">
+  <h1 class="title w3-center ">Drivers FeedBack</h1>
+   <div class="lines" style="width: 100px; margin-left: 46%;" ></div>
+  </div>
+  
+
+<app-testimoniyal></app-testimoniyal>
+
 <!-- end of slide show -->
 <!-- guideling taxiye -->
 <div class="w3-container">
@@ -79,11 +91,14 @@
   <h1 class="title">Guidelines to becoming a Taxiye</h1><br>
   <div class="lines"></div>
 </div>
-<figure>
-  <video width="1000" autoplay>
-    <source src="/assets/image/Taxiye - Home.mp4" type="video/mp4" width="1000">
-  </video>
-</figure>
+
+
+<video  controls width="500" autoplay>
+  <source src="\assets\image\Taxiye - Home.mp4" type="video/mp4">
+  <source src="\assets\image\Taxiye - Home.mp4" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
 
   <div class="w3-row">
     <div class="w3-third ">

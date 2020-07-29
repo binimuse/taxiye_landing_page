@@ -1,10 +1,55 @@
+.example {
+  font-size: 50px;
+  
+    padding-left: 65%;
+    padding-top: 20%;
+position: absolute;
+text-align: center;
+color: #950081;
+text-transform: capitalize;
+font-family: 'Times New Roman';
+  font-weight: bold;
+  }
+  .sign{
+    border-radius: 4px;
+    background-color: darkorange;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 100px;
+    transition: all 0.5s;
+    
+    cursor: pointer;
+    margin-left: 140px;
+    
+    text-align: center;
+  
+  }
+  
+  .sign a{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   
+  }
+ 
+  .sign:hover a:after{
+    opacity: 1;
+    right: 0;
+  }
 @media screen and (max-width: 600px){
+
+  
+  
   
 .title{
   text-align: center;
   color: #950081;
   font-size: 20px;
 }
+
+
 }
 .lines{
   width: 15%;
@@ -66,14 +111,7 @@ input {
   width: 300px;
 }
 
-span {
-  background-color: white;
-  line-height: 4rem;
-  width: 6rem;
-  border-radius: 8rem;
-  color: #616161;
-  font-size: 2rem;
-}
+
 
 .content {
   padding: 30px;
@@ -229,4 +267,39 @@ label {
 .center_ver{
 display: flex;
 align-items: center;
+}
+.arrow{
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #cea052;;
+  border-right: 2px solid #950081;;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
 }
