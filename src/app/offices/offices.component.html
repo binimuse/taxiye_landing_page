@@ -6,9 +6,7 @@ padding-right: 0px;
 <div class= "trans">
   <div class="w3-container w3-padding-32 w3-theme-d1">
     <div class="hi">
-    <h1 class="title" style="
-    padding-left: 300px;
-">About us</h1><br>
+    <h1 class="title" >About us</h1><br>
     
    
     <div class="lines" ></div>
@@ -16,40 +14,54 @@ padding-right: 0px;
       Taxiye is the leading Ethiopian transportation platform providing ride-hailing services in Africa. The company’s mission is to make travel easier, faster, safer and more reliable. Taxiye is powered by Elnet Technology Pvt. Ltd and it was launched in 2019 and is currently operating all over Ethiopia through its company Eltaxi Trading Pvt Ltd, opening offices in major cities in country. Eltaxi Trading is owned majorly by Elnet Technology, Taxi owners, Passengers, and the management of the company. The company was founded in Ethiopia and is expanding throughout Africa and has already established offices in Tanzania, Uganda, and Kenya empowering taxi drivers by providing the technology and ways of bettering their transportation services and lives.
     </p>
   </div>
-
-  <img style="
-  width: 500px;padding-top: 150px;padding-left: 70px;
-" src="\assets\image\a.png "  alt="Los Angeles">
+<div class="imgg"> 
+   <img src="\assets\image\a.png "  alt="Los Angeles">
 
 </div>
 </div>
 
+</div>
 
-<h1 class="title" style="
+<h1 class="titlee" id="our" style="
 padding-left: 80;
 ">Our Office</h1><br>
 
 
 <div class="liness" ></div>
 
-<img style="
-width: 1500px;padding-top: 50px;padding-left: auto;margin-left: 100px;margin-right: 100px;
-" src="\assets\image\Image 2.png "  alt="Los Angeles">
 
+<div class=""><!-- End .container -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+  <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(infowindow)" [latitude]="m.lat"
+    [longitude]="m.lng" [iconUrl]="icon">
 
+    <agm-info-window #infowindow>
+      <h2 class="modals">
+     <b>{{m.label}}</b>
+      </h2>
+      <div class="lines"></div><br>
+      <strong class="modals">
+        {{m.label2}}
+      </strong>
+    </agm-info-window>
+
+  </agm-marker>
+
+</agm-map>
+</div>
 
 
 <div class="w3-container">
   <div class="w3-container">
     <h1 class="title">Coming Soon</h1><br>
-    <div class="liness"></div>
+    <div class="lines"></div>
   </div>
 <br>
 <br><br>
 <br><br>
   <div class="w3">
-  <span class="titles" style="padding-left: 200px;"> Arbamench</span> <span class="titles" style="padding-left: 270px;">Kenya</span> <span class="titles"style="padding-left: 300px;">Uganda</span><br><br><br><br><br><br>
-  <span class="titles"style="padding-left: 200px;">Tanzaniya</span> <span class="titles"style="padding-left: 270px;">Gambela</span><br><br>
+  <span class="titles" style="padding-left: 200px;"> Arbamench</span> <span class="titles" style="padding-left: 270px;">Gambela</span> <span class="titles"style="padding-left: 300px;">Uganda</span><br><br><br><br><br><br>
+  <span class="titles"style="padding-left: 200px;"></span> <span class="titles"style="padding-left: 270px;"></span><br><br>
   </div>
 
 </div>
@@ -64,7 +76,7 @@ width: 1500px;padding-top: 50px;padding-left: auto;margin-left: 100px;margin-rig
       <br><br>
       <h1 class="w3-center">Address</h1>
       <br><br>
-      <ul style="margin-left: 450px;">
+      <ul >
         <li><i class="fa fa-road"></i> Ethiopia,Addis Ababa,Yerer
         Leka Building</li><br>
         <li><i class="fa fa-phone"></i> 6055</li><br>
@@ -77,7 +89,7 @@ width: 1500px;padding-top: 50px;padding-left: auto;margin-left: 100px;margin-rig
     <div></div>
     <!-- CONTACT FORM -->
     <div class="contact">
-      <form id="contact-form">
+      <form id="contact-form" method="POST" action="/contact">
         <p class="full">
           <label>Name</label>
           <input type="text" name="name" id="name" required>
@@ -94,7 +106,7 @@ width: 1500px;padding-top: 50px;padding-left: auto;margin-left: 100px;margin-rig
         </p>
 
         <p class="full">
-          <button type="submit">Submit</button>
+          <button type="submit"(click)="send()">Submit</button>
         </p>
 
       </form>

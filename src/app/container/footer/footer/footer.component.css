@@ -1,5 +1,8 @@
 /* footer start*/
-.container {
+
+@media screen and (min-width: 601px) {
+
+  .container {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -14,37 +17,21 @@
     display: table;
     clear: both;
   }
-  /* Responsive columns */
-  @media screen and (max-width: 700px) {
-    footer{
-      background-image: url('/assets/image/foote-half-mini.png');
-      background-size: 100% !important;
-      background-repeat: no-repeat;
-      padding-top: 15px !important;
-      
-    }
-    .column {
-      width: 50%;
-    }
-    .row {
-      flex-direction: column;
-
-    }
-
+  footer{
+    background-image: url('/assets/image/foote-half-mini.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+   
   }
 
-  @media screen and (min-width: 700px){
-    footer{
-      background-image: url('/assets/image/footer.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      padding-top: 180px;
-     
-    }
+  .column {
+    width: 50%;
+  }
+  .row {
+    flex-direction: column;
 
   }
-
-  /* Style the counter cards */
   .card {
    
     text-align: center;
@@ -68,5 +55,53 @@
   {
     padding-left:60px;
   }
+
+}
+
+@media screen and (max-width: 600px){
+
+  .footer {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   
+ 
+    text-align: center;
+ }
+ footer{
+  background-image: url('/assets/image/foote-half-mini.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 180px;
+ 
+}
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+.no-bullets a {
+  color: white;
+}
+
+
+}
+
+
+  /* Responsive columns 
+  @media screen and (max-width: 700px) {
+   
+
+  }
+
+  @media screen and (min-width: 700px){
+   
+  }
+*/
+  /* Style the counter cards */
+  
 
   /* footer end */

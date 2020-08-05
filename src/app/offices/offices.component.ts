@@ -1,16 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import { OfficeService } from '../service/office.service';
+import {FormsModule} from '@angular/forms';
+
+declare var require: any
+
+
+
+
+
 @Component({
   selector: 'app-offices',
   templateUrl: './offices.component.html',
   styleUrls: ['./offices.component.css'],
+  
 })
+
+
+
 
 export class OfficesComponent implements OnInit {
   offices: any;
 
   constructor(private officesService :OfficeService) {}
+
+  
+  
+
+
+
 
   lat = 8.5737791;
   lng = 35.6687268;
@@ -28,6 +46,19 @@ export class OfficesComponent implements OnInit {
   }
 
   ngOnInit() {
+
+
+
+
+
+
+
+
+
+
+
+
+    
     this.officesService.getOffices().subscribe(resp =>{
       this.offices =resp;
       this.offices = this.offices.map((offices)=>{
@@ -36,7 +67,12 @@ export class OfficesComponent implements OnInit {
       console.log(this.offices);
       this.markers =this.offices;
     })
+
+  
   }
+
+
+  
 }
 // tslint:disable-next-line: class-name
 interface marker {
@@ -46,3 +82,6 @@ label?: string;
 draggable: boolean;
 label2?: string;
 }
+
+
+

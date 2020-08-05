@@ -1,33 +1,74 @@
 <app-nav-bar></app-nav-bar>
 <div class="w3-display-topleft w3-text-white same_padding">
   <div class="example">
-<h2>More .....</h2>
+<h2>Meet our Fleet</h2>
+
   </div>
+  <div class="p">
+  <p>how do we get You around?</p>
+</div>
 </div>
 <div class="carousel-item">
+
+
   <img src="\assets\image\flle.jpg" width="100%" alt="Los Angeles">
+
+  <div class="tab">
+    <button class="tablinks" (click)="openCity(event, 'London')">City taxi</button>
+    <span class="vertical-line"></span>   
+    <button class="tablinks" (click)="openCity(event, 'Paris')">Rental</button>
+    <span class="vertical-line"></span>   
+    <button class="tablinks" (click)="openCity(event, 'Tokyo')">Outstation</button>
+  </div>
 </div>
 
-<div class="codepen-container">
-  <div id="icetab-container" class="w3-center">
-    <div class="icetab current-tab">City Taxiye</div>
-    <div class="icetab">Rental</div>
-    <div class="icetab">Outstation</div>
-  </div>
-
-
-    <br>
-  <br>
-
-  <br>
-
-  <br>
-
-  <br>
 
 
 
-  <div id="icetab-content">
+
+
+
+
+
+
+   <div id="London" class="tabcontent">
+  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;">City taxi</h3>
+  
+    <app-pricing ></app-pricing>
+
+
+</div>
+ 
+<div id="Paris" class="tabcontent"   >
+  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;">Rental</h3>
+  <app-rental></app-rental>
+</div>
+
+<div id="Tokyo" class="tabcontent" >
+  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;">Outstation</h3>
+  <app-rental></app-rental>
+</div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+  <!-- <div id="icetab-content">
     <div class="tabcontent tab-active">
       <div id="page">
         <div class="row">
@@ -35,7 +76,7 @@
            <div  class="slider slider-nav row" >
               <h3>
                   <span class="img-holder">
-                    <img src="\assets\image\bajaj1.png" width="50px" height="50px">
+                    <img src="{{single_tab.big_img}}" alt="" width="100%" height="500px">
                   </span>
               </h3>
             </div>
@@ -166,10 +207,10 @@
 
             </div>
 
-          </div>
+          </div> 
         </div>
       </div>
   </div>
   </div>
-  </div>
+  </div>-->
   <app-footer> </app-footer>

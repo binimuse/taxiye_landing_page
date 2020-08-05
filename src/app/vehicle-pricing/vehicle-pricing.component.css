@@ -1,10 +1,21 @@
-
-
 @media screen and (min-width: 601px) {
   .example {
-    font-size: 15px;
-    padding-top: 20%;
-    padding-left: 50px;
+    font-size: 25px;
+    padding-top: 30%;
+    padding-left: 540px;
+    font-weight: bold;
+    text-align: center;
+   
+    font-size: xx-large;
+  }
+  .p{
+    padding-top: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 540px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 16px;
+
   }
  .btn {
   border: none;
@@ -62,7 +73,7 @@ border: none;
     border-radius: 50%;
 }
 .sliders{
-  background: rgba(255, 255, 255, 0.5);
+  background: #fff;
 	color: black;
 	font-size: 20px;
 	position: relative;
@@ -119,64 +130,56 @@ h4 {
 
 .slider-nav .slick-slide { cursor: pointer; border: none; }
 
-.slick-slide.is-active .img-holder{
-  background-color: rgb(168, 163, 153);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  filter: none;
-  -webkit-filter: grayscale(0);
-  padding: 0;
-}
+
+
+
 .icetab {
-	border: 2px solid #ff9900;
+	
 	display: inline-block;
 	border-bottom: 0px;
 	margin: 0px;
-  color: #fff;
+  text-decoration-color: black;
+  font-weight: bold;
+  
 	cursor: pointer;
 	border-right: 0px;
 }
-.icetab:last-child {
-	border-right: 2px solid #ff9900;
+.vertical-line{
+  display: inline-block;
+  border-left: 2px solid #ccc;
+  margin-left: 6px;
+  margin-top: 10px;
+  height: 45px;
+  position: absolute;
+}
+
+
+
+
+.icetab a 
+{
+ 
+  color: black;
 }
 
 #icetab-content {
 	overflow: hidden;
 	position: relative;
-	border-top: 2px solid #ff9900;
+	border-top: 2px solid #fff;
 }
-.tabcontent {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	border-top: 0px;
-	border: 2px solid #ffffff;
-	border-top: 0px;
-	transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-.tabcontent:first-child {
-	position: relative;
-}
-.tabcontent.tab-active {
-	border-top: 0px;
-	display: block;
-	transform: translateY(0%);
-	-moz-transform: translateY(0%);
-	-webkit-transform: translateY(0%);
-}
 
 
 .codepen-container {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -200px;
+  margin-top: -120px;
 }
 .title {
   text-align: center;
@@ -190,14 +193,87 @@ h4 {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+.tab
+{
+ 
+  
+  padding-left:550px ;
+  padding-top: -300px;
+  font-weight: bold;
+  font-family: serif;
+  background-color:transparent;
+  
+}
+
+.tab button {
+  background-color:#fff;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding:  16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:#950081
+}
+
+/* Create an active/current tablink class */
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding-left: 100px;
+  border: 1px solid #fff;
+  border-top: none;
+}
+.tabcontent h3 {
+ color: #950081;
+ 
+}
+.horizontal{
+  display: inline;
+  justify-content: space-around;
 
 }
+#wrap{
+  background-color: #ddd;
+  padding: 50px 0;
+}
+#slider{
+  width: 300px;
+  margin: 0 auto;
+
+}
+ #slider img{
+    width: 100%;
+  }
+
+
+}
+/*--------------------------============================---------------------------=========================*/
 @media screen and (max-width: 601px){
   .example {
-    font-size: 20px;
+    font-size: 10px;
     padding-top: 20%;
-    padding-left: 30px;
+    padding-left: 60px;
 
+  }
+  .example h2 {
+    padding-top: 20%;
+    padding-left: 80px;
+    font-size: 10px;
+   
+
+  }
+  .p p{
+  
+    padding-left: 110px;
+    font-size: 10px;
   }
   .taxiye{
   margin-left: 90sp;
@@ -212,7 +288,7 @@ h4 {
   display: inline-block;
   padding-left: 1px;
 }
-.btn:hover {background: #eee;}
+.btn:hover {background: #fff;}
 .big-text{
     color: #fff;
     font-size: 20pt;
@@ -321,16 +397,6 @@ h4 {
 
 .slider-nav .slick-slide { cursor: pointer; border: none; }
 
-.slick-slide.is-active h3{
-  background-color: orange;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  filter: none;
-  -webkit-filter: grayscale(0);
-  padding: 0;
-}
 
 
 div {
@@ -340,7 +406,7 @@ div {
 	-webkit-transition: all ease-in-out .5s;
 }
 .icetab {
-	border: 1px solid #ff9900;
+
 	display: inline-block;
 	border-bottom: 0px;
 	margin: 0px;
@@ -348,38 +414,13 @@ div {
 	cursor: pointer;
 	border-right: 0px;
 }
-.icetab:last-child {
-	border-right: 1px solid #ff9900;
-}
 
-#icetab-content {
-	overflow: hidden;
-	position: relative;
-	border-top: 1px solid #ff9900;
-}
-.tabcontent {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	border-top: 0px;
-	border: 2px solid #ffffff;
-	border-top: 0px;
-	transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
-}
+
 
 .tabcontent:first-child {
 	position: relative;
 }
-.tabcontent.tab-active {
-	border-top: 0px;
-	display: block;
-	transform: translateY(0%);
-	-moz-transform: translateY(0%);
-	-webkit-transform: translateY(0%);
-}
+
 .codepen-container {
   max-width: 100%;
   margin-left: auto;
@@ -393,16 +434,84 @@ div {
   font-size: 1px;
 }
 
+
+.icetab a 
+{
+ 
+  color: black;
+}
+
+#icetab-content {
+	overflow: hidden;
+	position: relative;
+	border-top: 2px solid #fff;
+}
+.tab {
+
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+
+
+.codepen-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -120px;
+}
+.title {
+  text-align: center;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
 .icetab {
-	padding: 3px;
+	padding: 20px;
 	text-transform: uppercase;
-  font-size: 12px;
+	letter-spacing: 2px;
+}
+.tab
+{
+ 
+  
+  padding-left:50px ;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: serif;
+  background-color:transparent;
+  
 }
 
+.tab button {
+  background-color:#fff;
+  
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding:  16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #fff;
+}
+
+/* Create an active/current tablink class */
 
 
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  
+  border: 1px solid #fff;
+  border-top: none;
+ 
+}
 .horizontal{
   display: inline;
   justify-content: space-around;
@@ -413,10 +522,16 @@ div {
   padding: 50px 0;
 }
 #slider{
-  width: 300px;
+  width: 250px;
   margin: 0 auto;
 
 }
  #slider img{
-    width: 100%;
+    width: 50%;
   }
+
+
+}
+
+
+

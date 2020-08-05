@@ -51,6 +51,8 @@ import { OurServiceComponent } from './our-service/our-service.component';
 import { TaxiyeNewsComponent } from './taxiye-news/taxiye-news.component';
 import { ArticleComponent } from './article/article.component';
 import { TestimoniyalComponent } from './testimoniyal/testimoniyal.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { RentalComponent } from './rental/rental.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +96,8 @@ import { TestimoniyalComponent } from './testimoniyal/testimoniyal.component';
     TaxiyeNewsComponent,
     ArticleComponent,
     TestimoniyalComponent,
+    PricingComponent,
+    RentalComponent,
   ],
   imports: [
     BrowserModule,
