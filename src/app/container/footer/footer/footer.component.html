@@ -6,13 +6,13 @@
             <div class="card">
               <img src="/assets/image/Logo full masked yellow-2.png" alt="" width="125px" class="imgs">
               <ul class="no-bullets">
-                <li><a href="driver">Driver</a></li>
+                <li><a href="driver"> {{ 'HOME.Driver' | translate}}</a></li>
 
-                <li><a href="pricing">Pricing</a></li>
+                <li><a href="pricing"> {{ 'HOME.Pricing' | translate}}</a></li>
 
-                <li><a href="corporate">Corporate</a></li> 
+                <li><a href="corporate">{{ 'HOME.Corporate' | translate}}</a></li> 
 
-                <li><a href="offices">About us</a></li>
+                <li><a href="offices">{{ 'HOME.About' | translate}}</a></li>
            
                
               </ul>
@@ -25,11 +25,11 @@
           <div class="py-2 my-4">
             <div>
               <div class="card">
-                <h3 class="w3-text-white">Contact information</h3>
+                <h3 class="w3-text-white"> {{ 'HOME.Contact' | translate}}</h3>
                 <ul class="no-bullets">
-                  <li>Address : Ethiopia,Addis Ababa,YererLeka Building</li>
-                  <li>Phone : 6055</li>
-                  <li>Email : info@taxiye.com</li>
+                  <li>{{ 'HOME.Address' | translate}}</li>
+                  <li>{{ 'HOME.Phone' | translate}}</li>
+                  <li>{{ 'HOME.Email' | translate}}</li>
                 </ul>
                <a href="https://t.me/joinchat/AAAAAFDx0QXP9bZkLd5Vgg"><img src="/assets/image/telegram_yellow.png" alt="" width="30px" class="imgs"></a>
                <a href="https://twitter.com/taxiye"><img src="/assets/image/tweet_yellow-3.png" alt="" width="30px" class="imgs"></a>
@@ -43,13 +43,13 @@
           <div class="col-md-3 text-center text-md-left ">
             <div class="py-0">
               <div class="card">
-                <h3 class="w3-text-white">Actions</h3>
+                <h3 class="w3-text-white">{{ 'HOME.Actions' | translate}}</h3>
                 <ul class="no-bullets">
-                  <li><a href="signup">Rigester Driver</a></li>
+                  <li><a href="signup">{{ 'HOME.Rigester' | translate}}</a></li>
 
-                  <li><a href="book-ride">Book Taxiye</a></li>
+                  <li><a href="book-ride">{{ 'HOME.Book' | translate}}</a></li>
                   
-                  <li> <a href="corporate-signup">Rigester Corporate</a></li>
+                  <li> <a href="corporate-signup">{{ 'HOME.Rigesterc' | translate}}</a></li>
                   
                 </ul>
               </div>
@@ -59,23 +59,20 @@
 
         <div class="col-md-3 text-white my-4 text-center text-md-left ">
           <div class="card">
-            <h3 class="w3-text-white">Language</h3>
-            <ul class="no-bullets">
-              <li>
-                <div class="custom-select">
-                  <select class="w3-text-black w3-center">
-                    <option value="0">English</option>
-                    <option value="1">Amharic</option>
-                    <option value="2">Afaan Oromo</option>
-                    <option value="3">Latin</option>
-
+            <h3 class="w3-text-white">{{ 'HOME.TITLE' | translate}} </h3>
+           
+              <label for="">
+              
+                  <select  #langselect (change)="translate.use(langselect.value)" class="w3-text-black w3-center">
+                    <option style="color: black;" *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+                  
                   </select>
-                </div>
-              </li>
+              
+              </label>
               <br>
-              <li>Download</li>
+              <li style="color: white;">{{ 'HOME.TEXT' | translate}}</li>
               <br>
-            </ul>
+            
 
           </div>
           <div class="py-2">

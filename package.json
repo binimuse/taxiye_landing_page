@@ -24,6 +24,8 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@ng-bootstrap/ng-bootstrap": "^5.3.1",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "@types/googlemaps": "^3.39.6",
     "@types/jquery": "^3.5.0",
     "@types/nodemailer": "^6.4.0",

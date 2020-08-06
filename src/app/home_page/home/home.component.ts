@@ -1,19 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { GetNewsService } from 'src/app/service/get-news.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 declare var jQuery: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
+
+
 // tslint:disable-next-line: no-unused-expression
 export class HomeComponent implements OnInit {
+ 
   
   
-  constructor(private news: GetNewsService,) {}
-  
+  constructor(private news: GetNewsService,public translate: TranslateService) {
 
+    translate.addLangs(['English', 'Amharic']);
+    translate.setDefaultLang('English');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/English|Amharic/) ? browserLang : 'English'); 
+  }
+  
+ 
 
 
   openCity(evt, cityName) {
@@ -89,11 +99,13 @@ export class HomeComponent implements OnInit {
   modal_view(news) {
     this.single_news = news;
   }
+ 
   
   
 
   
 }
+
 // tslint:disable-next-line: class-name
 interface post {
 discription?: string;

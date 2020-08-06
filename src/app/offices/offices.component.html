@@ -92,22 +92,51 @@ padding-left: 80;
       <form id="contact-form" method="POST" action="/contact">
         <p class="full">
           <label>Name</label>
-          <input type="text" name="name" id="name" required>
+          <input type="text" [formControl]="nameFormControl" name="name" id="name" required>
+        
         </p>
 
         <p class="full">
           <label>E-mail Address</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" [formControl]="emailFormControl "  id="email"  required>
         </p>
 
         <p class="full">
           <label>Message</label>
-          <textarea name="message" rows="5" id="message"></textarea>
+          <textarea name="message"  [(ngModel)]="msg" rows="5" id="message"></textarea>
         </p>
 
         <p class="full">
-          <button type="submit"(click)="send()">Submit</button>
+          <button
+      
+        [disabled]="emailFormControl.invalid || nameFormControl.invalid || loading"
+        (click)="register()">
+        {{buttionText}}
+      </button>
         </p>
+
+
+
+
+
+
+     
+           
+           
+         
+        
+      
+  
+      
+
+
+
+
+
+
+
+
+
 
       </form>
       <!-- End #contact-form -->

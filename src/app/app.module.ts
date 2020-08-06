@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home_page/home/home.component';
 import { NavBarComponent } from './container/nav-bar/nav-bar/nav-bar/nav-bar.component';
 import { DriverRegisterComponent } from './driver-register/driver-register.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { FooterComponent } from './container/footer/footer/footer.component';
 import { DriverSingupComponent } from './driver-singup/driver-singup.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
@@ -53,6 +53,19 @@ import { ArticleComponent } from './article/article.component';
 import { TestimoniyalComponent } from './testimoniyal/testimoniyal.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { RentalComponent } from './rental/rental.component';
+
+
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+
+
+
+
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -103,6 +116,7 @@ import { RentalComponent } from './rental/rental.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
@@ -113,8 +127,25 @@ import { RentalComponent } from './rental/rental.component';
     SlickCarouselModule,
     FormWizardModule,
     Ng2TelInputModule,
+
+
+
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
+  
+
   ],
+  
   providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
+
+
 export class AppModule {}
+
+
