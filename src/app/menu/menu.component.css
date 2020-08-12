@@ -1,0 +1,93 @@
+
+@media screen and (min-width: 601px) {
+
+  /* Style the buttons inside the tab */
+  
+  
+  /* Change background color of buttons on hover */
+  .tab li:hover {
+    background-color: #93ee;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab li.active {
+    background-color: #93ee;
+    display: inline;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+  
+   
+   
+  }
+
+ 
+
+
+.example {
+    font-size: 30px;
+    padding-top: 19%;
+    padding-left: 65px;
+    
+    
+  }
+  .hi {
+    display: block;
+    
+  }
+
+  .hi h2 {
+   padding-left: 50px;
+   padding-bottom: 90px;
+    
+  }
+
+
+ 
+
+
+.example { display: inline-block; width: 100%; clear: both; } 
+		ul li {
+			list-style: none;
+			
+			
+		
+			border-radius: 3px;
+			cursor: pointer;
+		}
+	
+		#main-content { 
+			
+			padding: 5px 10px;
+    }
+    
+  .example li:hover {
+    color: #F8B857;
+    
+  }
+  
+  .example li {
+    font-family: "Lucida Console", Courier, monospace;
+    color: #fff;
+    margin-left: 20px;
+  }
+
+  .btnn {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 60%;
+    font-weight: bolder;
+  }
+  .vertical-line{
+    display: inline-block;
+    border-left: 2px solid #ccc;
+    margin-left: 20px;
+    height: 25px;
+  }
+ 
+  
+}

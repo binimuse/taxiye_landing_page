@@ -1,11 +1,11 @@
 <app-nav-bar></app-nav-bar>
 <div class="w3-display-topleft w3-text-white same_padding">
   <div class="example">
-<h2>Meet our Fleet</h2>
+<h2>{{ 'HOME.meet' | translate}}</h2>
 
   </div>
   <div class="p">
-  <p>how do we get You around?</p>
+  <p>{{ 'HOME.how' | translate}}</p>
 </div>
 </div>
 <div class="carousel-item">
@@ -14,11 +14,11 @@
   <img src="\assets\image\flle.jpg" width="100%" alt="Los Angeles">
 
   <div class="tab">
-    <button class="tablinks" (click)="openCity(event, 'London')">City taxi</button>
+    <button class="tablinks" (click)="openCity(event, 'London')"> {{ 'HOME.taxi' | translate}}</button>
     <span class="vertical-line"></span>   
-    <button class="tablinks" (click)="openCity(event, 'Paris')">Rental</button>
+    <button class="tablinks" (click)="openCity(event, 'Paris')"> {{ 'HOME.Rental' | translate}}</button>
     <span class="vertical-line"></span>   
-    <button class="tablinks" (click)="openCity(event, 'Tokyo')">Outstation</button>
+    <button class="tablinks" (click)="openCity(event, 'Tokyo')">  {{ 'HOME.Outstation' | translate}}</button>
   </div>
 </div>
 
@@ -32,7 +32,7 @@
 
 
    <div id="London" class="tabcontent">
-  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;">City taxi</h3>
+  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;"> {{ 'HOME.taxi' | translate}}</h3>
   
     <app-pricing ></app-pricing>
 
@@ -40,12 +40,12 @@
 </div>
  
 <div id="Paris" class="tabcontent"   >
-  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;">Rental</h3>
+  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;"> {{ 'HOME.Rental' | translate}}</h3>
   <app-rental></app-rental>
 </div>
 
 <div id="Tokyo" class="tabcontent" >
-  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;">Outstation</h3>
+  <h3 style="padding-top:20px ; font-weight: bold;padding-right: 120px;"> {{ 'HOME.Outstation' | translate}}</h3>
   <app-rental></app-rental>
 </div>
 

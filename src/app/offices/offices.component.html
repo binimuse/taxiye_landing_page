@@ -6,13 +6,12 @@ padding-right: 0px;
 <div class= "trans">
   <div class="w3-container w3-padding-32 w3-theme-d1">
     <div class="hi">
-    <h1 class="title" >About us</h1><br>
+    <h1 class="title" >{{ 'HOME.About' | translate}}</h1><br>
     
    
     <div class="lines" ></div>
     <p class="about">
-      Taxiye is the leading Ethiopian transportation platform providing ride-hailing services in Africa. The company’s mission is to make travel easier, faster, safer and more reliable. Taxiye is powered by Elnet Technology Pvt. Ltd and it was launched in 2019 and is currently operating all over Ethiopia through its company Eltaxi Trading Pvt Ltd, opening offices in major cities in country. Eltaxi Trading is owned majorly by Elnet Technology, Taxi owners, Passengers, and the management of the company. The company was founded in Ethiopia and is expanding throughout Africa and has already established offices in Tanzania, Uganda, and Kenya empowering taxi drivers by providing the technology and ways of bettering their transportation services and lives.
-    </p>
+      {{ 'HOME.aboutlong' | translate}} </p>
   </div>
 <div class="imgg"> 
    <img src="\assets\image\a.png "  alt="Los Angeles">
@@ -24,7 +23,7 @@ padding-right: 0px;
 
 <h1 class="titlee" id="our" style="
 padding-left: 80;
-">Our Office</h1><br>
+"> {{ 'HOME.Ouro' | translate}}</h1><br>
 
 
 <div class="liness" ></div>
@@ -53,14 +52,14 @@ padding-left: 80;
 
 <div class="w3-container">
   <div class="w3-container">
-    <h1 class="title">Coming Soon</h1><br>
+    <h1 class="title">{{ 'HOME.Comming' | translate}}</h1><br>
     <div class="lines"></div>
   </div>
 <br>
 <br><br>
 <br><br>
   <div class="w3">
-  <span class="titles" style="padding-left: 200px;"> Arbamench</span> <span class="titles" style="padding-left: 270px;">Gambela</span> <span class="titles"style="padding-left: 300px;">Uganda</span><br><br><br><br><br><br>
+  <span class="titles" style="padding-left: 200px;">{{ 'HOME.Arbamench' | translate}} </span> <span class="titles" style="padding-left: 270px;">{{ 'HOME.Gambela' | translate}} </span> <span id="ug" class="titles"style="padding-left: 300px;">{{ 'HOME.Uganda' | translate}}</span><br><br><br><br><br><br>
   <span class="titles"style="padding-left: 200px;"></span> <span class="titles"style="padding-left: 270px;"></span><br><br>
   </div>
 
@@ -74,14 +73,13 @@ padding-left: 80;
     <!-- COMPANY INFORMATION -->
     <div class="company-info">
       <br><br>
-      <h1 class="w3-center">Address</h1>
+      <h1 class="w3-center">{{ 'HOME.Add' | translate}}</h1>
       <br><br>
       <ul >
-        <li><i class="fa fa-road"></i> Ethiopia,Addis Ababa,Yerer
-        Leka Building</li><br>
-        <li><i class="fa fa-phone"></i> 6055</li><br>
+        <li><i class="fa fa-road"></i> {{ 'HOME.Address' | translate}}</li><br>
+        <li><i class="fa fa-phone"></i> {{ 'HOME.Phone' | translate}}</li><br>
         <li><i class="fa fa-phone"></i>+251960464646 OR +251970464646</li><br>
-        <li><i class="fa fa-envelope"></i> info@taxiye.com</li>
+        <li><i class="fa fa-envelope"></i> {{ 'HOME.Email' | translate}}</li>
       </ul>
     </div>
 
@@ -89,30 +87,25 @@ padding-left: 80;
     <div></div>
     <!-- CONTACT FORM -->
     <div class="contact">
-      <form id="contact-form" method="POST" action="/contact">
+      <form id="contact-form">
         <p class="full">
-          <label>Name</label>
-          <input type="text" [formControl]="nameFormControl" name="name" id="name" required>
+          <label>{{ 'HOME.name' | translate}}</label>
+          <input type="text" name="name" id="name" required>
         
         </p>
 
         <p class="full">
-          <label>E-mail Address</label>
-          <input type="email" [formControl]="emailFormControl "  id="email"  required>
+          <label>{{ 'HOME.E' | translate}}</label>
+          <input type="email" name="email" id="email"  required>
         </p>
 
         <p class="full">
-          <label>Message</label>
-          <textarea name="message"  [(ngModel)]="msg" rows="5" id="message"></textarea>
+          <label>{{ 'HOME.Message' | translate}}</label>
+          <textarea name="message"   id="message"></textarea>
         </p>
 
         <p class="full">
-          <button
-      
-        [disabled]="emailFormControl.invalid || nameFormControl.invalid || loading"
-        (click)="register()">
-        {{buttionText}}
-      </button>
+          <button type="submit" (click)="register()"> {{buttionText}} </button>
         </p>
 
 
@@ -120,7 +113,35 @@ padding-left: 80;
 
 
 
+     <script>
+
+
+function register() {
+      this.loading = true;
      
+      let user = {
+        name: this.nameFormControl.value,
+        email: this.emailFormControl.value
+      }
+      this.offices.server("http://localhost:3000/sendmail", user).subscribe(
+        data => {
+          let res = data; 
+         alert(
+            `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
+          );
+        },
+        err => {
+          alert(err);
+          this.loading = false;
+          this.buttionText = "Submit";
+        },() => {
+          this.loading = false;
+          this.buttionText = "Submit";
+        }
+      );
+    
+      }
+     </script>
            
            
          

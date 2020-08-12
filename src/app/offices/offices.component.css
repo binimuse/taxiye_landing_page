@@ -31,7 +31,7 @@
 }
 .about
 {
-  width: 600px;
+  width: 500px;
   font-family: FontAwesome;
   font-weight: normal;
   font-size: 20px;
@@ -86,8 +86,8 @@
 }
 
 .titles{
-  margin-left: 20px;
-  font-size: 15px;
+  margin-left: 10px;
+  font-size: 13px;
 }
 
 .modals{
@@ -251,9 +251,136 @@ ul {
   }
   
 }
+@media screen and (max-width: 1100px) {
+  
+  .imgg img{
+    
+    padding-top: 205px;
+    width: 400px;
+  
+  }
+
+.about
+{
+  width: 200px;
+  
+  font-weight: 2px;
+  font-size: 2px;
+  margin-left: 530px;
+  
+}
+.trans
+{
+  background-color: rgba(228, 227, 227, 0.815);
+  width: 100%;
+  height: 610px;
+}  
+.contact form {
+ 
+ display: none;
+} 
+.company-info h1
+{
+  
+  padding-left: 200px;
+}
+
+}
+/*125*/
+@media screen and (max-width: 1200px){
+  
+ 
+  .w3{
+    display: none;
+  }
+  .about
+  {
+    width: 320px;
+    font-size: 16px;
+   
+    
+  }
+  .contact form {
+ 
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-left: 600px;
+    margin-top: -300px;
+  }
+
+}
+
+/*175*/
+@media screen and (max-width: 800px){
+  .w3{
+    display: none;
+  }
+
+  .imgg img{
+    
+    padding-top: 205px;
+    width: 300px;
+  
+  }
+    .img
+    {
+      width: 7.5%;
+      height: 2px;
+    }
+
+ agm-map{
+   height: 550px;
+  
+ }
+ .map agm-map
+ {
+   position: sticky;
+  
+
+ }
+ .lines{
+  margin-left: 310px;
+ }
+ .title{
+  
+  text-align: center;
+  color: #950081;
+  font-style: normal;
+ font-size: 20px;
+  font-weight: bolder;
+  margin-left: 90px;
+  
+  }
+.titlee{
+  
+  text-align: center;
+  color: #950081;
+  font-style: normal;
+ font-size: 20px;
+  font-weight: bolder;
+  
+  }
 
 
-/*------------------------------------------------------------------------------------------------------------------*/
+.about
+{
+  width: 210px;
+  
+  font-weight: 6px;
+  font-size: 11px;
+  margin-left: 420px;
+  
+}
+    
+.trans
+{
+  background-color: rgba(228, 227, 227, 0.815);
+  width: 100%;
+  height: 500px;
+}
+
+}
+/* ------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
 
   
@@ -264,8 +391,8 @@ ul {
 
   .imgg img{
     
-    padding-top: 45px;
-    width: 100px;
+    padding-top: 25px;
+    width: 150px;
   
   }
     .img
@@ -307,7 +434,7 @@ display: none;
   font-family: FontAwesome;
   font-weight: 2px;
   font-size: 8px;
-  margin-left: 120px;
+  margin-left: 300px;
   
 }
 .hi
@@ -319,7 +446,7 @@ display: none;
 {
   background-color: rgba(228, 227, 227, 0.815);
   width: 100%;
-  height: 210px;
+  height: 230px;
 }
 
 

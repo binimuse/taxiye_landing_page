@@ -10,7 +10,7 @@
     "Address":" Address : Ethiopia,Addis Ababa,YererLeka Building",
     "Phone":" Phone : 6055",
     "Email":"Email : info@taxiye.com",
-
+    "upload":"upload",
     "Driver":"Driver",
     "Pricing":"Pricing",
     "Corporate":"Corporate",
@@ -44,22 +44,129 @@
     "fast":"The fast, affordable way to ride",
     "Regi":"Register Corporate",
     "bo":"Book Taxiye",
-    "Regid":"Register Driver"
-    
+    "Regid":"Register Driver",
+   
    
     
+    "commnet driver":"////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+ 
+
+   
+
+    "doc":"1.Driver license image",
+    "doc2":"2.Vehicle Image",
+    "doc3":"3.Driver Image " ,
+    "doc4":"4.libary Image" ,
+    "doc5":"5.Other Documents",
+    "We":"We require the following documents:",
+    "Whatd":"What documents do i need to become a drive?",
+    "DriverF":"Driver Frequently Asked Questions",
+    "Downloadf":"Download the Free Taxiye Driver App from the Google play and App store on your smartphone.Use your phone number to create an account",
+    "Guidelines":"Guidelines to becoming a Taxiye",
+    "FeedBack":"Drivers FeedBack",
+    "Drivern":"TAXIYE Driver News",
+    "AS":"Register As a ",
+
+   
+    "Sign":" Sign UP",
     
    
+   
+    "commnet vehicle":"////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+ 
+
+
+    "meet":"Meet our Fleet",
+    "how":" how do we get You around? ",
+    "taxi":" City taxi",
+    "Rental":"Rental ",
+    "Outstation":"Outstation",
+
+    "commnet pricing":"////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+ 
 
    
+    "Lada":"Meet our Fleet",
+    "Base":"Base fee: 20birr ",
+    "perk":"per kilometter: 7 ",
+    "perm":"per minute: 0 ",
+    "taxiyem":"taxiye mini ",
+    "taxiyen":"taxiye Normal ",
+    "Bike":" Bike ",
+    "Bajaj":"Bajaj ",
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Our":"Our Corporate Client ",
+    "CorporateF":"Corporate FeedBack",
+    "Guid":"Guidelines to becoming a",
+    "Corporateu":"Corporate User",
+    "t":"Taxiye ",
+    "long":" Taxiye is the leading Ethiopian transportation platform providing ride-hailing services in Africa. The company’s missionis to make travel easier, faster, safer and more reliable. Taxiye is powered by Elnet Technology Pvt. Ltd and it was launched in 2019 and is currently operating all over Ethiopia through its company Eltaxi Trading Pvt Ltd, openingoffices in major cities in country. Eltaxi Trading is owned majorly by Elnet Technology, Taxi owners, Passengers, and the management of the company. The company was founded in Ethiopia and is expanding throughout Africa and has already established offices in Tanzania, Uganda, and Kenya empowering taxi drivers by providing the technology and ways of bettering their transportation services and lives.",
+    "Corporatef":"Corporate Frequently Asked Questions",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "aboutlong":" Taxiye is the leading Ethiopian transportation platform providing ride-hailing services in Africa. The company’s mission is to make travel easier, faster, safer and more reliable. Taxiye is powered by Elnet Technology Pvt. Ltd and it was launched in 2019 and is currently operating all over Ethiopia through its company Eltaxi Trading Pvt Ltd, opening offices in major cities in country. Eltaxi Trading is owned majorly by Elnet Technology, Taxi owners, Passengers, and the management of the company. The company was founded in Ethiopia and is expanding throughout Africa and has already established offices in Tanzania, Uganda, and Kenya empowering taxi drivers by providing the technology and ways of bettering their transportation services and lives.",
+    "Ouro":"Our Office",
+
+    "Arbamench":"Arbamench",
+    "Gambela":"Gambela",
+    "Uganda":"Uganda",
+    "Add":"Address",
+    "name":"Name",
+    "E":"E-mail Address",
+    "Message":"Message"
+    
 
     
+
+    
+
+
+
+
+
+
    
-
-
-
-
+   
    
     }
+
+  
+
 }

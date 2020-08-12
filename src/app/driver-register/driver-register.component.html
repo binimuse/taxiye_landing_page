@@ -1,8 +1,8 @@
 <app-nav-bar></app-nav-bar>
 
 <div class="w3-display-topright w3-text-white same_padding">
-  <div class="example">REGISTER AS A <br>DRIVER </div>
-  <p class="sign"><a href="" class="btns btn-defualt">Sign UP</a></p>
+  <div class="example">{{ 'HOME.AS' | translate}}  <br>{{ 'HOME.Driver' | translate}} </div>
+  <p class="sign"><a href=""  class="btns btn-defualt">{{ 'HOME.Sign' | translate}} </a></p>
 
 </div>
 
@@ -26,7 +26,7 @@
   padding-right: 0px;
 ">
     <div class="w3-container w3-padding-32 w3-theme-d1">
-      <h1 class="title w3-center ">TAXIYE Driver News</h1>
+      <h1 class="title w3-center ">{{ 'HOME.Drivern' | translate}}</h1>
        <div class="lines" style="width: 100px; margin-left: 46%;" ></div>
     </div>
 
@@ -41,35 +41,29 @@
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="/assets/image/management.png  " alt="Paris" width="400" height="300">
-          <p><strong>Taxiye Has officially launched</strong></p>
-          <p>BY :: ADMIN                        
-
-            Wlam Aiber Vestibulum Fringilla Oremedad Ipsum Dolor Sit Amet Consectetur </p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Read more</button>
-          <p class="date" >25 feb</p>
+          <p><strong>{{ 'HOME.Taxiye' | translate}}</strong></p>
+          <p>{{ 'HOME.BY' | translate}} </p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">{{ 'HOME.Read' | translate}}</button>
+          <p class="date" >{{ 'HOME.feb' | translate}}</p>
          
         </div>
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="/assets/image/management.png" alt="New York" width="400" height="300">
-          <p><strong>Taxiye Has officially launched</strong></p>
-          <p>BY :: ADMIN                        
-
-            Wlam Aiber Vestibulum Fringilla Oremedad Ipsum Dolor Sit Amet Consectetur </p>
-         <button class="btn" data-toggle="modal" data-target="#myModal">Read more</button>
-         <p class="date" >25 feb</p>
+          <p><strong>{{ 'HOME.Taxiye' | translate}}</strong></p>
+          <p>{{ 'HOME.BY' | translate}} </p>
+         <button class="btn" data-toggle="modal" data-target="#myModal">{{ 'HOME.Read' | translate}}</button>
+         <p class="date" >{{ 'HOME.feb' | translate}}</p>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="/assets/image/management.png" alt="San Francisco" width="400" height="300">
-          <p><strong>Taxiye Has officially launched</strong></p>
-          <p>BY :: ADMIN                        
-
-            Wlam Aiber Vestibulum Fringilla Oremedad Ipsum Dolor Sit Amet Consectetur </p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Read more</button>
-          <p class="date" >25 feb</p>
+          <p><strong>{{ 'HOME.Taxiye' | translate}}</strong></p>
+          <p>{{ 'HOME.BY' | translate}}</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">{{ 'HOME.Read' | translate}}</button>
+          <p class="date" >{{ 'HOME.feb' | translate}}</p>
         </div>
       </div>
     </div>
@@ -77,7 +71,7 @@
 
 <!-- slide show content -->
 <div class="w3-container w3-padding-32 w3-theme-d1">
-  <h1 class="title w3-center " id="hid">Drivers FeedBack</h1>
+  <h1 class="title w3-center " id="hid">{{ 'HOME.FeedBack' | translate}} </h1>
    <div class="lines" style="width: 100px; margin-left: 46%;" ></div>
   </div>
   
@@ -89,7 +83,7 @@
 <!-- guideling taxiye -->
 <div class="w3-container">
 <div class="w3-container w3-padding-32 w3-theme-d1">
-  <h1 class="title">Guidelines to becoming a Taxiye</h1><br>
+  <h1 class="title">{{ 'HOME.Guidelines' | translate}}</h1><br>
   <div class="lines"></div>
 </div>
 
@@ -103,19 +97,16 @@
 
   <div class="w3-row">
     <div class="w3-third ">
-      <h3 class="title">1. Download</h3>
-    <p class="pg">Download the Free Taxiye Driver App from the Google play and App store on your smartphone.
-      Use your phone number to create an account </p>
+      <h3 class="title">1.{{ 'HOME.TEXT' | translate}}</h3>
+    <p class="pg">{{ 'HOME.Downloadf' | translate}}</p>
     </div>
     <div class="w3-third ">
-      <h3 class="title">2. Upload</h3>
-     <p class="pg">Download the Free Taxiye Driver App from the Google play and App store on your smartphone.
-       Use your phone number to create an account </p>
+      <h3 class="title">2.{{ 'HOME.upload' | translate}}</h3>
+     <p class="pg">{{ 'HOME.Downloadf' | translate}}</p>
     </div>
     <div class="w3-third ">
-      <h3 class="title">3. Driver</h3>
-    <p class="pg">Download the Free Taxiye Driver App from the Google play and App store on your smartphone.
-  Use your phone number to create an account </p>
+      <h3 class="title">3.{{ 'HOME.Driver' | translate}}</h3>
+    <p class="pg">{{ 'HOME.Downloadf' | translate}} </p>
     </div>
   </div>
 </div><br>
@@ -134,79 +125,79 @@
       
         <br>
         <div class=" w3-container col-sm-6">
-          <h1 class="titlew">Driver Frequently Asked Questions </h1>
+          <h1 class="titlew"> {{ 'HOME.DriverF' | translate}} </h1>
           <div class="lines"></div>
           <br><br><br>
           <!-- FAQ start -->
   <div class="accordion-container">
   <div class="set">
     <a>
-      What documents do i need to become a drive?
+      {{ 'HOME.Whatd' | translate}}
       <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
-      <p class="fqa-title">We require the following documents:</p>
-      <p class="fqa-title">1. Driver license image<br>
-        2. Vehicle Image<br>
-        3. Driver Image<br>
-        4. libary Image<br>
-        5. Other Documents</p>
+      <p class="fqa-title">{{ 'HOME.We' | translate}}</p>
+      <p class="fqa-title">{{ 'HOME.doc' | translate}}<br>
+        {{ 'HOME.doc2' | translate}}<br>
+        {{ 'HOME.doc3' | translate}}<br>
+        {{ 'HOME.doc4' | translate}}<br>
+        {{ 'HOME.doc5' | translate}}</p>
     </div>
   </div><br>
   <div class="set">
     <a>
-      What documents do i need to become a drive?
+      {{ 'HOME.Whatd' | translate}}
       <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
-      <p class="fqa-title">We require the following documents:</p>
-      <p class="fqa-title">1. Driver license image<br>
-        2. Vehicle Image<br>
-        3. Driver Image<br>
-        4. libary Image<br>
-        5. Other Documents</p>
+      <p class="fqa-title">{{ 'HOME.We' | translate}}</p>
+      <p class="fqa-title">{{ 'HOME.doc' | translate}}<br>
+        {{ 'HOME.doc2' | translate}}<br>
+        {{ 'HOME.doc3' | translate}}<br>
+        {{ 'HOME.doc4' | translate}}<br>
+        {{ 'HOME.doc5' | translate}}</p>
     </div>
   </div><br>
   <div class="set">
     <a>
-      What documents do i need to become a drive?
+      {{ 'HOME.Whatd' | translate}}
       <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
-      <p class="fqa-title">We require the following documents:</p>
-      <p class="fqa-title">1. Driver license image<br>
-        2. Vehicle Image<br>
-        3. Driver Image<br>
-        4. libary Image<br>
-        5. Other Documents</p>
+      <p class="fqa-title">{{ 'HOME.We' | translate}}</p>
+      <p class="fqa-title">{{ 'HOME.doc' | translate}}<br>
+        {{ 'HOME.doc2' | translate}}<br>
+        {{ 'HOME.doc3' | translate}}<br>
+        {{ 'HOME.doc4' | translate}}<br>
+        {{ 'HOME.doc5' | translate}}</p>
     </div>
   </div><br>
   <div class="set">
     <a>
-      What documents do i need to become a drive?
+      {{ 'HOME.Whatd' | translate}}
       <i class="fa fa-arrow-right"></i>
     </a>
     <div class="contents">
-      <p class="fqa-title">We require the following documents:</p>
-      <p class="fqa-title">1. Driver license image<br>
-        2. Vehicle Image<br>
-        3. Driver Image<br>
-        4. libary Image<br>
-        5. Other Documents</p>
+      <p class="fqa-title">{{ 'HOME.We' | translate}}</p>
+      <p class="fqa-title">{{ 'HOME.doc' | translate}}<br>
+        {{ 'HOME.doc2' | translate}}<br>
+        {{ 'HOME.doc3' | translate}}<br>
+        {{ 'HOME.doc4' | translate}}<br>
+        {{ 'HOME.doc5' | translate}}</p>
     </div>
   </div><br>
 <div class="set">
   <a>
-    What documents do i need to become a drive?
+    {{ 'HOME.Whatd' | translate}}
     <i class="fa fa-arrow-right"></i>
   </a>
   <div class="contents">
-    <p class="fqa-title">We require the following documents:</p>
-    <p class="fqa-title">1. Driver license image<br>
-      2. Vehicle Image<br>
-      3. Driver Image<br>
-      4. libary Image<br>
-      5. Other Documents</p>
+    <p class="fqa-title">{{ 'HOME.We' | translate}}</p>
+    <p class="fqa-title">{{ 'HOME.doc' | translate}}<br>
+      {{ 'HOME.doc2' | translate}}<br>
+      {{ 'HOME.doc3' | translate}}<br>
+      {{ 'HOME.doc4' | translate}}<br>
+      {{ 'HOME.doc5' | translate}}</p>
   </div>
 </div>
 </div>

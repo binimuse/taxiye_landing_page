@@ -1,16 +1,18 @@
 
-<app-nav-bar></app-nav-bar>
+ <div class="width">
 <div class="w3-display-topleft w3-text-white same_padding">
+ 
   <div class="example">
-  <a class="btn default" href="signup">Register Driver</a>|
-  <a class="btn default" href="book-ride">Book</a>|
-  <a class="btn default" href="corporate-signup">Register Corporate</a>
+    
+      <app-menu  id="font" ></app-menu>
+    
 <br><br>
 
       <div class="center-div">
+      
         <div class="w3-card-4">
           <div class="card-header">
-            <strong class="title1">Corporate Sing Up</strong>
+            <strong class="title1">  Corporate Sing Up</strong>
           </div>
           <div class="card-body">
             <div class="form-group" [formGroup]="corporate_form">
@@ -26,14 +28,12 @@
             <div class="btn-center" >
               <input type="button" (click)="addcorporate()" class="btn btn-primary " value="Submit" style="background-color: darkorange" [disabled]="corporate_form.invalid"/>
             </div>
-
+         
           </div>
+         
         </div>
       </div>
   </div>
+  
 </div>
-
-<div class="carousel-item">
-  <img src="\assets\image\2.png" height="400" width="100%" class="back-img" alt="Los Angeles">
 </div>
-

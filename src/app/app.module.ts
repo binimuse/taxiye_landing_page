@@ -57,6 +57,9 @@ import { RentalComponent } from './rental/rental.component';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { I18nModule } from './i18n/i18n.module';
+import { BookcarComponent } from './bookcar/bookcar.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -111,6 +114,8 @@ export function httpTranslateLoader(http: HttpClient) {
     TestimoniyalComponent,
     PricingComponent,
     RentalComponent,
+    BookcarComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -136,7 +141,11 @@ export function httpTranslateLoader(http: HttpClient) {
         useFactory: httpTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+
+
+
+    I18nModule
   
 
   ],

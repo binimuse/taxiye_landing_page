@@ -1,10 +1,200 @@
 /* windows resolution */
+
+@media screen and (min-width: 4300px) {
+  .example  ul  {
+ 
+  top: 100%;
+    
+  }
+  .one{
+    top: 100%;
+    right: 100%;
+  
+  }
+  .two
+  {
+    top: 100%;
+  }
+
+}
+@media screen and (min-width: 3200px) {
+  
+  
+  .download img{
+    margin-left: 1000px;
+  }
+  .example  ul  {
+ 
+    padding-left: 1000px;
+    
+  }
+
+  .one
+{
+  margin-left: 1000px;
+
+}
+.two
+{
+  margin-left: 1000px;
+ 
+}
+  .pp 
+  {
+   display: none;
+  }
+  .p{
+    display: none;
+  }
+ 
+}
+@media screen and (min-width: 2100px) {
+ 
+  
+  .vid
+   {
+     display: none;
+   }
+  
+
+.pp 
+{
+  width: 200px;
+padding-left: 900px;
+}
+.p p
+{
+ width: 450px;
+margin-left: 900px;
+}
+.pp h4
+{
+  margin-left: 100px;
+  width: 200px; 
+}
+#mobile-app-area::after {
+
+	left: 45%;
+	top: 45%;
+
+}
+}
+/*67*/
+@media screen and (min-width: 2000px) {
+  .hi h2
+  {
+    display: none;
+  }
+  .download{
+   
+
+    margin-top:40px;
+    width: 40%;
+  }
+  .download img{
+  
+   width: 10%;
+  } 
+  .example {
+    font-size: 3px;
+    padding-top: 16%;
+    padding-left: 35px;
+    margin-left: 700px;
+    
+  }
+  .example li {
+    font-size: 23px;
+   
+    
+    
+  }
+
+  .one
+{
+  font-style: normal;
+  font-size: 20px;
+  font-family:'sans-serif';
+  padding-left: 50px;
+}
+.two
+{
+  font-style: italic;
+  font-size: 20px;
+  font-family: "Sofia";
+  padding-left: 50px;
+}
+.vid 
+{
+ margin-left: 10%;
+}
+
+}
 @media screen and (min-width: 601px) {
 
+/* Style the tab */
+.tab {
+
+  position: absolute;
+ 
+}
+
+/* Style the buttons inside the tab */
+
+
+/* Change background color of buttons on hover */
+.tab li:hover {
+  background-color: #93ee;
+}
+
+/* Create an active/current tablink class */
+.tab li.active {
+  background-color: #93ee;
+  display: inline;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+
+ 
+ 
+}
+
   
+}
+
+
+.tab {
+
+  position: absolute;
+ 
+}
+
+/* Style the buttons inside the tab */
+
+
+/* Change background color of buttons on hover */
+.tab li:hover {
+  background-color: #93ee;
+}
+
+/* Create an active/current tablink class */
+.tab li.active {
+  background-color: #93ee;
+  display: inline;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+
+ 
+ 
+}
+
   .example {
     font-size: 30px;
-    padding-top: 20%;
+    padding-top: 19%;
     padding-left: 65px;
     
     
@@ -55,6 +245,7 @@
     font-size: 50px;
     font-family:'sans-serif';
     padding-left: 50px;
+    padding-top: 40px;
   }
   .two
   {
@@ -62,6 +253,7 @@
     font-size: 50px;
     font-family: "Sofia";
     padding-left: 50px;
+    padding-top: 20px;
   }
   .p{
     width: 80%;
@@ -82,6 +274,7 @@
 {
   width: 500px;
 margin-left: 100px;
+padding-left: 12px;
 }
 
   .taxiye{
@@ -279,44 +472,6 @@ margin-left: 50px;
 }
 
 
-.tab
-{
- 
-  
-  padding-left:550px ;
-  padding-top: -300px;
-  font-weight: bold;
-  font-family: serif;
-  background-color:transparent;
-  
-}
-
-.tab button {
-  background-color:#fff;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding:  16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #fff;
-}
-
-/* Create an active/current tablink class */
-
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding-left: 190px;
-  border: 1px solid #fff;
-  border-top: none;
-}
 
 .arrow{
   position: absolute;
@@ -352,18 +507,12 @@ margin-left: 50px;
       opacity: 0;
       transform: rotate(45deg) translate(20px,20px);
   }
-}
 
 
 
+
 }
-@media screen and (max-width: 1000%){
-  .download{
-   
-   display: none;
- 
-}
-}
+
 
 /*125*/
 @media screen and (max-width: 1200px){
@@ -386,8 +535,66 @@ margin-left: 50px;
   .hi{
     display: none;
   }
+  .vid video
+{
+ 
+  
+  
+ display: none;
+
+ 
+}
+#mobile-app-area {
+	padding: 10px 0;
+  position: relative;
+  
+  
+}
+
+#mobile-app-area #wrapper_mobileapp-video-bg .YTPOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  
+}
+
+#mobile-app-area::after {
+ 
+	background-image: url("/assets/image/photo600123775451329.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 55%;
+	position: absolute;
+left: 50%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 60%;
+}
+
+.mobile-app-content h2 {
+	color: #950081;
+  font-size: 30px;
+  
+ 
+}
+
+.mobile-app-content {
+	
+	font-size: 10px;
+  font-weight: 400;
+ 
+}
+
+.mobile-app-content p {
+  margin: 5px 0 20px;
+  
+}
 
 }
+
+
+
 /*175*/
 @media screen and (max-width: 800px){
   .download{
@@ -457,7 +664,34 @@ margin-left: 50px;
 /* mobile resolution --------------------------------------------------------------------------------*/
 @media screen and (max-width: 600px){
 
+  .tab {
 
+    position: absolute;
+   
+  }
+  
+  /* Style the buttons inside the tab */
+  
+  
+  /* Change background color of buttons on hover */
+  .tab li:hover {
+    background-color: #93ee;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab li.active {
+    background-color: #93ee;
+    display: inline;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+  
+   
+   
+  }
+  
   .arrow{
     position: absolute;
     top: 40%;

@@ -16,17 +16,34 @@ export class HomeComponent implements OnInit {
   
   
   constructor(private news: GetNewsService,public translate: TranslateService) {
-
+/*
     translate.addLangs(['English', 'Amharic']);
     translate.setDefaultLang('English');
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/English|Amharic/) ? browserLang : 'English'); 
+    */
   }
   
  
+  hide() {
+    
+   }
 
-
+  
+  
   openCity(evt, cityName) {
+
+    
+    var display = 'none';
+    var nav = document.getElementById('tab');
+    var settings = document.getElementById('download');
+    var one = document.getElementById('one');
+    var two = document.getElementById('two');
+    settings.style.display = display;
+    nav.style.display = display;
+    one.style.display = display;
+    two.style.display = display;
+
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -38,47 +55,12 @@ export class HomeComponent implements OnInit {
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
+
+    
+
   }
 
 
-  loadHomepage() {
-
-    
-    var DOMAIN_NAME = './home.component.html';
-
-    
-    
-    var html_home = '';
-   
-        
-    var html_product = '<h1>PRODUCTS PAGE</h1>';
-    html_product += '<h3>Add content Products page here!</h3>';
-    html_product += '<h4>Any question or Task, Please Contact with me: luyenthinhanh.contact@gmail.com!</h4>';
-    
-   
-    history.pushState({},"",DOMAIN_NAME + "/home");
-				document.getElementById('main-content').innerHTML = html_home;
-    
-  }
-  loadBooking() {
-
-    
-    var DOMAIN_NAME = './home.component.html';
-
-    
-    
-    var html_home = '';
-   
-        
-    var html_product = '<h1>PRODUCTS PAGE</h1>';
-    html_product += '<h3>Add content Products page here!</h3>';
-    html_product += '<h4>Any question or Task, Please Contact with me: luyenthinhanh.contact@gmail.com!</h4>';
-    
-   
-    history.pushState({},"",DOMAIN_NAME + "/home");
-				document.getElementById('main-content').innerHTML = html_home;
-    
-  }
   
 
   

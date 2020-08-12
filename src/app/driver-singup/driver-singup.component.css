@@ -1,12 +1,43 @@
 
 .example {
     font-size: 40px;
-    padding-top: 10%;
+    margin-top: -80px;
     padding-left: 40px;
+    position: relative;
+   
   }
   .example a {
     font-size: 20px;
-    
+    color: #ffffff;
+  }
+
+
+  .tab {
+
+    position: absolute;
+   
+  }
+  
+  /* Style the buttons inside the tab */
+  
+  
+  /* Change background color of buttons on hover */
+  .tab li:hover {
+    background-color: #93ee;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab li.active {
+    background-color: #93ee;
+    display: inline;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+  
+   
+   
   }
 
  #c
@@ -27,7 +58,7 @@
   }
  
 #grad1 {
-    background-image: url('/assets/image/right.png');
+    background-image:transparent;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%; 
@@ -43,7 +74,7 @@
 #msform fieldset .form-card {  
     border: 0 none;
     position: relative;
-    margin-bottom: 20px
+    margin-bottom: -10px
 }
 
 #msform fieldset {
@@ -54,7 +85,7 @@
     margin-bottom: 95px;
     padding-bottom: 20px;
     position: relative;
-    width: 80%;
+    width: 100%;
 }
 
 #msform fieldset:not(:first-of-type) {
@@ -72,9 +103,9 @@
     border-bottom: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 20px;
-    margin-top: 34px;
-    width: 80%;
-    height: 40px;
+    margin-top: 1px;
+    width: 85%;
+    height: 20px;
     box-sizing:content-box;
     font-family: montserrat;
     color: #2C3E50;
@@ -160,8 +191,8 @@ select.list-dt:focus {
 }
 
 #progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
+    margin-bottom: -90px;
+   
     color: lightgrey;
     
 }

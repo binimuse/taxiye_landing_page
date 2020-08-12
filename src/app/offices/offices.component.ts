@@ -3,6 +3,8 @@ import { MouseEvent } from '@agm/core';
 import { OfficeService } from '../service/office.service';
 import {FormsModule} from '@angular/forms';
 import { FormControl, Validators } from "@angular/forms";
+import { TranslateService } from '@ngx-translate/core';
+import { HttpService } from "../service/http.service";
 
 
 declare var require: any
@@ -22,6 +24,7 @@ declare var require: any
 
 
 export class OfficesComponent implements OnInit {
+  
   loading = false;
   buttionText = "Submit";
 
@@ -35,42 +38,17 @@ export class OfficesComponent implements OnInit {
     Validators.minLength(4)
   ]);
 
-
+  
   
 
 
   offices: any;
 
-  constructor(private officesService :OfficeService) {}
+  constructor(private officesService :OfficeService,public translate: TranslateService,public http: HttpService) {}
 
   
   
-  register() {
-    this.loading = true;
-   
-    let user = {
-      name: this.nameFormControl.value,
-      email: this.emailFormControl.value
-    }
-    this.offices.sendEmail("http://localhost:3000/neww", user).subscribe(
-      data => {
-        let res:any = data; 
-       alert(
-          `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
-        );
-      },
-      err => {
-        alert(err);
-        this.loading = false;
-        this.buttionText = "Submit";
-      },() => {
-        this.loading = false;
-        this.buttionText = "Submit";
-      }
-    );
-  
-    }
-   
+ 
 
   lat = 8.5737791;
   lng = 35.6687268;
@@ -96,10 +74,13 @@ export class OfficesComponent implements OnInit {
 
 
 
+/*
+    this.translate.addLangs(['English', 'Amharic','Afan oromo',]);
+    this. translate.setDefaultLang('English');
+    const browserLang =  this.translate.getBrowserLang();
+    this.translate.use(browserLang.match(/English|Amharic/) ? browserLang : 'English');
 
-
-
-
+*/
 
     
     this.officesService.getOffices().subscribe(resp =>{
@@ -113,7 +94,32 @@ export class OfficesComponent implements OnInit {
 
   
 
-
+   function register() {
+      this.loading = true;
+     
+      let user = {
+        name: this.nameFormControl.value,
+        email: this.emailFormControl.value
+      }
+      this.offices.server("http://localhost:3000/server/server", user).subscribe(
+        data => {
+          let res:any = data; 
+         alert(
+            `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
+          );
+        },
+        err => {
+          alert(err);
+          this.loading = false;
+          this.buttionText = "Submit";
+        },() => {
+          this.loading = false;
+          this.buttionText = "Submit";
+        }
+      );
+    
+      }
+     
 
   
 

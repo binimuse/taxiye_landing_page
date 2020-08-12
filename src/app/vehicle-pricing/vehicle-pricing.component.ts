@@ -3,6 +3,7 @@ import { Component, OnInit, forwardRef } from '@angular/core';
 declare var jQuery: any;
 import { PriceService } from '../service/price.service';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
@@ -43,7 +44,7 @@ export class VehiclePricingComponent implements OnInit {
   onDemand: any;
   rental: any;
   Outstation: any;
-  constructor(private priceService: PriceService) { }
+  constructor(private priceService: PriceService, public translate: TranslateService) { }
 
   ngOnInit() {
 
@@ -57,6 +58,9 @@ export class VehiclePricingComponent implements OnInit {
       this.rental =  this.prices.filter(function(price1) {
         return price1.service_type == 'rental';
 });
+
+
+
       this.Outstation = this.prices.filter(function (price2) {
         return price2.service_type == 'outstation';
       });
@@ -65,6 +69,12 @@ export class VehiclePricingComponent implements OnInit {
       console.log(this.rental);
       console.log(this.Outstation);
     });
+/*
+    this.translate.addLangs(['English', 'Amharic','Afan oromo',]);
+    this. translate.setDefaultLang('English');
+    const browserLang =  this.translate.getBrowserLang();
+    this.translate.use(browserLang.match(/English|Amharic/) ? browserLang : 'English');
+    */
     // $('.slider-single').slick({
     //   slidesToShow: 1,
     //   slidesToScroll: 1,

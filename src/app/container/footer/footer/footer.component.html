@@ -63,10 +63,13 @@
            
               <label for="">
               
-                  <select  #langselect (change)="translate.use(langselect.value)" class="w3-text-black w3-center">
-                    <option style="color: black;" *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
-                  
-                  </select>
+                <select #langSelect (change)="translate.use(langSelect.value)">
+                  <option
+                    *ngFor="let lang of translate.getLangs()"
+                    [value]="lang"
+                    [attr.selected]="lang === translate.currentLang ? '' : null"
+                  >{{lang}}</option>
+                </select>
               
               </label>
               <br>

@@ -3,8 +3,10 @@
 @media screen and (min-width: 601px) {
   .example {
     font-size: 50px;
-    padding-top: 40%;
-    padding-right: 30%;
+    padding-top: 30%;
+    text-align: center;
+    padding-right: 490px;
+    font-family: 'Courier New', Courier, monospace;
   }
   .taxiye{
   margin-left: 10px;
@@ -25,7 +27,7 @@
   border:  #e2a320;
   background-color: transparent;
   color: white;
- 
+
   cursor: pointer;
   
 }
@@ -153,9 +155,56 @@
   color: #555;
 }
 }
+
+@media screen and (max-width: 1200px){
+  
+  .vid 
+  {
+    
+   
+   padding-right: 530px;
+    
+  }
+  .example {
+    font-size: 30px;
+    padding-top: 40%;
+    padding-right: 30%;
+  }
+  .pg
+{
+  padding-left: 100px;
+  width: 250px;
+}
+
+}
+/*175*/
+@media screen and (max-width: 800px){
+  .vid 
+  {
+    
+   
+   padding-right: 530px;
+    
+  }
+  .pg
+{
+  padding-left: 80px;
+  width: 200px;
+}
+.imgg
+{
+  display: none;
+}
+
+}
+
+
 /*------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 600px){
-
+.vid
+{
+  display: none;
+}
   .thumbnail {
     padding: 0 0 15px 0;
     border: 1px solid;
@@ -187,13 +236,15 @@
   .sign
   {
     height: 23px;
-      max-width: 40px;  
+      max-width: 40px; 
+      
   }
   .sign a{
    
     font-size: 8px;
     font-weight: bold;
    padding-bottom: 90px;
+  
    
   }
   .accordion-container{
@@ -363,8 +414,9 @@ p{
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  margin-left: 130px;
   text-align: center;
+
 
 }
 
@@ -373,6 +425,7 @@ p{
   display: inline-block;
   position: relative;
   transition: 0.5s;
+ 
 }
 .sign:hover a:after{
   opacity: 1;

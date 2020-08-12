@@ -1,10 +1,33 @@
 /* windows resolution */
 @media screen and (min-width: 601px) {
+  .form-card{
+    margin-top: -30px;
+  }
+  #d{
+   
+    position: absolute;
+    width:170px;
+    margin-top: -220px;
+    margin-left: 40px;
+  }
+  #t{
+    position: absolute;
+    margin-top: -180px;
+    margin-left: 40px;
+    width:170px;
+  }
   .example {
     font-size: 30px;
     padding-top: 100px;
-    padding-left: 20px;
+    padding-left: 140px;
     padding-bottom: 50px;
+    color: #fff;
+    
+  }
+  .example a {
+  
+    color: #fff;
+    
   }
   .taxiye{
   margin-left: 10px;
@@ -25,13 +48,145 @@
  width: 200px;
  padding-right:30px;
 }
+.radio {
+  margin-left: -20px;
+  size: 20px;
 }
+.radio p {
+  color: #fff;
+  font-size: 15px;
+  position: absolute;
+  padding-left: 230px;
+  margin-top: -50px;
+ 
+}
+.radio label {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bolder;
+  float: left;
+  position: absolute;
+  margin-left: -170px;
+}
+.radio input {
+  position: absolute;
+ margin-top: -60px;
+  
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+/*000000000000000000000000000000000000000000000*/
+
+
+
+#mapp {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+ 
+ 
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#target {
+  width: 345px;
+}
+
+
+
+
+
+
+
+
+}
+
+
 /* mobile resolution */
 @media screen and (max-width: 600px){
   .example {
     font-size: 12px;
     padding-top: 25%;
-    padding-left: 8px;
+    padding-left: 148px;
 
   }
 .taxiye{
@@ -56,7 +211,7 @@
 }
 }
 
-.btn:hover {background: #eee;}
+.btn:hover {background: #950081;}
 .big-text{
     color: #fff;
     font-size: 20pt;
@@ -168,8 +323,7 @@ textarea {
     border: 0 none;
     border-radius: 0px;
     cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px
+   margin-top: -16px;
 }
 
  .action-button:hover,
@@ -178,7 +332,13 @@ textarea {
 }
 .maps
 {
-  padding-left: 100px;
- width: 900px;
- height: 600px;
+
+  padding-left: 620px;
+ 
+}
+.maps iframe
+{
+ width: 600px;
+ height: 400px;
+ 
 }

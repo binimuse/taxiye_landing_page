@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CorporateService } from '../service/corporate.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-corporate',
@@ -9,14 +10,19 @@ import { CorporateService } from '../service/corporate.service';
 export class CorporateComponent implements OnInit {
   corporate;
 
-  constructor(private corporateService : CorporateService) { }
+  constructor(private corporateService : CorporateService,public translate: TranslateService) { }
 
   ngOnInit() {
     this.corporateService.getlatestcorporates().subscribe((resp:any)=>{
       this.corporate = resp.latest_corporate;
       console.log(resp)
     })
-
+/*
+    this.translate.addLangs(['English', 'Amharic','Afan oromo',]);
+    this. translate.setDefaultLang('English');
+    const browserLang =  this.translate.getBrowserLang();
+    this.translate.use(browserLang.match(/English|Amharic/) ? browserLang : 'English');
+*/
     $(document).ready(function () {
       $(".set > a").on("click", function () {
         if ($(this).hasClass("active")) {

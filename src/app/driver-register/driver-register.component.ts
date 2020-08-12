@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { TranslateService } from '@ngx-translate/core';
 import { DriveFeedbackService } from '../service/drive-feedback.service';
 import { SuperDriverService } from '../service/super-driver.service';
 @Component({
@@ -13,7 +14,8 @@ export class DriverRegisterComponent implements OnInit {
 
   constructor(
     private feedbackService : DriveFeedbackService,
-    private superDriverService :SuperDriverService
+    private superDriverService :SuperDriverService,
+     public translate: TranslateService
     ) { }
 
   ngOnInit() {
@@ -21,8 +23,15 @@ export class DriverRegisterComponent implements OnInit {
       this.super_driver = resp.latest_news;
       console.log(this.super_driver)
     })
+    /*
+    this.translate.addLangs(['English', 'Amharic','Afan oromo',]);
+    this. translate.setDefaultLang('English');
+    const browserLang =  this.translate.getBrowserLang();
+    this.translate.use(browserLang.match(/English|Amharic/) ? browserLang : 'English');
+    */
     this.feedbackService.getlatestfeedback().subscribe((resp:any)=>{
       this.latest_fb = resp.latest_news;
+
 
     })
     $(document).ready(function() {
